@@ -1,0 +1,28 @@
+{
+  "name": "hikaleonsubs",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yahyasetz11/HikaLeonSubs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/yahyasetz11/HikaLeonSubs/issues"
+  },
+  "homepage": "https://github.com/yahyasetz11/HikaLeonSubs#readme",
+  "dependencies": {
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^7.3.3",
+    "tailwindcss": "^3.4.19"
+  }
+}

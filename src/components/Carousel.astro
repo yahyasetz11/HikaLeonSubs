@@ -1,0 +1,285 @@
+---
+import type { Episode } from '../data/episodes';
+import { parseTitle, stripTitleTags } from '../utils/title';
+
+interface Props {
+  episodes: Episode[];
+}
+
+const { episodes } = Astro.props;
+const hasEpisodes = episodes.length > 0;
+---
+
+<section
+  class="relative w-full overflow-hidden bg-ground dark:bg-dark-ground"
+  aria-label="Episode terbaru"
+  aria-roledescription="carousel"
+>
+  {hasEpisodes ? (
+    <div class="relative min-h-[500px] sm:min-h-[460px] md:min-h-[400px] lg:min-h-[480px] xl:min-h-[540px]">
+      <div
+        id="carousel-track"
+        class="relative w-full h-full min-h-[500px] sm:min-h-[460px] md:min-h-[400px] lg:min-h-[480px] xl:min-h-[540px]"
+      >
+        {episodes.map((ep, i) => (
+          <article
+            class="carousel-slide absolute inset-0 flex flex-col md:flex-row transition-opacity duration-300"
+            data-index={i}
+            aria-roledescription="slide"
+            aria-label={`${i + 1} dari ${episodes.length}: ${stripTitleTags(ep.episodeTitle)}`}
+            aria-hidden={i !== 0 ? 'true' : 'false'}
+            style={i === 0 ? 'opacity: 1; z-index: 2;' : 'opacity: 0; z-index: 1;'}
+          >
+            <div class="absolute inset-0 md:relative md:inset-auto md:w-3/5 lg:w-2/3 md:flex-shrink-0 overflow-hidden bg-ground-border dark:bg-dark-border">
+              <img
+                src={ep.thumbnail}
+                alt={`Thumbnail ${ep.showName} — ${stripTitleTags(ep.episodeTitle)}`}
+                class="w-full h-full object-cover"
+                loading={i === 0 ? 'eager' : 'lazy'}
+                onerror="this.style.display='none'; this.parentElement.classList.add('thumbnail-placeholder')"
+              />
+              <div class="thumbnail-fallback absolute inset-0 hidden items-center justify-center bg-gradient-to-br from-sakura-100 to-sakura-200 dark:from-sakura-900/40 dark:to-sakura-800/40">
+                <svg class="w-20 h-20 text-sakura-300 dark:text-sakura-700" fill="none" viewBox="0 0 80 80" aria-hidden="true">
+                  <circle cx="40" cy="40" r="36" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M40 12C40 12 24 22 24 34C24 42.837 31.163 50 40 50C48.837 50 56 42.837 56 34C56 22 40 12 40 12Z" fill="currentColor" opacity="0.4"/>
+                  <path d="M40 22C40 22 32 28 32 34C32 38.418 35.582 42 40 42C44.418 42 48 38.418 48 34C48 28 40 22 40 22Z" fill="currentColor" opacity="0.7"/>
+                </svg>
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-ground dark:from-dark-ground via-ground/50 dark:via-dark-ground/50 to-transparent opacity-100 md:opacity-0 pointer-events-none" aria-hidden="true"></div>
+              <div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-ground dark:to-dark-ground opacity-0 md:opacity-100 pointer-events-none" aria-hidden="true"></div>
+            </div>
+
+            <div class="relative z-10 mt-auto md:mt-0 md:flex-initial md:w-2/5 lg:w-1/3 flex flex-col justify-end md:justify-center px-4 pb-5 pt-0 sm:px-6 sm:pb-6 md:pl-2 md:pr-10 lg:pr-16 md:pb-8 md:bg-ground md:dark:bg-dark-ground overflow-hidden">
+              <div class="mb-2 sm:mb-3 flex">
+                <a
+                  href={`/shows/${ep.showSlug}`}
+                  class="show-badge whitespace-nowrap max-w-full overflow-hidden text-ellipsis"
+                  tabindex="0"
+                >
+                  {ep.showName}
+                </a>
+              </div>
+
+              <p class="font-display font-medium text-ink-muted dark:text-white/70 md:text-ink-muted mb-1.5 tracking-wide uppercase text-[11px] sm:text-xs md:text-inherit">
+                {ep.episodeNumber}
+              </p>
+
+              <a
+                href={`/episode/${ep.id}`}
+                class="font-display font-bold text-lg sm:text-2xl md:text-3xl lg:text-4xl leading-tight text-ink dark:text-white md:text-ink md:dark:text-dark-ink hover:text-sakura-600 dark:hover:text-sakura-300 md:hover:text-sakura-600 md:dark:hover:text-sakura-400 transition-colors duration-150 mb-1.5 sm:mb-2 line-clamp-2 break-words [overflow-wrap:anywhere]"
+              >
+                {parseTitle(ep.episodeTitle).map((part) =>
+                  part.isTagged ? (
+                    <span class="title-tag-gold">{part.text}</span>
+                  ) : (
+                    <span>{part.text}</span>
+                  )
+                )}
+              </a>
+
+              {ep.episodeSubtitle && (
+                <p class="text-xs sm:text-sm md:text-base text-ink-muted dark:text-white/70 md:text-ink-muted md:dark:text-dark-muted font-sans leading-snug mb-2 sm:mb-3 line-clamp-1 sm:line-clamp-2">
+                  {ep.episodeSubtitle}
+                </p>
+              )}
+
+              {ep.description && (
+                <p class="text-xs sm:text-sm text-ink-muted dark:text-white/60 md:text-ink-muted md:dark:text-dark-muted leading-relaxed mb-4 sm:mb-5 line-clamp-2 sm:line-clamp-3">
+                  {ep.description}
+                </p>
+              )}
+
+              <div class="flex items-center gap-2.5 sm:gap-3 flex-wrap">
+                <a
+                  href={ep.downloadUrl}
+                  class="btn-primary !px-3.5 !py-2 !text-xs sm:!text-sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                  </svg>
+                  Go to Trakteer
+                </a>
+
+                <a
+                  href={`/episode/${ep.id}`}
+                  class="inline-flex items-center gap-1.5 font-display font-medium text-xs sm:text-sm text-ink-muted dark:text-dark-muted hover:text-sakura-600 dark:hover:text-sakura-400 transition-colors duration-150 py-1"
+                >
+                  Detail
+                  <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                  </svg>
+                </a>
+
+                <div class="flex items-center gap-1.5 sm:gap-2 ml-auto" role="tablist" aria-label="Slide carousel">
+                  <button
+                    id={`carousel-prev-${i}`}
+                    type="button"
+                    aria-label="Slide sebelumnya"
+                    class="carousel-prev-btn w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-ground/90 dark:bg-dark-card/90 backdrop-blur-sm border border-ground-border dark:border-dark-border flex items-center justify-center text-ink-muted dark:text-dark-muted hover:text-sakura-600 dark:hover:text-sakura-400 hover:border-sakura-300 dark:hover:border-sakura-700 transition-all duration-150 shadow-sm"
+                  >
+                    <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                  </button>
+                  {episodes.map((_, di) => (
+                    <button
+                      type="button"
+                      role="tab"
+                      class="carousel-dot transition-all duration-200 rounded-full bg-sakura-200 dark:bg-sakura-900 hover:bg-sakura-400 dark:hover:bg-sakura-700"
+                      data-index={di}
+                      aria-selected={di === 0 ? 'true' : 'false'}
+                      aria-label={`Slide ${di + 1}: ${stripTitleTags(episodes[di].episodeTitle)}`}
+                      style={di === 0 ? 'width: 20px; height: 6px; background-color: #e8638a;' : 'width: 6px; height: 6px;'}
+                    ></button>
+                  ))}
+                  <button
+                    id={`carousel-next-${i}`}
+                    type="button"
+                    aria-label="Slide berikutnya"
+                    class="carousel-next-btn w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-ground/90 dark:bg-dark-card/90 backdrop-blur-sm border border-ground-border dark:border-dark-border flex items-center justify-center text-ink-muted dark:text-dark-muted hover:text-sakura-600 dark:hover:text-sakura-400 hover:border-sakura-300 dark:hover:border-sakura-700 transition-all duration-150 shadow-sm"
+                  >
+                    <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <p class="mt-3 sm:mt-5 text-[11px] sm:text-xs text-ink-light dark:text-white/50 md:text-ink-light md:dark:text-dark-muted font-sans">
+                {new Date(ep.releaseDate).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}
+              </p>
+            </div>
+          </article>
+        ))}
+      </div>
+
+    </div>
+  ) : (
+    <div class="flex flex-col items-center justify-center py-24 text-center">
+      <div class="w-20 h-20 rounded-full bg-sakura-50 dark:bg-sakura-900/20 flex items-center justify-center mb-6">
+        <svg class="w-10 h-10 text-sakura-300 dark:text-sakura-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+        </svg>
+      </div>
+      <p class="font-display font-semibold text-xl text-ink dark:text-dark-ink mb-2">Belum Ada Rilis</p>
+      <p class="text-sm text-ink-muted dark:text-dark-muted max-w-sm">Subtitle pertama akan segera hadir. Pantau terus halaman ini!</p>
+    </div>
+  )}
+</section>
+
+<style>
+  .thumbnail-placeholder .thumbnail-fallback {
+    display: flex !important;
+  }
+  .carousel-slide {
+    will-change: opacity;
+  }
+</style>
+
+<script>
+  const track = document.getElementById('carousel-track');
+  if (track) {
+    const slides = Array.from(track.querySelectorAll<HTMLElement>('.carousel-slide'));
+    const allDots = Array.from(document.querySelectorAll<HTMLButtonElement>('.carousel-dot'));
+
+    if (slides.length < 2) {
+      document.querySelectorAll<HTMLButtonElement>('.carousel-prev-btn, .carousel-next-btn').forEach(b => b.setAttribute('disabled', ''));
+    }
+
+    let current = 0;
+    let autoTimer: ReturnType<typeof setInterval> | null = null;
+    let isTransitioning = false;
+
+    function setDots(idx: number, active: boolean) {
+      allDots.filter(d => parseInt(d.dataset.index ?? '-1') === idx).forEach(d => {
+        if (active) {
+          d.style.width = '20px';
+          d.style.height = '6px';
+          d.style.backgroundColor = '#e8638a';
+          d.setAttribute('aria-selected', 'true');
+        } else {
+          d.style.width = '6px';
+          d.style.height = '6px';
+          d.style.backgroundColor = '';
+          d.setAttribute('aria-selected', 'false');
+        }
+      });
+    }
+
+    function goTo(idx: number) {
+      if (isTransitioning || idx === current) return;
+      isTransitioning = true;
+
+      slides[current].style.opacity = '0';
+      slides[current].style.zIndex = '1';
+      slides[current].setAttribute('aria-hidden', 'true');
+      setDots(current, false);
+
+      current = (idx + slides.length) % slides.length;
+
+      slides[current].style.opacity = '1';
+      slides[current].style.zIndex = '2';
+      slides[current].setAttribute('aria-hidden', 'false');
+      setDots(current, true);
+
+      setTimeout(() => { isTransitioning = false; }, 500);
+    }
+
+    function startAuto() {
+      if (slides.length < 2) return;
+      autoTimer = setInterval(() => goTo(current + 1), 6000);
+    }
+
+    function stopAuto() {
+      if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
+    }
+
+    document.querySelectorAll<HTMLButtonElement>('.carousel-prev-btn').forEach(btn => {
+      btn.addEventListener('click', () => { stopAuto(); goTo(current - 1); startAuto(); });
+    });
+    document.querySelectorAll<HTMLButtonElement>('.carousel-next-btn').forEach(btn => {
+      btn.addEventListener('click', () => { stopAuto(); goTo(current + 1); startAuto(); });
+    });
+
+    allDots.forEach((dot) => {
+      dot.addEventListener('click', () => { stopAuto(); goTo(parseInt(dot.dataset.index ?? '0')); startAuto(); });
+    });
+
+    track.addEventListener('mouseenter', stopAuto);
+    track.addEventListener('mouseleave', startAuto);
+
+    track.addEventListener('keydown', (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') { stopAuto(); goTo(current - 1); startAuto(); }
+      if (e.key === 'ArrowRight') { stopAuto(); goTo(current + 1); startAuto(); }
+    });
+
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+    track.addEventListener('touchstart', (e: TouchEvent) => {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+      stopAuto();
+    }, { passive: true });
+
+    track.addEventListener('touchend', (e: TouchEvent) => {
+      const touchEndX = e.changedTouches[0].screenX;
+      const touchEndY = e.changedTouches[0].screenY;
+      const diffX = touchStartX - touchEndX;
+      const diffY = touchStartY - touchEndY;
+
+      if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY)) {
+        if (diffX > 0) {
+          goTo(current + 1);
+        } else {
+          goTo(current - 1);
+        }
+      }
+      startAuto();
+    }, { passive: true });
+
+    startAuto();
+  }
+</script>

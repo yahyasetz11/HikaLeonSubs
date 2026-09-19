@@ -1,0 +1,19 @@
+---
+import Base from '../layouts/Base.astro';
+import Navbar from '../components/Navbar.astro';
+import Carousel from '../components/Carousel.astro';
+import EpisodeFeed from '../components/EpisodeFeed.astro';
+import Footer from '../components/Footer.astro';
+import { latestEpisodes, feedEpisodes } from '../data/episodes';
+---
+
+<Base>
+  <Navbar />
+  <main id="main-content">
+    <div class="border-b border-ground-border dark:border-dark-border">
+      <Carousel episodes={latestEpisodes} />
+    </div>
+    <EpisodeFeed episodes={feedEpisodes} pageSize={9} />
+  </main>
+  <Footer />
+</Base>

@@ -1,0 +1,6 @@
+{
+  "prompt": "A fansub release website homepage in the style of a photocopied zine interior. The background is a warm goldenrod yellow (copy-shop stock color). A single column of text runs the full height. The header displays 'Sokomagattara, Sakurazaka?' in Letter Gothic typeface, enlarged to 400% until the final character is cut off cleanly at the right edge of the screen. Below it, a typed episode list with dates and episode names in Letter Gothic at 16-17px on 1.7 line height. Each episode row has a typed bracket download cell: [ ] for unset, X for downloaded. Navigation shows the edge of a blue stock sheet peeking 10mm from the right, indicating the next show. Ink is near-black on the goldenrod ground. No gradients, no card UI, no shadows. The right side of the headline type bleeds off the canvas edge. Monospace episode metadata columns to the right of each episode name. Bilingual: Japanese show title 'そこ曲がったら、桜坂?' in small caps below the enlarged Latin title. Ultra-minimal, typographic, raw copy-shop energy.",
+  "createdAt": "2026-09-19T08:07:36.256Z",
+  "tool": "impeccable generate-image",
+  "model": "gpt-image-2.5-flare"
+}

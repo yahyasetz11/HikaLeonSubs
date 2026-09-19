@@ -1,0 +1,6 @@
+{
+  "prompt": "A Japanese idol fansub website homepage inspired by origami washi paper. The background is a rich vermilion red washi paper texture with visible kozo fiber. The page shows the show catalog as a numbered sequence, like origami folding steps: '01', '02', etc., each a show name. Show names appear in both kanji and Indonesian, side by side in precise bilateral columns. The active show is marked with a small gold dot. Sumi black ink for all typography. Humanist sans typeface for Indonesian, graceful for Japanese script. Diagrams or step indicators at the right margin. The overall feeling is handcrafted, precise, Japanese in cultural origin. Washi texture is the dominant visual material — the site IS the paper. Near-black ink, gold accent only for the active state, no other colors.",
+  "createdAt": "2026-09-19T08:08:39.391Z",
+  "tool": "impeccable generate-image",
+  "model": "gpt-image-2.5-flare"
+}

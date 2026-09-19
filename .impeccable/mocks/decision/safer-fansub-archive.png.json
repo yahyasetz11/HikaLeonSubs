@@ -1,0 +1,6 @@
+{
+  "prompt": "A fansub archive website homepage styled like a well-maintained anime fansub site. Clean white background. Left sidebar with show navigation: 'Sokomagattara, Sakurazaka?', 'Sakurazaka Channel', 'Chokosaku', 'Sakura Meets', 'Documentary'. Main content area shows the episode list as a structured table: episode number, episode title in Indonesian, date, status badge (Selesai/Dalam Proses), and download icon. Status badges use soft green for completed, amber for in progress. Clean, functional, information-dense but not cluttered. Top nav: 'HikaLeonSubs — Subtitle Indonesia Sakurazaka46'. The feel is practical, organized, built by fans for fans. A progress summary at the top: '47 episode tersedia'. Clean sans-serif throughout.",
+  "createdAt": "2026-09-19T08:16:02.473Z",
+  "tool": "impeccable generate-image",
+  "model": "gpt-image-2.5-flare"
+}

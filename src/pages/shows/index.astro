@@ -1,0 +1,60 @@
+---
+import Base from '../../layouts/Base.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import { shows, episodes } from '../../data/episodes';
+
+const showsWithCount = shows.map((show) => ({
+  ...show,
+  count: episodes.filter((ep) => ep.showSlug === show.slug).length,
+}));
+---
+
+<Base title="Semua Show — HikaLeonSubs" description="Daftar semua variety show dan konten Sakurazaka46 yang tersedia dengan subtitle Indonesia.">
+  <Navbar />
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <h1 class="font-display font-bold text-2xl sm:text-3xl md:text-4xl text-ink dark:text-dark-ink mb-2">Semua Show</h1>
+    <p class="text-sm sm:text-base text-ink-muted dark:text-dark-muted mb-6 sm:mb-10">Semua konten Sakurazaka46 yang tersedia dengan subtitle Indonesia.</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
+      {showsWithCount.map((show) => (
+        <a
+          href={`/shows/${show.slug}`}
+          class="card-hover group rounded-2xl overflow-hidden bg-ground-card dark:bg-dark-card border border-ground-border dark:border-dark-border flex flex-col"
+        >
+          <div class="aspect-video overflow-hidden bg-ground-border dark:bg-dark-border relative">
+            <img
+              src={show.thumbnail}
+              alt={`Cover ${show.name}`}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-out"
+              loading="lazy"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+            />
+            <div
+              class="absolute inset-0 items-center justify-center bg-gradient-to-br from-sakura-100 to-sakura-200 dark:from-sakura-900/40 dark:to-sakura-800/40"
+              style="display: none;"
+              aria-hidden="true"
+            >
+              <svg class="w-16 h-16 text-sakura-300 dark:text-sakura-700" fill="none" viewBox="0 0 64 64" aria-hidden="true">
+                <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M32 10C32 10 18 18 18 28C18 35.732 24.268 42 32 42C39.732 42 46 35.732 46 28C46 18 32 10 32 10Z" fill="currentColor" opacity="0.4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="p-4 sm:p-5 flex-1 flex flex-col">
+            <h2 class="font-display font-bold text-base sm:text-lg text-ink dark:text-dark-ink group-hover:text-sakura-600 dark:group-hover:text-sakura-400 transition-colors duration-150 mb-1.5 sm:mb-2 leading-snug">
+              {show.name}
+            </h2>
+            <p class="text-xs sm:text-sm text-ink-muted dark:text-dark-muted leading-relaxed flex-1 line-clamp-2">
+              {show.description}
+            </p>
+            <p class="mt-3 text-xs font-display font-semibold text-sakura-600 dark:text-sakura-400">
+              {show.count} episode
+            </p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </main>
+  <Footer />
+</Base>

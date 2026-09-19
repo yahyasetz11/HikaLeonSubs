@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@1,500;1,600;1,700&family=Urbanist:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --sakura: #e8638a;
+    --sakura-light: #f472b6;
+    --sakura-dark: #be185d;
+    color-scheme: light;
+  }
+
+  .dark {
+    color-scheme: dark;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply bg-ground text-ink font-sans transition-colors duration-300;
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  .dark body {
+    @apply bg-dark-ground text-dark-ink;
+  }
+
+  ::selection {
+    background-color: #e8638a33;
+    color: #e8638a;
+  }
+
+  .dark ::selection {
+    background-color: #e8638a44;
+    color: #f9a8d4;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-sakura-500 rounded-sm;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-ground-border;
+  }
+
+  .dark ::-webkit-scrollbar-track {
+    @apply bg-dark-border;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-sakura-300 rounded-full;
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    @apply bg-sakura-700 rounded-full;
+  }
+}
+
+@layer components {
+  .card-hover {
+    @apply transition-all duration-200 ease-out;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(232, 99, 138, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  .dark .card-hover:hover {
+    box-shadow: 0 8px 24px rgba(232, 99, 138, 0.2), 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-sakura-500 hover:bg-sakura-600 text-white font-display font-semibold text-sm px-4 py-2.5 rounded-lg transition-all duration-150 ease-out;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(232, 99, 138, 0.4);
+  }
+
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+
+  .show-badge {
+    @apply inline-flex items-center text-xs font-display font-semibold px-2.5 py-1 rounded-full bg-sakura-100 text-sakura-700 hover:bg-sakura-200 transition-colors duration-150 cursor-pointer;
+  }
+
+  .dark .show-badge {
+    @apply bg-sakura-900/40 text-sakura-300 hover:bg-sakura-900/60;
+  }
+
+  .skeleton {
+    background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
+  .dark .skeleton {
+    background: linear-gradient(90deg, #1c1c26 25%, #2d2d3d 50%, #1c1c26 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
+  .title-tag-gold {
+    font-family: 'Playfair Display', Georgia, Cambria, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 600;
+    color: #b37810;
+    letter-spacing: 0.015em;
+    display: inline;
+    transition: color 150ms ease-out;
+  }
+
+  .dark .title-tag-gold {
+    color: #f3c853;
+  }
+
+  a:hover .title-tag-gold,
+  .group:hover .title-tag-gold {
+    color: #9a6509;
+  }
+
+  .dark a:hover .title-tag-gold,
+  .dark .group:hover .title-tag-gold {
+    color: #fde68a;
+  }
+}
+
+@layer utilities {
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}

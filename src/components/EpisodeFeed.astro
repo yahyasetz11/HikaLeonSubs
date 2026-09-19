@@ -1,0 +1,173 @@
+---
+import type { Episode } from '../data/episodes';
+import EpisodeCard from './EpisodeCard.astro';
+
+interface Props {
+  episodes: Episode[];
+  pageSize?: number;
+}
+
+const { episodes, pageSize = 9 } = Astro.props;
+
+const initialEpisodes = episodes.slice(0, pageSize);
+const hasMore = episodes.length > pageSize;
+---
+
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+  <div class="flex items-center justify-between mb-6 sm:mb-8">
+    <div>
+      <h2 class="font-display font-bold text-xl sm:text-2xl md:text-3xl text-ink dark:text-dark-ink tracking-tight">
+        Rilis Terbaru
+      </h2>
+      <p class="text-xs sm:text-sm text-ink-muted dark:text-dark-muted mt-0.5 sm:mt-1">
+        {episodes.length} subtitle tersedia
+      </p>
+    </div>
+
+    <a
+      href="/shows"
+      class="inline-flex items-center gap-1 font-display font-medium text-xs sm:text-sm text-ink-muted dark:text-dark-muted hover:text-sakura-600 dark:hover:text-sakura-400 transition-colors duration-150 py-1.5 px-2.5 rounded-lg hover:bg-ground-border dark:hover:bg-dark-border"
+    >
+      Semua show
+      <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+      </svg>
+    </a>
+  </div>
+
+  {episodes.length === 0 ? (
+    <div class="flex flex-col items-center justify-center py-20 text-center rounded-2xl border border-dashed border-ground-border dark:border-dark-border">
+      <div class="w-16 h-16 rounded-full bg-sakura-50 dark:bg-sakura-900/20 flex items-center justify-center mb-4">
+        <svg class="w-8 h-8 text-sakura-300 dark:text-sakura-700" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 0 0-1.883 2.542l.857 6a2.25 2.25 0 0 0 2.227 1.932H19.05a2.25 2.25 0 0 0 2.227-1.932l.857-6a2.25 2.25 0 0 0-1.883-2.542m-16.5 0V6A2.25 2.25 0 0 1 6 3.75h3.879a1.5 1.5 0 0 1 1.06.44l2.122 2.12a1.5 1.5 0 0 0 1.06.44H18A2.25 2.25 0 0 1 20.25 9v.776" />
+        </svg>
+      </div>
+      <p class="font-display font-semibold text-lg text-ink dark:text-dark-ink mb-1">Belum ada rilis</p>
+      <p class="text-sm text-ink-muted dark:text-dark-muted max-w-xs">
+        Subtitle pertama akan segera hadir. Ikuti kami untuk mendapatkan update terbaru!
+      </p>
+    </div>
+  ) : (
+    <>
+      <div
+        id="feed-grid"
+        class="grid grid-cols-1 gap-4 animate-slide-up"
+        aria-label="Daftar episode"
+      >
+        {initialEpisodes.map((ep) => (
+          <EpisodeCard episode={ep} />
+        ))}
+      </div>
+
+      {hasMore && (
+        <div class="mt-8 sm:mt-10 text-center" id="load-more-container">
+          <button
+            id="load-more-btn"
+            type="button"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 font-display font-semibold text-sm px-6 py-3 rounded-xl border-2 border-ground-border dark:border-dark-border text-ink-muted dark:text-dark-muted hover:border-sakura-300 dark:hover:border-sakura-700 hover:text-sakura-600 dark:hover:text-sakura-400 transition-all duration-150 active:scale-[0.99]"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+            Tampilkan lebih banyak
+          </button>
+        </div>
+      )}
+    </>
+  )}
+</section>
+
+<script define:vars={{ allEpisodes: episodes, pageSize }}>
+  const btn = document.getElementById('load-more-btn');
+  const grid = document.getElementById('feed-grid');
+  const container = document.getElementById('load-more-container');
+
+  if (btn && grid) {
+    let loaded = pageSize;
+
+    btn.addEventListener('click', () => {
+      const nextBatch = allEpisodes.slice(loaded, loaded + pageSize);
+
+      nextBatch.forEach((ep) => {
+        const card = buildCard(ep);
+        grid.appendChild(card);
+      });
+
+      loaded += nextBatch.length;
+
+      if (loaded >= allEpisodes.length && container) {
+        container.style.display = 'none';
+      }
+    });
+  }
+
+  function buildCard(ep) {
+    const dateStr = new Date(ep.releaseDate).toLocaleDateString('id-ID', {
+      day: 'numeric',
+      month: 'short',
+      year: 'numeric',
+    });
+
+    const showLabel = ep.showName.length > 20
+      ? ep.showName.split(' ').slice(0, 2).join(' ') + '…'
+      : ep.showName;
+
+    const cleanTitle = ep.episodeTitle.replace(/\{([^}]+)\}/g, '$1');
+
+    const descSnippet = ep.description
+      ? `<p class="hidden sm:block text-sm text-ink-muted dark:text-dark-muted font-sans leading-relaxed line-clamp-2 mt-1">${ep.description}</p>`
+      : '';
+
+    const article = document.createElement('article');
+    article.className = 'group relative flex gap-0 rounded-2xl overflow-hidden bg-ground-card dark:bg-dark-card border border-ground-border dark:border-dark-border transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(232,99,138,0.10),0_2px_8px_rgba(0,0,0,0.05)] dark:hover:shadow-[0_8px_24px_rgba(232,99,138,0.18),0_2px_8px_rgba(0,0,0,0.3)]';
+
+    article.innerHTML = `
+      <a href="/episode/${ep.id}" class="relative flex-shrink-0 w-28 sm:w-52 md:w-60 overflow-hidden bg-ground-border dark:bg-dark-border rounded-l-2xl" tabindex="-1" aria-hidden="true">
+        <img
+          src="${ep.thumbnail}"
+          alt=""
+          class="episode-thumb w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]"
+          loading="lazy"
+          decoding="async"
+        />
+        <div class="episode-fallback absolute inset-0 hidden items-center justify-center bg-gradient-to-br from-sakura-50 to-sakura-100 dark:from-sakura-900/30 dark:to-sakura-800/30" aria-hidden="true">
+          <svg class="w-10 h-10 text-sakura-300 dark:text-sakura-700" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M24 8C24 8 16 13 16 20C16 24.418 19.582 28 24 28C28.418 28 32 24.418 32 20C32 13 24 8 24 8Z" fill="currentColor" opacity="0.4"/>
+            <path d="M24 14C24 14 20 17 20 20C20 22.209 21.791 24 24 24C26.209 24 28 22.209 28 20C28 17 24 14 24 14Z" fill="currentColor" opacity="0.7"/>
+          </svg>
+        </div>
+      </a>
+      <div class="flex flex-col justify-between flex-1 min-w-0 p-3 sm:p-5">
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center gap-1.5 mb-1.5 sm:mb-2.5">
+            <a href="/shows/${ep.showSlug}" class="show-badge" onclick="event.stopPropagation()">${showLabel}</a>
+            <span class="text-xs text-ink-light dark:text-dark-muted font-sans">${ep.episodeNumber}</span>
+          </div>
+          <a href="/episode/${ep.id}" class="block font-display font-semibold text-sm sm:text-xl md:text-2xl leading-snug text-ink dark:text-dark-ink hover:text-sakura-600 dark:hover:text-sakura-400 transition-colors duration-150 line-clamp-2 mb-1">
+            ${cleanTitle}
+          </a>
+          ${descSnippet}
+        </div>
+        <div class="flex items-center justify-between gap-2 mt-2 pt-2 sm:mt-3 sm:pt-3 border-t border-ground-border dark:border-dark-border">
+          <time datetime="${ep.releaseDate}" class="text-xs text-ink-light dark:text-dark-muted font-sans">${dateStr}</time>
+          <a href="${ep.downloadUrl}" class="btn-primary !px-3 !py-1.5 !text-xs flex-shrink-0" target="_blank" rel="noopener noreferrer" aria-label="Trakteer untuk ${cleanTitle}">
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
+            Trakteer
+          </a>
+        </div>
+      </div>
+    `;
+
+    const newThumbs = article.querySelectorAll('.episode-thumb');
+    newThumbs.forEach((img) => {
+      const fallback = img.nextElementSibling;
+      if (!fallback) return;
+      const show = () => { img.style.display = 'none'; fallback.style.display = 'flex'; };
+      if (img.complete && img.naturalWidth === 0) { show(); }
+      else { img.addEventListener('error', show); }
+    });
+
+    return article;
+  }
+</script>

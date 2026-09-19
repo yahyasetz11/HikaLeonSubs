@@ -1,0 +1,6 @@
+{
+  "prompt": "A fansub website homepage in the style of Windows Phone Metro UI. Pure black background. A grid of flat colored rectangular tiles. Each tile contains a show name in giant, light-weight, lowercase white sans-serif type, cropped so the last letters bleed off the right edge of the tile: 'sokomagat...' / 'sakurazaka ch...' / 'chokosaku...' etc. Tiles are in a strict grid: some cyan, some magenta, some deep violet, some white. Navigation at the top in small tracked caps: 'SHOWS · LATEST · ABOUT'. One tile per show. Selecting a tile floods it with a bright cyan accent. No borders, no card shadows, no gradients. The type IS the tile content — huge, cropped, bold, lowercase. The energy is bold, digital, panoramic. Below the tile grid, text in small white type: 'HikaLeonSubs — Indonesian subtitles for Sakurazaka46'.",
+  "createdAt": "2026-09-19T08:09:08.004Z",
+  "tool": "impeccable generate-image",
+  "model": "gpt-image-2.5-flare"
+}
