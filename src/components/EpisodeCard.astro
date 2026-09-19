@@ -16,10 +16,6 @@ const dateFormatted = new Date(episode.releaseDate).toLocaleDateString('id-ID', 
   year: 'numeric',
 });
 
-const showLabel = episode.showName.length > 20
-  ? episode.showName.split(' ').slice(0, 2).join(' ') + '…'
-  : episode.showName;
-
 const cardId = `card-${episode.id}`;
 ---
 
@@ -60,9 +56,8 @@ const cardId = `card-${episode.id}`;
               class="show-badge"
               onclick="event.stopPropagation()"
             >
-              {showLabel}
+              {episode.showName}
             </a>
-            <span class="text-xs text-ink-light dark:text-dark-muted font-sans">{episode.episodeNumber}</span>
           </div>
 
           <a

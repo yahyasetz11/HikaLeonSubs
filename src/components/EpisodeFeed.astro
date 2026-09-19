@@ -141,8 +141,7 @@ const hasMore = episodes.length > pageSize;
       <div class="flex flex-col justify-between flex-1 min-w-0 p-3 sm:p-5">
         <div class="flex-1 min-w-0">
           <div class="flex items-center gap-1.5 mb-1.5 sm:mb-2.5">
-            <a href="/shows/${ep.showSlug}" class="show-badge" onclick="event.stopPropagation()">${showLabel}</a>
-            <span class="text-xs text-ink-light dark:text-dark-muted font-sans">${ep.episodeNumber}</span>
+            <a href="/shows/${ep.showSlug}" class="show-badge" onclick="event.stopPropagation()">${showLabel}${ep.episodeNumber ? ` · ${ep.episodeNumber}` : ''}</a>
           </div>
           <a href="/episode/${ep.id}" class="block font-display font-semibold text-sm sm:text-xl md:text-2xl leading-snug text-ink dark:text-dark-ink hover:text-sakura-600 dark:hover:text-sakura-400 transition-colors duration-150 line-clamp-2 mb-1">
             ${cleanTitle}
