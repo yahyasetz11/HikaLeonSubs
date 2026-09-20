@@ -212,11 +212,13 @@ const cardId = `card-${episode.id}`;
     else { img.addEventListener('error', show); }
   });
 
-  document.querySelectorAll<HTMLElement>('.episode-card-wrapper').forEach((wrapper) => {
-    wrapper.querySelectorAll<HTMLButtonElement>('.flip-btn').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        wrapper.classList.toggle('is-flipped');
-      });
-    });
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement | null;
+    const btn = target?.closest('.flip-btn');
+    if (!btn) return;
+    const wrapper = btn.closest('.episode-card-wrapper');
+    if (wrapper) {
+      wrapper.classList.toggle('is-flipped');
+    }
   });
 </script>
