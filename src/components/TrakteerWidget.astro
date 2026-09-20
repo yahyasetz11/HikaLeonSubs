@@ -1,0 +1,50 @@
+---
+---
+
+<div class="trakteer-widget space-y-4">
+  <div class="trakteer-leaderboard-wrap rounded-2xl overflow-hidden border border-ground-border dark:border-dark-border bg-ground-card dark:bg-dark-card">
+    <div class="px-4 pt-4 pb-2 flex items-center gap-2">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-sakura-500 flex-shrink-0" aria-hidden="true"><path d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"/></svg>
+      <span class="font-display font-semibold text-xs uppercase tracking-widest text-ink-muted dark:text-dark-muted">Top Supporter</span>
+    </div>
+    <iframe
+      src="https://stream.trakteer.id/top-supporter/index.html?ts_theme=default&ts_interval=30&ts_customtitle=Top+Supporter&ts_customsubtitle=selama&key=trstream-Z9psMlYxfshIxILkq9hu&page_url=trakteer.id%2Fhikaleon%2Fgift&mod=3&hash=vgxe3x9pygl3ladb&timestamp=1789883156"
+      class="trakteer-frame w-full"
+      title="Top Supporter Trakteer"
+      loading="lazy"
+      scrolling="no"
+      frameborder="0"
+      aria-label="Daftar top supporter di Trakteer"
+    ></iframe>
+  </div>
+
+  <div class="trakteer-btn-wrap flex justify-center">
+    <script type="text/javascript" src="https://edge-cdn.trakteer.id/js/embed/trbtn.min.js?v=14-05-2025" is:inline></script>
+    <script type="text/javascript" is:inline>
+      (function () {
+        if (typeof trbtn !== 'undefined') {
+          var id = trbtn.init(
+            'Dukung Saya di Trakteer',
+            '#E8628A',
+            'https://trakteer.id/hikaleon',
+            'https://edge-cdn.trakteer.id/images/embed/trbtn-icon.png?v=14-05-2025',
+            '40'
+          );
+          trbtn.draw(id);
+        }
+      })();
+    </script>
+  </div>
+</div>
+
+<style>
+  .trakteer-frame {
+    height: 420px;
+    border: none;
+    display: block;
+  }
+
+  .trakteer-btn-wrap {
+    min-height: 44px;
+  }
+</style>
