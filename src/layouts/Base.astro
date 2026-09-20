@@ -4,12 +4,20 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
+  type?: string;
 }
 
 const {
   title = 'HikaLeonSubs — Subtitle Indonesia Sakurazaka46',
   description = 'Subtitle Indonesia untuk konten Sakurazaka46 — variety show, dokumenter, dan clip eksklusif. Dibuat dengan AI pipeline open-source.',
+  image = '/logo-bg.jpg',
+  type = 'website',
 } = Astro.props;
+
+const siteOrigin = Astro.site ? Astro.site.origin : 'https://hikaleonsubs.pages.dev';
+const canonicalImage = new URL(image, siteOrigin).href;
+const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).href;
 ---
 
 <!doctype html>
@@ -22,9 +30,17 @@ const {
     <link rel="icon" href="/logo-coloredpng.png" media="(prefers-color-scheme: light)" />
     <link rel="icon" href="/logo-bg.jpg" media="(prefers-color-scheme: dark)" />
     <meta name="theme-color" content="#e8638a" />
+    <meta property="og:site_name" content="HikaLeonSubs" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={canonicalImage} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={canonicalImage} />
     <script is:inline>
       (function () {
         const stored = localStorage.getItem('theme');
