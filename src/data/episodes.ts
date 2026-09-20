@@ -8,7 +8,12 @@ export interface Episode {
   episodeNumber: string;
   releaseDate: string;
   thumbnail: string;
+  previewImage1?: string;
+  previewImage2?: string;
   downloadUrl: string;
+  mediafireUrl?: string;
+  trakteerUrl?: string;
+  rawMp4Url?: string;
   description?: string;
 }
 
@@ -74,8 +79,14 @@ export const episodes: Episode[] = [
       "Kilas Balik dari Panggung Sakura Meets Fes Bagian Hiru Meets",
     episodeNumber: "Episode 168",
     releaseDate: "2026-09-17",
-    thumbnail: "/images/thumbnails/sakura-meets-168.png",
+    thumbnail: "/images/thumbnails/sakura-meets/168/sakura-meets-168-1.png",
+    previewImage1: "/images/thumbnails/sakura-meets/168/sakura-meets-168-2.png",
+    previewImage2: "/images/thumbnails/sakura-meets/168/sakura-meets-168-3.png",
     downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260917-sakura-meets-168-sub-indo-5rFi5",
+    rawMp4Url: "https://www.akari46.com/",
     description:
       "Episode Sakura Meets minggu ini menyajikan kilas balik dari panggung Sakura Meets Fes bagian Hiru Meets (sesi siang), yang secara resmi menyambut bergabungnya Yamada Momomi dan Sato Neo sebagai member reguler baru. Bersama Kosaka Marino yang hadir sebagai bintang tamu, para member membedah ragam momen tak terlupakan di balik layar—mulai dari reaksi kaget saat penyergapan pengumuman member baru, cerita di balik sketsa komedi kolaborasi bareng Long Coat Daddy dan Kano (A-Masso), kekacauan kostum dalam pertunjukan ritme Kega no Koumyou 2, hingga proses kreatif Masumoto Kira yang menulis naskah drama orisinal bertema gadis penyihir berdasarkan mimpi pribadinya. Nostalgia sesi siang ini ditutup dengan keharuan paduan suara massal yang menyatukan seluruh penonton. Sisanya bisa langsung kalian tonton sendiri!",
   },
@@ -89,8 +100,16 @@ export const episodes: Episode[] = [
       "Perjalanan Penuh Kenangan! Liburan santai ke Hiroshima bareng duo wilayah Chugoku! Bener-bener makan terus tanpa henti! Sub Indo",
     episodeNumber: "",
     releaseDate: "2026-09-14",
-    thumbnail: "/images/thumbnails/sakura-channel-121.png",
+    thumbnail: "/images/thumbnails/sakura-channel/260914/sakura-channel-1.png",
+    previewImage1:
+      "/images/thumbnails/sakura-channel/260914/sakura-channel-2.png",
+    previewImage2:
+      "/images/thumbnails/sakura-channel/260914/sakura-channel-3.png",
     downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260914-sakurazaka-channel-perjalanan-penuh-kenangan-liburan-santai-ke-hiroshima-bareng-duo-wilayah-chugoku-bener-bener-makan-terus-tanpa-henti-sub-indo-a2W87",
+    rawMp4Url: "https://www.youtube.com/watch?v=HX2ezjOU12A",
     description:
       "Memanfaatkan waktu luang tepat sehari setelah merampungkan tur konser Sakurazaka46 di Hiroshima, Taniguchi Airi dan Mukai Itoha menghabiskan liburan santai untuk bernapak tilas ke Pulau Miyajima. Perjalanan berdua ini diisi dengan beragam aktivitas seru—mulai dari menaiki kapal feri sambil menyapa pemandangan gerbang Ootorii, berinteraksi akrab dengan rusa-rusa liar, menjajal ropeway menuju ketinggian Stasiun Shishiiwa, hingga mencicipi kuliner khas seperti hidangan anagomeshi, tiram goreng, serta pengalaman memanggang sendiri kue momiji manju yang manis. Tidak ketinggalan, keduanya juga mencoba melukis piring keramik bertema kenangan konser serta menutup trip nostalgia mereka di kedai ramen favorit masa sekolah sebelum kembali ke Tokyo. Sisanya bisa langsung kalian tonton sendiri!",
   },
@@ -103,8 +122,15 @@ export const episodes: Episode[] = [
     episodeSubtitle: "Masih Ada Lagi, Ajang Unjuk Pesona yang Bikin Kepincut",
     episodeNumber: "Episode 302",
     releaseDate: "2026-09-13",
-    thumbnail: "/images/thumbnails/chokosaku-302.png",
+    thumbnail: "/images/thumbnails/chokosaku/302/chokosaku-302-1.png",
+    previewImage1: "/images/thumbnails/chokosaku/302/chokosaku-302-2.png",
+    previewImage2: "/images/thumbnails/chokosaku/302/chokosaku-302-3.png",
     downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260913-chokosaku-302-sub-indo-oIONd",
+    rawMp4Url:
+      "https://www.akari46.com/2026/09/260913-sakurazaka46chokosaku302.html",
     description:
       'Melanjutkan keseruan dari tayangan utama, Chokosaku pekan ini menghadirkan segmen lanjutan bertajuk "Masih Ada Lagi, Ajang Unjuk Pesona yang Bikin Kepincut" yang dipandu oleh Murai Yu dan Sato Neo. Tanpa tekanan sistem tebak kuis, para member saling membongkar perlakuan manis dan perhatian tak terduga yang pernah mereka terima—mulai dari gaya pujian blak-blakan Murayama Miu, kebaikan diam-diam si bungsu Yamada Momom, hingga pesona gentleman Matono Mio dan Murai Yu. Puncaknya, tawa seisi studio pecah saat Airi nekat memuji dan membongkar aksi keren dirinya. Sisanya bisa langsung kalian tonton sendiri!',
   },
@@ -117,8 +143,17 @@ export const episodes: Episode[] = [
     episodeSubtitle: "Kuis Episode Keren Sakurazaka46, Jawab Tanpa Ragu!",
     episodeNumber: "Episode 302",
     releaseDate: "2026-09-13",
-    thumbnail: "/images/thumbnails/sokomagattara-302.png",
+    thumbnail: "/images/thumbnails/sokomagattara/302/sokomagattara-302-1.png",
+    previewImage1:
+      "/images/thumbnails/sokomagattara/302/sokomagattara-302-2.png",
+    previewImage2:
+      "/images/thumbnails/sokomagattara/302/sokomagattara-302-3.png",
     downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260913-soko-magattara-sakurazaka-302-sub-indo-ruXbr",
+    rawMp4Url:
+      "https://www.akari46.com/2026/09/260913-soko-magattara-sakurazaka-302.html",
     description:
       'Sokomagattara, Sakurazaka? minggu ini menghadirkan proyek seru "Kuis Episode Keren Sakurazaka46, Jawab Tanpa Ragu!", sebuah wadah unik bagi para member untuk memamerkan kebaikan dan perlakuan keren yang pernah mereka lakukan kepada rekan satu grup tanpa takut dicap sombong. Suasana studio dipenuhi gelak tawa sekaligus momen menghangatkan hati saat para member berebut mengklaim diri sebagai sosok paling berjasa. Menutup keseruan episode, panggung beralih ke momen yang ditunggu, yaitu pengumuman formasi senbatsu untuk single ke-16 "Ai must be", yang resmi mendapuk Taniguchi Airi sebagai center baru. Sisanya bisa langsung kamu tonton sendiri!',
   },
@@ -132,8 +167,14 @@ export const episodes: Episode[] = [
       "Part Kedua dari Proyek Telephone Bingo, Pertarungan Sengit Tim Masumoto vs Tim Onuma",
     episodeNumber: "Episode 167",
     releaseDate: "2026-09-10",
-    thumbnail: "/images/thumbnails/sakura-meets-167.png",
+    thumbnail: "/images/thumbnails/sakura-meets/167/sakura-meets-167-1.png",
+    previewImage1: "/images/thumbnails/sakura-meets/167/sakura-meets-167-2.png",
+    previewImage2: "/images/thumbnails/sakura-meets/167/sakura-meets-167-3.png",
     downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260910-sakura-meets-167-sub-indo-bArUO",
+    rawMp4Url: "https://www.akari46.com/",
     description:
       'Melanjutkan persaingan sengit babak sebelumnya bersama duo komedian Saraba Seishun no Hikari, Sakura Meets pekan ini memasuki babak penentuan dalam proyek "Telephone Bingo". Pertarungan antara Tim Masumoto dan Tim Onuma berlangsung semakin kacau sekaligus menggelitik ketika kedua tim beradu taktik menebak kategori sulit seperti sejarah, musik, psikologi, hingga tokoh komedian demi menyusun garis kemenangan. Kejutan demi kejutan terus bermunculan hingga akhir ronde. Sisanya bisa langsung kalian tonton sendiri!',
   },
@@ -148,8 +189,18 @@ export const episodes: Episode[] = [
       "From Blu-Ray Release of '5th YEAR ANNIVERSARY LIVE' Sakurazaka46",
     episodeNumber: "",
     releaseDate: "2026-09-09",
-    thumbnail: "/images/thumbnails/documentary-5th-annila.png",
+    thumbnail:
+      "/images/thumbnails/documentary/5th-annila/documentary-5th-annila-1.png",
+    previewImage1:
+      "/images/thumbnails/documentary/5th-annila/documentary-5th-annila-2.png",
+    previewImage2:
+      "/images/thumbnails/documentary/5th-annila/documentary-5th-annila-3.png",
     downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/documentary-behind-the-scenes-of-5th-year-anniversary-live-sakurazaka46-sub-indo-EBP1k",
+    rawMp4Url:
+      "https://drive.google.com/file/d/1-X5R486hG16nwG0KZFRM_r-sa_sSgJhY/view?usp=sharing",
     description:
       "Dokumenter di balik layar ini merekam secara intim perjuangan, keringat, dan luapan emosi para member Sakurazaka46 saat mempersiapkan konser bersejarah 5th YEAR ANNIVERSARY LIVE di panggung megah Stadion Nasional (Kokuritsu). Mulai dari kilas balik perjalanan berliku selama lima tahun melewati masa-masa sulit, proses Takemoto Yui merancang koreografi dance track untuk seluruh formasi grup, beban emosional generasi baru saat dipercaya membawakan lagu-lagu sarat makna, hingga momen sakral penunjukan Yamasaki Ten sebagai wakil kapten, mendampingi kapten saat ini, Matsuda Rina. Menyajikan sudut pandang personal yang jujur di ruang latihan hingga atmosfer magis ketika puluhan ribu Buddies memenuhi tribun, tayangan ini menjadi potret ketulusan serta pembuktian ikatan antargenerasi sebelum mereka melangkah lebih jauh menyongsong tahun keenam perjalanan grup. Sisanya bisa langsung kamu tonton sendiri! ",
   },
@@ -163,8 +214,15 @@ export const episodes: Episode[] = [
       "Sesi Rapat Penyemangat, Ajang Unjuk Ambisi dan Kekompakan",
     episodeNumber: "Episode 301",
     releaseDate: "2026-09-06",
-    thumbnail: "/images/thumbnails/chokosaku-301.png",
+    thumbnail: "/images/thumbnails/chokosaku/301/chokosaku-301-1.png",
+    previewImage1: "/images/thumbnails/chokosaku/301/chokosaku-301-2.png",
+    previewImage2: "/images/thumbnails/chokosaku/301/chokosaku-301-3.png",
     downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260906-chokosaku-301-sub-indo-jWVCV",
+    rawMp4Url:
+      "https://www.akari46.com/2026/09/260906-sakurazaka46chokosaku301.html",
     description:
       'Melanjutkan suasana evaluasi dari tayangan utama demi menyambut tahun ke-7 acara, Chokosaku pekan ini menggelar sesi rapat penyemangat yang dipandu oleh Moriya Rena dan Kojima Nagisa. Para member ditantang berteriak sekencang-kencangnya lewat undian untuk menumpahkan unek-unek terpendam—mulai dari ambisi terpendam Matsuda Rina, curhatan polos Inaguma Hina, hingga momen memalukan Matsumoto Wako. Ketegangan studio pun memuncak saat para junior Generasi ke-3 dan ke-4 dihadapkan pada misi kekompakan fisik demi menyelamatkan para senior Generasi ke-2 dari hukuman meneguk "Jus Maut" legendaris yang sempat membuat Taniguchi Airi trauma berat. Sisanya bisa ditonton sendiri!',
   },
@@ -178,8 +236,17 @@ export const episodes: Episode[] = [
       "Pelunasan Trauma Besar-besaran, Momen Nostalgia yang Bikin Gelak Tawa",
     episodeNumber: "Episode 301",
     releaseDate: "2026-09-06",
-    thumbnail: "/images/thumbnails/sokomagattara-301.png",
+    thumbnail: "/images/thumbnails/sokomagattara/301/sokomagattara-301-1.png",
+    previewImage1:
+      "/images/thumbnails/sokomagattara/301/sokomagattara-301-2.png",
+    previewImage2:
+      "/images/thumbnails/sokomagattara/301/sokomagattara-301-3.png",
     downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260906-soko-magattara-sakurazaka-301-sub-indo-9cuJV",
+    rawMp4Url:
+      "https://www.akari46.com/2026/09/260906-sakurazaka46sokomagattara301.html",
     description:
       'Menjelang menginjak enam tahun, Sokosaku menggelar proyek spesial "Pelunasan Trauma Besar-besaran" demi memberi kesempatan bagi para member menuntaskan kenangan memalukan mereka di masa lalu. Berbagai insiden legendaris yang sempat meninggalkan luka batin pun diuji ulang di studio—mulai dari Yamasaki Ten yang menantang trauma ogiri, trauma Inaguma tentang melempar aba-aba VTR, hingga Matsuda Rina yang dipaksa menghadapi kembali teror pijat refleksi kaki. Puncaknya, drama kantor yang ikonik kembali berlanjut lewat simulasi telepon kocak Fujiyoshi Karin sebagai sekretaris ceroboh Presdir Sawabe yang harus meladeni komplain pelanggan rewel. Momen-momen nostalgia yang berbalut kepanikan dan gelak tawa ini bisa langsung disaksikan selengkapnya di episode kali ini!',
   },
