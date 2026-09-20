@@ -28,10 +28,10 @@ export default {
           border: '#f3f4f6',
         },
         dark: {
-          ground: '#111118',
-          card: '#1c1c26',
-          border: '#2d2d3d',
-          ink: '#f0f0f8',
+          ground: '#0d0d0d',
+          card: '#161616',
+          border: '#202020',
+          ink: '#ededed',
           muted: '#9ca3af',
         },
         gold: {
