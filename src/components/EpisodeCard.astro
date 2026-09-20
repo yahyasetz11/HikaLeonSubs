@@ -62,7 +62,7 @@ const cardId = `card-${episode.id}`;
 
           <a
             href={`/episode/${episode.id}`}
-            class="block font-display font-semibold text-sm sm:text-xl md:text-2xl leading-snug text-ink dark:text-dark-ink hover:text-sakura-600 dark:hover:text-sakura-400 transition-colors duration-150 line-clamp-2 mb-1"
+            class="block font-display font-bold text-sm sm:text-xl md:text-2xl leading-snug text-ink dark:text-dark-ink hover:text-sakura-600 dark:hover:text-sakura-400 transition-colors duration-150 line-clamp-2 mb-1"
           >
             {cleanTitle}
           </a>
@@ -77,7 +77,7 @@ const cardId = `card-${episode.id}`;
         <div class="flex items-center justify-between gap-2 mt-2 pt-2 sm:mt-3 sm:pt-3 border-t border-ground-border dark:border-dark-border">
           <time
             datetime={episode.releaseDate}
-            class="text-xs text-ink-light dark:text-dark-muted font-sans"
+            class="text-xs text-ink-light/70 dark:text-dark-muted/60 font-sans"
           >
             {dateFormatted}
           </time>
@@ -130,7 +130,7 @@ const cardId = `card-${episode.id}`;
         </div>
 
         <div class="flex items-center justify-between gap-3 mt-auto pt-3 border-t border-ground-border dark:border-dark-border">
-          <time datetime={episode.releaseDate} class="text-xs text-ink-light dark:text-dark-muted font-sans">
+          <time datetime={episode.releaseDate} class="text-xs text-ink-light/70 dark:text-dark-muted/60 font-sans">
             {dateFormatted}
           </time>
           <a
