@@ -1,0 +1,469 @@
+---
+import Base from '../layouts/Base.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base
+  title="Dokumentasi Algoritma SubtitledByAI — HikaLeonSubs"
+  description="Arsitektur dan riwayat evolusi pipeline AI HikaLeonSubs dari Whisper lokal hingga model multimodal Gemini 2.5 Pro untuk transkripsi audio Sakurazaka46."
+>
+  <Navbar />
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-xs text-ink-muted dark:text-dark-muted font-sans mb-6 sm:mb-8" aria-label="Navigasi">
+      <a href="/" class="hover:text-sakura-600 dark:hover:text-sakura-400 transition-colors">Beranda</a>
+      <span class="text-ink-light dark:text-dark-muted">/</span>
+      <a href="/about" class="hover:text-sakura-600 dark:hover:text-sakura-400 transition-colors">Tentang</a>
+      <span class="text-ink-light dark:text-dark-muted">/</span>
+      <span class="text-ink dark:text-dark-ink font-medium">Dokumentasi Algoritma</span>
+    </nav>
+
+    <!-- Header Hero -->
+    <header class="pb-8 sm:pb-10 border-b border-ground-border dark:border-dark-border mb-10 sm:mb-12">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sakura-100 dark:bg-sakura-900/40 text-sakura-700 dark:text-sakura-300 text-xs font-display font-semibold mb-4">
+        <svg class="w-3.5 h-3.5 text-sakura-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+        </svg>
+        SubtitledByAI Architecture
+      </div>
+
+      <h1 class="font-display font-bold text-3xl sm:text-4xl md:text-5xl text-ink dark:text-dark-ink tracking-tight mb-4">
+        Bagaimana Kami Membuat Subtitle Sakurazaka46
+      </h1>
+
+      <div class="space-y-3 text-sm sm:text-base text-ink-muted dark:text-dark-muted leading-relaxed font-sans max-w-3xl">
+        <p>
+          Sebagai penggemar Sakurazaka46, kami ingin membantu para <span class="title-tag-gold">Buddies</span> Indonesia menikmati setiap momen — mulai dari dialog cepat di variety show, celetukan spontan para member, drama emosional di balik layar, hingga penampilan panggung live.
+        </p>
+        <p>
+          Menerjemahkan video berdurasi panjang secara manual dari nol membutuhkan waktu berhari-hari per episode. Karena itulah lahir proyek <strong class="text-ink dark:text-dark-ink">SubtitledByAI</strong>: sebuah pipeline otomatisasi kecerdasan buatan untuk mentranskripsi audio percakapan bahasa Jepang dan menerjemahkannya secara kontekstual ke Bahasa Indonesia dengan standar timing presisi fansub.
+        </p>
+      </div>
+
+      <!-- Tech stack pill list -->
+      <div class="mt-6 flex flex-wrap items-center gap-2 pt-4 border-t border-ground-border dark:border-dark-border">
+        <span class="text-xs font-display font-semibold text-sakura-600 dark:text-sakura-400 mr-1">Stack Utama:</span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-sakura-50 dark:bg-sakura-950/40 border border-sakura-200/70 dark:border-sakura-800/50 text-sakura-700 dark:text-sakura-300">
+          <span class="w-1.5 h-1.5 rounded-full bg-sakura-500"></span>
+          Gemini 2.5 Pro (Audio Ingestion)
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-sakura-50 dark:bg-sakura-950/40 border border-sakura-200/70 dark:border-sakura-800/50 text-sakura-700 dark:text-sakura-300">
+          <span class="w-1.5 h-1.5 rounded-full bg-sakura-500"></span>
+          Claude 3.5 Sonnet / GPT-4o
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-sakura-50 dark:bg-sakura-950/40 border border-sakura-200/70 dark:border-sakura-800/50 text-sakura-700 dark:text-sakura-300">
+          <span class="w-1.5 h-1.5 rounded-full bg-sakura-500"></span>
+          FastAPI & Python 3.11
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-sakura-50 dark:bg-sakura-950/40 border border-sakura-200/70 dark:border-sakura-800/50 text-sakura-700 dark:text-sakura-300">
+          <span class="w-1.5 h-1.5 rounded-full bg-sakura-500"></span>
+          FFmpeg Silencedetect
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-sakura-50 dark:bg-sakura-950/40 border border-sakura-200/70 dark:border-sakura-800/50 text-sakura-700 dark:text-sakura-300">
+          <span class="w-1.5 h-1.5 rounded-full bg-sakura-500"></span>
+          yt-dlp
+        </span>
+      </div>
+    </header>
+
+    <div class="space-y-12 sm:space-y-16">
+      <!-- Section 1: Riwayat Versi -->
+      <section aria-labelledby="heading-riwayat">
+        <h2 id="heading-riwayat" class="font-display font-bold text-xl sm:text-2xl text-ink dark:text-dark-ink mb-6 flex items-center gap-2.5">
+          <span class="w-2 h-5 rounded-full bg-sakura-500 inline-block" aria-hidden="true"></span>
+          Riwayat &amp; Evolusi Pipeline
+        </h2>
+
+        <div class="space-y-6">
+          <!-- v1.0 -->
+          <div class="rounded-2xl border border-sakura-100 dark:border-dark-border bg-ground-card dark:bg-dark-card p-5 sm:p-7 shadow-sm transition-all duration-200">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-3">
+                <span class="px-2.5 py-1 rounded-lg bg-sakura-600 dark:bg-sakura-700 text-white font-display font-bold text-xs shadow-xs">
+                  v1.0
+                </span>
+                <span class="font-display font-bold text-base text-ink dark:text-dark-ink">WhisperAI-subs (Lokal)</span>
+              </div>
+              <a
+                href="https://github.com/yahyasetz11/WhisperAI-subs.git"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-xs font-display font-semibold text-sakura-600 dark:text-sakura-400 hover:underline inline-flex items-center gap-1"
+              >
+                GitHub Repository ↗
+              </a>
+            </div>
+
+            <p class="text-xs sm:text-sm text-ink-muted dark:text-dark-muted leading-relaxed mb-4">
+              Versi pertama dieksekusi seutuhnya pada komputer lokal (Python script). Transkripsi audio Jepang menggunakan <strong>Whisper API dari OpenAI</strong>, lalu hasil teks transkrip diterjemahkan ke Bahasa Indonesia dengan model <strong>GPT-4o</strong>. Cukup untuk pembuktian konsep awal, namun rentan pada dialog cepat dan keterbatasan hardware lokal.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-2 pt-3 border-t border-ground-border dark:border-dark-border text-xs">
+              <span class="px-2.5 py-0.5 rounded-full bg-sakura-50/70 dark:bg-sakura-950/40 border border-sakura-200/60 dark:border-sakura-800/40 text-sakura-700 dark:text-sakura-300 font-sans text-xs">Python Local</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-sakura-50/70 dark:bg-sakura-950/40 border border-sakura-200/60 dark:border-sakura-800/40 text-sakura-700 dark:text-sakura-300 font-sans text-xs">OpenAI Whisper API</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-sakura-50/70 dark:bg-sakura-950/40 border border-sakura-200/60 dark:border-sakura-800/40 text-sakura-700 dark:text-sakura-300 font-sans text-xs">GPT-4o</span>
+              <span class="ml-auto text-xs font-display font-semibold text-ink-muted dark:text-dark-muted">Biaya API: ~USD $0.33 / 30 mnt</span>
+            </div>
+          </div>
+
+          <!-- v2.0 -->
+          <div class="rounded-2xl border border-sakura-100 dark:border-dark-border bg-ground-card dark:bg-dark-card p-5 sm:p-7 shadow-sm transition-all duration-200">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-3">
+                <span class="px-2.5 py-1 rounded-lg bg-sakura-600 dark:bg-sakura-700 text-white font-display font-bold text-xs shadow-xs">
+                  v2.0
+                </span>
+                <span class="font-display font-bold text-base text-ink dark:text-dark-ink">Migrasi Cloud (Google Colab)</span>
+              </div>
+              <a
+                href="https://colab.research.google.com/drive/1n1N0iXRTf9mWO3fATJN2vfqo_jq3KrVT?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-xs font-display font-semibold text-sakura-600 dark:text-sakura-400 hover:underline inline-flex items-center gap-1"
+              >
+                Colab Notebook ↗
+              </a>
+            </div>
+
+            <p class="text-xs sm:text-sm text-ink-muted dark:text-dark-muted leading-relaxed mb-4">
+              Arsitektur pipeline dipindahkan ke <strong>Google Colab</strong>. Perubahan ini memungkinkan proses pembuatan subtitle dijalankan secara fleksibel melalui perangkat mobile tanpa perlu menyalakan komputer rumah. Akurasi hasil tetap setara dengan v1.0.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-2 pt-3 border-t border-ground-border dark:border-dark-border text-xs">
+              <span class="px-2.5 py-0.5 rounded-full bg-sakura-50/70 dark:bg-sakura-950/40 border border-sakura-200/60 dark:border-sakura-800/40 text-sakura-700 dark:text-sakura-300 font-sans text-xs">Google Colab Cloud</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-sakura-50/70 dark:bg-sakura-950/40 border border-sakura-200/60 dark:border-sakura-800/40 text-sakura-700 dark:text-sakura-300 font-sans text-xs">Whisper API</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-sakura-50/70 dark:bg-sakura-950/40 border border-sakura-200/60 dark:border-sakura-800/40 text-sakura-700 dark:text-sakura-300 font-sans text-xs">GPT-4o</span>
+              <span class="ml-auto text-xs font-display font-semibold text-ink-muted dark:text-dark-muted">Biaya API: ~USD $0.33 / 30 mnt</span>
+            </div>
+          </div>
+
+          <!-- v2.5 -->
+          <div class="rounded-2xl border border-sakura-100 dark:border-dark-border bg-ground-card dark:bg-dark-card p-5 sm:p-7 shadow-sm transition-all duration-200">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-3">
+                <span class="px-2.5 py-1 rounded-lg bg-sakura-600 dark:bg-sakura-700 text-white font-display font-bold text-xs shadow-xs">
+                  v2.5
+                </span>
+                <span class="font-display font-bold text-base text-ink dark:text-dark-ink">Optimasi Biaya (kotoba-whisper-v2.0)</span>
+              </div>
+              <a
+                href="https://colab.research.google.com/drive/1n1N0iXRTf9mWO3fATJN2vfqo_jq3KrVT?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-xs font-display font-semibold text-sakura-600 dark:text-sakura-400 hover:underline inline-flex items-center gap-1"
+              >
+                Colab Notebook ↗
+              </a>
+            </div>
+
+            <p class="text-xs sm:text-sm text-ink-muted dark:text-dark-muted leading-relaxed mb-4">
+              Masih berada di lingkungan Colab, namun transkripsi beralih dari Whisper API berbayar ke model open-source <strong>kotoba-whisper-v2.0</strong> yang di-host langsung pada GPU Colab (bebas biaya komputasi). Kualitas pengenalan istilah Jepang meningkat signifikan sementara pengeluaran API terpangkas drastis hanya untuk tahap terjemahan GPT-4o.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-2 pt-3 border-t border-ground-border dark:border-dark-border text-xs">
+              <span class="px-2.5 py-0.5 rounded-full bg-sakura-50/70 dark:bg-sakura-950/40 border border-sakura-200/60 dark:border-sakura-800/40 text-sakura-700 dark:text-sakura-300 font-sans text-xs">Google Colab GPU</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-sakura-50/70 dark:bg-sakura-950/40 border border-sakura-200/60 dark:border-sakura-800/40 text-sakura-700 dark:text-sakura-300 font-sans text-xs">kotoba-whisper-v2.0 (Lokal)</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-sakura-50/70 dark:bg-sakura-950/40 border border-sakura-200/60 dark:border-sakura-800/40 text-sakura-700 dark:text-sakura-300 font-sans text-xs">GPT-4o</span>
+              <span class="ml-auto text-xs font-display font-semibold text-emerald-600 dark:text-emerald-400">Biaya API: ~USD $0.10 / 30 mnt</span>
+            </div>
+          </div>
+
+          <!-- v3.0 LATEST -->
+          <div class="rounded-2xl border-2 border-sakura-500 bg-ground-card dark:bg-dark-card p-5 sm:p-7 shadow-md transition-all duration-200 relative">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+              <div class="flex items-center gap-3">
+                <span class="px-2.5 py-1 rounded-lg bg-sakura-500 text-white font-display font-bold text-xs">
+                  v3.0 Aktif
+                </span>
+                <span class="font-display font-bold text-base sm:text-lg text-ink dark:text-dark-ink">
+                  Gemini 2.5 Pro Multimodal Audio Pipeline
+                </span>
+              </div>
+              <span class="px-2.5 py-0.5 rounded-full bg-sakura-100 dark:bg-sakura-900/60 text-sakura-700 dark:text-sakura-200 text-xs font-display font-bold">
+                Generasi Terbaru
+              </span>
+            </div>
+
+            <div class="space-y-3 text-xs sm:text-sm text-ink dark:text-dark-ink leading-relaxed mb-6">
+              <p>
+                Generasi ini merupakan <strong>perombakan arsitektur menyeluruh</strong>. Kami meniadakan Whisper standar dan beralih ke <strong>Gemini 2.5 Pro via Google AI Studio Files API</strong> dengan input audio langsung.
+              </p>
+              <p class="text-ink-muted dark:text-dark-muted">
+                Tidak seperti Whisper yang hanya memproses gelombang suara menjadi teks literal, Gemini mampu <strong class="text-ink dark:text-dark-ink">mendengar secara kontekstual</strong>. Model dapat mengenali pergantian antar-pembicara (speaker diarization), memahami intonasi bercanda atau sarkasme khas variety show, mendeteksi sound effect latar (BGM / tebeng SFX), dan membedakan kata-kata homofon bahasa Jepang yang serupa dari nada suaranya.
+              </p>
+            </div>
+
+            <!-- Flowchart Pipeline 7 Steps -->
+            <div class="mt-6 pt-5 border-t border-ground-border dark:border-dark-border">
+              <h3 class="font-display font-bold text-xs uppercase tracking-wider text-sakura-600 dark:text-sakura-400 mb-4">
+                Tahapan Alur Kerja SubtitledByAI v3.0
+              </h3>
+
+              <div class="space-y-3">
+                <!-- Step 1 -->
+                <div class="flex items-start gap-3 p-3.5 rounded-xl bg-sakura-50/50 dark:bg-sakura-950/30 border border-sakura-100 dark:border-sakura-900/40 hover:border-sakura-300 dark:hover:border-sakura-700 transition-colors">
+                  <span class="w-6 h-6 rounded-lg bg-sakura-100 dark:bg-sakura-900/60 text-sakura-700 dark:text-sakura-200 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 shadow-xs">
+                    1
+                  </span>
+                  <div>
+                    <h4 class="font-display font-bold text-xs sm:text-sm text-ink dark:text-dark-ink">Ingestion Media &amp; Ekstraksi Audio</h4>
+                    <p class="text-xs text-ink-muted dark:text-dark-muted mt-0.5">Pengunduhan otomatis melalui <code class="text-xs font-mono bg-sakura-100/60 dark:bg-sakura-900/40 px-1 py-0.5 rounded text-sakura-700 dark:text-sakura-300">yt-dlp</code> dari tautan YouTube atau input berkas lokal video RAW episode.</p>
+                  </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex items-start gap-3 p-3.5 rounded-xl bg-sakura-50/50 dark:bg-sakura-950/30 border border-sakura-100 dark:border-sakura-900/40 hover:border-sakura-300 dark:hover:border-sakura-700 transition-colors">
+                  <span class="w-6 h-6 rounded-lg bg-sakura-100 dark:bg-sakura-900/60 text-sakura-700 dark:text-sakura-200 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 shadow-xs">
+                    2
+                  </span>
+                  <div>
+                    <h4 class="font-display font-bold text-xs sm:text-sm text-ink dark:text-dark-ink">Normalisasi &amp; Silencedetect Chunking</h4>
+                    <p class="text-xs text-ink-muted dark:text-dark-muted mt-0.5">FFmpeg mendeteksi hening suara alami untuk memecah audio menjadi chunk-chunk logis tanpa memotong kalimat di tengah pembicaraan.</p>
+                  </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex items-start gap-3 p-3.5 rounded-xl bg-sakura-50/50 dark:bg-sakura-950/30 border border-sakura-100 dark:border-sakura-900/40 hover:border-sakura-300 dark:hover:border-sakura-700 transition-colors">
+                  <span class="w-6 h-6 rounded-lg bg-sakura-100 dark:bg-sakura-900/60 text-sakura-700 dark:text-sakura-200 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 shadow-xs">
+                    3
+                  </span>
+                  <div>
+                    <h4 class="font-display font-bold text-xs sm:text-sm text-ink dark:text-dark-ink">Transkripsi Multimodal (Gemini 2.5 Pro)</h4>
+                    <p class="text-xs text-ink-muted dark:text-dark-muted mt-0.5">Chunk audio diproses melalui Files API. Gemini menghasilkan transkripsi Jepang akurat beserta timestamp per baris ucapan dan indikasi pembicara.</p>
+                  </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="flex items-start gap-3 p-3.5 rounded-xl bg-sakura-50/50 dark:bg-sakura-950/30 border border-sakura-100 dark:border-sakura-900/40 hover:border-sakura-300 dark:hover:border-sakura-700 transition-colors">
+                  <span class="w-6 h-6 rounded-lg bg-sakura-100 dark:bg-sakura-900/60 text-sakura-700 dark:text-sakura-200 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 shadow-xs">
+                    4
+                  </span>
+                  <div>
+                    <h4 class="font-display font-bold text-xs sm:text-sm text-ink dark:text-dark-ink">Merge Deterministik &amp; Deduplikasi</h4>
+                    <p class="text-xs text-ink-muted dark:text-dark-muted mt-0.5">Seluruh chunk digabungkan kembali dengan algoritma fuzzy matching untuk mengeliminasi tumpang-tindih kalimat pada batas segmen.</p>
+                  </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="flex items-start gap-3 p-3.5 rounded-xl bg-sakura-50/50 dark:bg-sakura-950/30 border border-sakura-100 dark:border-sakura-900/40 hover:border-sakura-300 dark:hover:border-sakura-700 transition-colors">
+                  <span class="w-6 h-6 rounded-lg bg-sakura-100 dark:bg-sakura-900/60 text-sakura-700 dark:text-sakura-200 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 shadow-xs">
+                    5
+                  </span>
+                  <div>
+                    <h4 class="font-display font-bold text-xs sm:text-sm text-ink dark:text-dark-ink">Translasi Batch JSON &amp; Penyesuaian Budaya Idol</h4>
+                    <p class="text-xs text-ink-muted dark:text-dark-muted mt-0.5">Teks diterjemahkan dalam batch ≤100 ujaran menggunakan Claude 3.5 Sonnet / Gemini Flash dengan kamus khusus istilah Sakurazaka46 dan checkpoint berkala.</p>
+                  </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="flex items-start gap-3 p-3.5 rounded-xl bg-sakura-50/50 dark:bg-sakura-950/30 border border-sakura-100 dark:border-sakura-900/40 hover:border-sakura-300 dark:hover:border-sakura-700 transition-colors">
+                  <span class="w-6 h-6 rounded-lg bg-sakura-100 dark:bg-sakura-900/60 text-sakura-700 dark:text-sakura-200 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 shadow-xs">
+                    6
+                  </span>
+                  <div>
+                    <h4 class="font-display font-bold text-xs sm:text-sm text-ink dark:text-dark-ink">Post-Processing Durasi &amp; Kontrol CPS</h4>
+                    <p class="text-xs text-ink-muted dark:text-dark-muted mt-0.5">Koreksi otomatis batas durasi tayang subtitle (0.7 detik s/d 7.5 detik), perapatan jeda mikro, serta deteksi Characters Per Second (CPS &gt; 25) untuk audit manual.</p>
+                  </div>
+                </div>
+
+                <!-- Step 7 -->
+                <div class="flex items-start gap-3 p-3.5 rounded-xl bg-sakura-50/50 dark:bg-sakura-950/30 border border-sakura-100 dark:border-sakura-900/40 hover:border-sakura-300 dark:hover:border-sakura-700 transition-colors">
+                  <span class="w-6 h-6 rounded-lg bg-sakura-100 dark:bg-sakura-900/60 text-sakura-700 dark:text-sakura-200 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5 shadow-xs">
+                    7
+                  </span>
+                  <div>
+                    <h4 class="font-display font-bold text-xs sm:text-sm text-ink dark:text-dark-ink">Ekspor Rilis Subtitle (.ass &amp; .srt)</h4>
+                    <p class="text-xs text-ink-muted dark:text-dark-muted mt-0.5">Kompilasi berkas styling khas HikaLeon (.ass dengan font &amp; outline) dan .srt standar, disertai arsip JSON transkrip mentah.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-2 mt-5 pt-4 border-t border-ground-border dark:border-dark-border text-xs">
+              <span class="px-2 py-0.5 rounded bg-sakura-100 dark:bg-sakura-950/60 text-sakura-700 dark:text-sakura-300 font-mono">FastAPI Localhost</span>
+              <span class="px-2 py-0.5 rounded bg-sakura-100 dark:bg-sakura-950/60 text-sakura-700 dark:text-sakura-300 font-mono">Gemini 2.5 Pro Audio</span>
+              <span class="px-2 py-0.5 rounded bg-sakura-100 dark:bg-sakura-950/60 text-sakura-700 dark:text-sakura-300 font-mono">Claude / Flash / GPT-4o</span>
+              <span class="ml-auto text-xs font-display font-semibold text-sakura-600 dark:text-sakura-400">Biaya Token: ~USD $1.00 – $1.50 / 30 mnt</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Benchmark Kualitas -->
+      <section aria-labelledby="heading-benchmark">
+        <h2 id="heading-benchmark" class="font-display font-bold text-xl sm:text-2xl text-ink dark:text-dark-ink mb-6 flex items-center gap-2.5">
+          <span class="w-2 h-5 rounded-full bg-sakura-500 inline-block" aria-hidden="true"></span>
+          Benchmark Kualitas &amp; Akurasi
+        </h2>
+
+        <div class="rounded-2xl border border-sakura-100 dark:border-dark-border bg-ground-card dark:bg-dark-card p-6 sm:p-7 shadow-sm space-y-6">
+          <div class="space-y-4">
+            <!-- Row v1.0 -->
+            <div>
+              <div class="flex items-center justify-between text-xs sm:text-sm font-sans mb-1.5">
+                <span class="font-display font-bold text-ink dark:text-dark-ink">v1.0 (Whisper API Lokal)</span>
+                <span class="text-ink-muted dark:text-dark-muted font-mono font-medium">55 / 100 <span class="text-[11px] text-ink-light">(Timing buruk di dialog padat)</span></span>
+              </div>
+              <div class="w-full h-3 rounded-full bg-sakura-100/50 dark:bg-sakura-950/50 overflow-hidden border border-sakura-200/50 dark:border-sakura-900/40">
+                <div class="h-full rounded-full bg-sakura-300 dark:bg-sakura-800/80" style="width: 55%"></div>
+              </div>
+            </div>
+
+            <!-- Row v2.0 -->
+            <div>
+              <div class="flex items-center justify-between text-xs sm:text-sm font-sans mb-1.5">
+                <span class="font-display font-bold text-ink dark:text-dark-ink">v2.0 (Google Colab Cloud)</span>
+                <span class="text-ink-muted dark:text-dark-muted font-mono font-medium">55 / 100 <span class="text-[11px] text-ink-light">(Identik dengan v1.0)</span></span>
+              </div>
+              <div class="w-full h-3 rounded-full bg-sakura-100/50 dark:bg-sakura-950/50 overflow-hidden border border-sakura-200/50 dark:border-sakura-900/40">
+                <div class="h-full rounded-full bg-sakura-300 dark:bg-sakura-800/80" style="width: 55%"></div>
+              </div>
+            </div>
+
+            <!-- Row v2.5 -->
+            <div>
+              <div class="flex items-center justify-between text-xs sm:text-sm font-sans mb-1.5">
+                <span class="font-display font-bold text-ink dark:text-dark-ink">v2.5 (kotoba-whisper-v2.0)</span>
+                <span class="text-ink-muted dark:text-dark-muted font-mono font-medium">60 / 100 <span class="text-[11px] text-ink-light">(Kosakata idol sedikit membaik)</span></span>
+              </div>
+              <div class="w-full h-3 rounded-full bg-sakura-100/50 dark:bg-sakura-950/50 overflow-hidden border border-sakura-200/50 dark:border-sakura-900/40">
+                <div class="h-full rounded-full bg-sakura-400 dark:bg-sakura-700" style="width: 60%"></div>
+              </div>
+            </div>
+
+            <!-- Row v3.0 -->
+            <div>
+              <div class="flex items-center justify-between text-xs sm:text-sm font-sans mb-1.5">
+                <span class="font-display font-bold text-sakura-600 dark:text-sakura-400">v3.0 (Gemini 2.5 Pro Multimodal)</span>
+                <span class="text-sakura-600 dark:text-sakura-400 font-mono font-bold">92 / 100 <span class="text-[11px]">(Timing presisi, konteks akurat)</span></span>
+              </div>
+              <div class="w-full h-3.5 rounded-full bg-sakura-100/60 dark:bg-sakura-950/60 overflow-hidden border border-sakura-300 dark:border-sakura-700">
+                <div class="h-full rounded-full bg-sakura-500 shadow-sm" style="width: 92%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-sakura-50/60 dark:bg-sakura-950/30 border border-sakura-200/70 dark:border-sakura-900/40 text-xs leading-relaxed text-ink dark:text-dark-ink space-y-1.5">
+            <p>
+              <strong class="text-sakura-700 dark:text-sakura-300 font-semibold">Evaluasi Komparasi:</strong> Pada model generasi Whisper tradisional (v1–v2.5), ketika beberapa member Sakurazaka46 berbicara bersamaan atau tertawa, teks transkripsi sering kehilangan timing dan memicu desinkronisasi.
+            </p>
+            <p class="text-ink-muted dark:text-dark-muted">
+              Pada v3.0, kemampuan multimodal Gemini menerima spektrum audio biner secara penuh, memungkinkan pemahaman intonasi dengan batas deviasi timing rata-rata di bawah <strong class="text-ink dark:text-dark-ink">0.5 detik</strong>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Estimasi Biaya API -->
+      <section aria-labelledby="heading-biaya">
+        <h2 id="heading-biaya" class="font-display font-bold text-xl sm:text-2xl text-ink dark:text-dark-ink mb-6 flex items-center gap-2.5">
+          <span class="w-2 h-5 rounded-full bg-sakura-500 inline-block" aria-hidden="true"></span>
+          Estimasi Biaya API per Episode (~30 Menit)
+        </h2>
+
+        <div class="rounded-2xl border border-sakura-100 dark:border-dark-border bg-ground-card dark:bg-dark-card p-6 sm:p-7 shadow-sm space-y-6">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between text-xs sm:text-sm">
+              <span class="font-display font-semibold text-ink dark:text-dark-ink">v1.0 &amp; v2.0 (Whisper API + GPT-4o)</span>
+              <span class="font-mono text-ink-muted dark:text-dark-muted font-medium">$0.20 – $0.33</span>
+            </div>
+            <div class="w-full h-2.5 rounded-full bg-sakura-100/50 dark:bg-sakura-950/50 overflow-hidden border border-sakura-200/50 dark:border-sakura-900/40">
+              <div class="h-full rounded-full bg-sakura-300 dark:bg-sakura-900" style="width: 25%"></div>
+            </div>
+
+            <div class="flex items-center justify-between text-xs sm:text-sm">
+              <span class="font-display font-semibold text-ink dark:text-dark-ink">v2.5 (kotoba-whisper gratis + GPT-4o)</span>
+              <span class="font-mono text-emerald-600 dark:text-emerald-400 font-medium">$0.10 – $0.15</span>
+            </div>
+            <div class="w-full h-2.5 rounded-full bg-sakura-100/50 dark:bg-sakura-950/50 overflow-hidden border border-sakura-200/50 dark:border-sakura-900/40">
+              <div class="h-full rounded-full bg-sakura-400 dark:bg-sakura-800" style="width: 12%"></div>
+            </div>
+
+            <div class="flex items-center justify-between text-xs sm:text-sm">
+              <span class="font-display font-semibold text-sakura-600 dark:text-sakura-400">v3.0 (Gemini 2.5 Pro Audio Ingestion)</span>
+              <span class="font-mono font-bold text-sakura-600 dark:text-sakura-400">$1.00 – $1.50</span>
+            </div>
+            <div class="w-full h-3 rounded-full bg-sakura-100/60 dark:bg-sakura-950/60 overflow-hidden border border-sakura-300 dark:border-sakura-800">
+              <div class="h-full rounded-full bg-sakura-500 shadow-sm" style="width: 100%"></div>
+            </div>
+          </div>
+
+          <!-- Note Callout -->
+          <div class="rounded-xl border border-sakura-200/80 dark:border-sakura-900/50 bg-sakura-50/50 dark:bg-sakura-950/20 p-4 sm:p-5 flex items-start gap-3.5 text-xs sm:text-sm leading-relaxed text-ink dark:text-dark-ink">
+            <svg class="w-5 h-5 text-sakura-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+            </svg>
+            <div>
+              <strong class="font-display font-bold text-sakura-700 dark:text-sakura-300">Mengapa Dukungan Supporter Sangat Dibutuhkan:</strong>
+              <p class="text-ink-muted dark:text-dark-muted mt-1">
+                Gemini memiliki batasan free tier harian yang hanya mencukupi ~1 episode per hari. Untuk merilis beragam show (Sokomagattara, Chokosaku, Sakura Meets, Documentary) secara serentak tanpa antrean panjang, token API berbayar harus digunakan. Dukungan dari para penikmat fansub melalui Trakteer sepenuhnya disalurkan untuk pembiayaan token ini.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Repositori & CTA -->
+      <section aria-labelledby="heading-repositori" class="border-t border-ground-border dark:border-dark-border pt-10">
+        <h2 id="heading-repositori" class="font-display font-bold text-xl sm:text-2xl text-ink dark:text-dark-ink mb-4 flex items-center gap-2.5">
+          <span class="w-2 h-5 rounded-full bg-sakura-500 inline-block" aria-hidden="true"></span>
+          Keterbukaan &amp; Kode Sumber
+        </h2>
+
+        <p class="text-xs sm:text-sm text-ink-muted dark:text-dark-muted mb-6 leading-relaxed">
+          Kami percaya pada transparansi proses pembuatan subtitle. Kamu dapat meninjau kode script maupun notebook yang kami gunakan secara terbuka melalui tautan berikut:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+          <a
+            href="https://github.com/yahyasetz11/WhisperAI-subs.git"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-2xl border border-ground-border dark:border-dark-border bg-ground-card dark:bg-dark-card p-5 flex items-start gap-4 hover:border-sakura-300 dark:hover:border-sakura-800 transition-colors shadow-sm group"
+          >
+            <div class="w-10 h-10 rounded-xl bg-sakura-50 dark:bg-sakura-950/40 border border-sakura-200/80 dark:border-sakura-800/60 flex items-center justify-center text-sakura-600 dark:text-sakura-300 group-hover:bg-sakura-100 dark:group-hover:bg-sakura-900/60 transition-colors flex-shrink-0">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-sm text-ink dark:text-dark-ink group-hover:text-sakura-600 dark:group-hover:text-sakura-400 transition-colors">WhisperAI-subs Repo</h3>
+              <p class="text-xs text-ink-muted dark:text-dark-muted mt-1 leading-relaxed">Kode sumber implementasi pipeline awal berbasis Python &amp; Whisper API.</p>
+            </div>
+          </a>
+
+          <a
+            href="https://colab.research.google.com/drive/1n1N0iXRTf9mWO3fATJN2vfqo_jq3KrVT?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-2xl border border-ground-border dark:border-dark-border bg-ground-card dark:bg-dark-card p-5 flex items-start gap-4 hover:border-sakura-300 dark:hover:border-sakura-800 transition-colors shadow-sm group"
+          >
+            <div class="w-10 h-10 rounded-xl bg-sakura-50 dark:bg-sakura-950/40 border border-sakura-200/80 dark:border-sakura-800/60 flex items-center justify-center text-sakura-600 dark:text-sakura-300 group-hover:bg-sakura-100 dark:group-hover:bg-sakura-900/60 transition-colors flex-shrink-0">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-.778.099-1.533.284-2.253" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-sm text-ink dark:text-dark-ink group-hover:text-sakura-600 dark:group-hover:text-sakura-400 transition-colors">Google Colab Notebook</h3>
+              <p class="text-xs text-ink-muted dark:text-dark-muted mt-1 leading-relaxed">Notebook Google Colab siap pakai dengan akselerasi GPU.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 rounded-2xl bg-gradient-to-r from-sakura-50/60 via-ground-card to-sakura-50/40 dark:from-sakura-950/30 dark:via-dark-card dark:to-sakura-950/20 border border-sakura-200/80 dark:border-sakura-900/50">
+          <div>
+            <h3 class="font-display font-bold text-sm text-ink dark:text-dark-ink">Ingin mengetahui sistem rilis dan donasi?</h3>
+            <p class="text-xs text-ink-muted dark:text-dark-muted">Kunjungi halaman Tentang untuk melihat sistem tier supporter Trakteer.</p>
+          </div>
+          <a href="/about" class="btn-primary whitespace-nowrap text-xs py-2.5 px-4 self-stretch sm:self-auto justify-center">
+            Ke Halaman Tentang
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <Footer />
+</Base>

@@ -1,0 +1,17 @@
+---
+// Redirect /tentang to /about
+return Astro.redirect('/about', 301);
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0;url=/about" />
+    <title>Mengalihkan ke Tentang HikaLeonSubs...</title>
+    <link rel="canonical" href="/about" />
+  </head>
+  <body>
+    <p>Mengalihkan ke <a href="/about">halaman Tentang</a>...</p>
+  </body>
+</html>
