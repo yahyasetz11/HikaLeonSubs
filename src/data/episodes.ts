@@ -70,6 +70,49 @@ export const shows: Show[] = [
 
 export const episodes: Episode[] = [
   {
+    id: "ep-303-choko",
+    showId: "chokosaku",
+    showName: "Chokosaku",
+    showSlug: "chokosaku",
+    episodeTitle: "260920 {Chokosaku} #303 Sub Indo",
+    episodeSubtitle: "Babak Tambahan Tes Kemampuan Komentar!",
+    episodeNumber: "Episode 303",
+    releaseDate: "2026-09-21",
+    thumbnail: "/images/thumbnails/chokosaku/303/chokosaku-1.png",
+    previewImage1: "/images/thumbnails/chokosaku/303/chokosaku-2.png",
+    previewImage2: "/images/thumbnails/chokosaku/303/chokosaku-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260920-chokosaku-303-sub-indo-2ONSk",
+    rawMp4Url:
+      "https://www.akari46.com/2026/09/260920-sakurazaka46chokosaku303.html",
+    description:
+      'Melanjutkan keseruan dari tayangan utama, Chokosaku pekan ini menghadirkan segmen lanjutan bertajuk "Babak Tambahan Tes Kemampuan Komentar!" yang dipandu oleh Endo Riko dan Yamashita Shizuki, dengan Matono Mio dan Konomi-chan didapuk sebagai juri penilai skor. Segmen ini terbagi menjadi beberapa babak, mulai dari memberi komentar spontan atas hasil survei ranking fiktif seputar sesama member, hingga tantangan membuat video promosi singkat yang bakal benar-benar diunggah ke media sosial resmi grup. Setiap penampilan dinilai langsung oleh kedua juri lengkap dengan alasan di baliknya, bikin suasana studio makin tegang sekaligus seru. Sisanya bisa langsung kalian tonton sendiri di rilisannya ya!',
+  },
+  {
+    id: "ep-303-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "260920 {Soko Magattara, Sakurazaka} #303 Sub Indo",
+    episodeSubtitle: "Uji Kemampuan Berkomentar Sakurazaka46!",
+    episodeNumber: "Episode 303",
+    releaseDate: "2026-09-21",
+    thumbnail: "/images/thumbnails/sokomagattara/303/sokomagattara-1.png",
+    previewImage1: "/images/thumbnails/sokomagattara/303/sokomagattara-2.png",
+    previewImage2: "/images/thumbnails/sokomagattara/303/sokomagattara-3.png",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.akari46.com/2026/09/260920-soko-magattara-sakurazaka-303.html",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260920-soko-magattara-sakurazaka-303-sub-indo-jTiOo",
+    rawMp4Url:
+      "https://www.akari46.com/2026/09/260920-soko-magattara-sakurazaka-303.html",
+    description:
+      'Sokosaku minggu ini menghadirkan segmen "Uji Kemampuan Berkomentar!", tantangan bagi para member untuk membuktikan kemampuan mereka berkomentar dalam berbagai situasi. Segmen ini terbagi ke dalam beberapa babak, mulai dari menanggapi berita-berita ringan tanpa mengulang komentar rekan yang tampil sebelumnya, hingga sesi debat dadakan di mana posisi yang harus dibela baru diketahui tepat sebelum perdebatan dimulai. Babak pamungkas menguji member lewat peran sebagai juri yang menilai sebuah karya seni. Sisanya bisa langsung kalian tonton sendiri di rilisannya ya!',
+  },
+  {
     id: "ep-168-meets",
     showId: "sakura-meets",
     showName: "Sakura Meets",
@@ -149,7 +192,8 @@ export const episodes: Episode[] = [
     previewImage2:
       "/images/thumbnails/sokomagattara/302/sokomagattara-302-3.png",
     downloadUrl: "#",
-    mediafireUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/file/cfyqzouj3sf92sh/260913_Soko_Magattara%252C_Sakurazaka_%2523302_Sub_Indo.ass/file",
     trakteerUrl:
       "https://trakteer.id/hikaleon/reward/260913-soko-magattara-sakurazaka-302-sub-indo-ruXbr",
     rawMp4Url:
@@ -520,6 +564,224 @@ export const episodes: Episode[] = [
     rawMp4Url: "https://www.youtube.com/watch?v=1SqUIf1jlYM",
     description:
       "Edisi Sakurazaka Channel kali ini menampilkan petualangan seru Tamura Hono dan Morita Hikaru yang pergi ke Nagasaki Bio Park untuk mewujudkan impian mereka menjajal pengalaman menjadi penjaga hewan seharian. Berbalut seragam khusus, keduanya berinteraksi jarak dekat dengan beragam koleksi satwa—mulai dari melukis papan informasi untuk kura-kura dan bebek, berani memegang ular hingga ulat makanan, sampai memberi makan lemur, berang-berang, dan kudanil secara langsung. Di sela-sela aktivitas, kehangatan hubungan mereka juga terlihat saat menikmati makan siang bersama sambil mengobrolkan kebiasaan unik satu sama lain. Sisanya bisa ditonton sendiri.",
+  },
+  {
+    id: "ep-297-choko",
+    showId: "chokosaku",
+    showName: "Chokosaku",
+    showSlug: "chokosaku",
+    episodeTitle: "260809 {Chokosaku} #297 Sub Indo",
+    episodeSubtitle:
+      "Kuis Murayama Miu: Menebak Isi Percakapan dan Perilaku Unik Miu di Saitama",
+    episodeNumber: "Episode 297",
+    releaseDate: "2026-08-09",
+    thumbnail: "/images/thumbnails/chokosaku/297/chokosaku-1.png",
+    previewImage1: "/images/thumbnails/chokosaku/297/chokosaku-2.png",
+    previewImage2: "/images/thumbnails/chokosaku/297/chokosaku-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260809-chokosaku-297-sub-indo-WcRTD",
+    rawMp4Url:
+      "https://www.akari46.com/2026/08/260809-sakurazaka46chokosaku297.html",
+    description:
+      'Segmen Chokotto Sokosaku minggu ini menghadirkan "Kuis Murayama Miu" yang dipandu oleh Odakura Reina dan Murayama Miu, menampilkan berbagai rekaman menarik yang belum sempat ditayangkan pada episode utama saat Miu melakukan liputan di Saitama. Para member memperebutkan poin kuis dengan menebak isi percakapan hingga perilaku unik Miu selama jalan-jalan di toko tontonan lokal, tempat makan, hingga menjajal wahana game AR bersama staf. Persaingan antar tim berlangsung cair dan penuh gelak tawa berkat kelakar ceroboh para member serta pemberian "Poin Odakura" untuk jawaban-jawaban paling menghibur. Sisanya bisa ditonton sendiri.',
+  },
+  {
+    id: "ep-297-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "260809 {Soko Magattara, Sakurazaka} #297 Sub Indo",
+    episodeSubtitle:
+      "Proyek Khusus Liputan Luar Studio: Saitama Gokil Bersama Murayama Miu",
+    episodeNumber: "Episode 297",
+    releaseDate: "2026-08-09",
+    thumbnail: "/images/thumbnails/sokomagattara/297/sokomagattara-1.png",
+    previewImage1: "/images/thumbnails/sokomagattara/297/sokomagattara-2.png",
+    previewImage2: "/images/thumbnails/sokomagattara/297/sokomagattara-3.png",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/file/vcn0m8obz7wq8ge/260809_Soko_Magattara%252C_Sakurazaka_%2523297_Sub_Indo.ass/file",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260809-soko-magattara-sakurazaka-297-sub-indo-u75iv",
+    rawMp4Url:
+      "https://www.akari46.com/2026/08/260809-soko-magattara-sakurazaka-297.html",
+    description:
+      'Episode minggu ini dari Sokomagattara Sakurazaka menghadirkan proyek khusus liputan luar studio bertajuk "Saitama Gokil" yang dibintangi oleh Murayama Miu. Berawal dari pernyataannya yang meragukan keberadaan Prefektur Saitama, Murayama dikirim langsung untuk mengeksplorasi berbagai destinasi terkenal seperti kota bersejarah Kawagoe, taman edukasi kecap asin Kinbue, hingga kedai kuliner lokal Yamada Udon. Selagi VTR liputannya diputar, para member di studio beradu cepat menjawab kuis seputar kejadian unik selama syuting demi memenangkan hadiah oleh-oleh khas Saitama. Kepolosan Murayama saat memandu acara serta celotehan spontannya sukses memicu berbagai momen kocak yang menghibur di sepanjang episode. Sisanya bisa ditonton sendiri.',
+  },
+  {
+    id: "ep-163-meets",
+    showId: "sakura-meets",
+    showName: "Sakura Meets",
+    showSlug: "sakura-meets",
+    episodeTitle: "260806 {Sakura Meets} #163 Sub Indo",
+    episodeSubtitle:
+      "Babak Terakhir Kuis Only One Meets, Aksi Panggung Komedi Corochiki",
+    episodeNumber: "Episode 163",
+    releaseDate: "2026-08-06",
+    thumbnail: "/images/thumbnails/sakura-meets/163/sakura-meets-1.png",
+    previewImage1: "/images/thumbnails/sakura-meets/163/sakura-meets-2.png",
+    previewImage2: "/images/thumbnails/sakura-meets/163/sakura-meets-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260806-sakura-meets-163-sub-indo-IlHa3",
+    rawMp4Url: "https://www.akari46.com/",
+    description:
+      "Segmen Sakura Meets minggu ini menyajikan babak terakhir kuis Only One Meets dan ditutup dengan aksi panggung komedi bersama duo komedian Corocoro Chikichiki Peppers (Corochiki). Di segmen pertama, persaingan kuis berlanjut seru lewat tebak suara tiruan Masumoto Kira, alasan ucapan favorit Yamashita Shizuki, hingga dialog khas Nakashima Yuzuki saat cemas. Lalu berpindah ke segmen kedua saat para member menantang skit perkelahian berlatar sekolah, di mana tiap member tampil totalitas membawa karakter, julukan, serta gaya bertarung unik mereka masing-masing yang memicu aksi kocak tak terduga. Sisanya bisa ditonton sendiri.",
+  },
+  {
+    id: "ep-020-channel",
+    showId: "sakurazaka-channel",
+    showName: "Sakurazaka Channel",
+    showSlug: "sakurazaka-channel",
+    episodeTitle: "260804 {Sakurazaka Channel} Sub Indo",
+    episodeSubtitle:
+      "Anakku! Belanja, Makan, & Rekaman Radio Bareng Kocchan Tersayang ♡ Kosaka Marino & Korilakkuma!",
+    episodeNumber: "#",
+    releaseDate: "2026-08-04",
+    thumbnail: "/images/thumbnails/sakura-channel/260804/sakura-channel-1.jpg",
+    previewImage1:
+      "/images/thumbnails/sakura-channel/260804/sakura-channel-2.png",
+    previewImage2:
+      "/images/thumbnails/sakura-channel/260804/sakura-channel-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260804-sakurazaka-channel-anakku-belanja-makan-rekaman-radio-bareng-kocchan-tersayang-kosaka-marino-korilakkuma-sub-indo-2wFLY",
+    rawMp4Url: "https://www.youtube.com/watch?v=wPlHICzC8S4",
+    description:
+      "Dalam edisi Sakurazaka Channel kali ini, Kosaka Marino menikmati hari libur spesial dengan mengajak boneka beruang kesayangannya, Kocchan, berbelanja di Harajuku. Perjalanan santai tersebut diisi dengan berburu squishy menggemaskan di toko Mosh Squishy, mengunjungi Rilakkuma Store untuk mencari boneka pendamping Kocchan, hingga menyempatkan diri melakukan rekaman radio bersama rekan sesama grup. Momen kebersamaan berlanjut di rumah saat Kosaka memasak pancake untuk makan malam dan membongkar seluruh barang belanjaannya, memperlihatkan sisi keseharian yang hangat dan jarang terlihat dari sang idol. Sisanya bisa ditonton sendiri.",
+  },
+  {
+    id: "ep-296-choko",
+    showId: "chokosaku",
+    showName: "Chokosaku",
+    showSlug: "chokosaku",
+    episodeTitle: "260802 {Chokosaku} #296 Sub Indo",
+    episodeSubtitle:
+      "Babak Tambahan Pasangan Nomor Satu: Uji Kekompakan dan Ikatan Batin Antar-Generasi",
+    episodeNumber: "Episode 296",
+    releaseDate: "2026-08-02",
+    thumbnail: "/images/thumbnails/chokosaku/296/chokosaku-1.png",
+    previewImage1: "/images/thumbnails/chokosaku/296/chokosaku-2.png",
+    previewImage2: "/images/thumbnails/chokosaku/296/chokosaku-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260802-chokosaku-296-hardsub-indo-4Bfd7",
+    rawMp4Url:
+      "https://www.akari46.com/2026/08/260802-sakurazaka46chokosaku296.html",
+    description:
+      'Eps minggu ini dari Chokosaku menghadirkan proyek lanjutan bertajuk "Babak Tambahan Pasangan Nomor Satu" yang bertujuan menguji kekompakan dan ikatan batin antar pasangan Generasi ke-2 dan ke-3. Dipandu oleh Mukai Itoha dan Endo Riko, tiga pasangan yang berlaga—Morita Hikaru & Taniguchi Airi, Endo Hikari & Matono Mio, serta Ozono Rei & Murayama Miu—saling beradu poin lewat serangkaian tantangan kooperatif, mulai dari game keselarasan jawaban "Satu Hati Satu Jiwa", tebak pose yang sedang tren, hingga merancang menara gelas tinggi berbatas waktu. Sisanya bisa ditonton sendiri.',
+  },
+  {
+    id: "ep-296-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "260802 {Soko Magattara, Sakurazaka} #296 Sub Indo",
+    episodeSubtitle:
+      "Part 2 Pertandingan Penentuan Pasangan Nomor Satu: Babak Penentuan",
+    episodeNumber: "Episode 296",
+    releaseDate: "2026-08-02",
+    thumbnail: "/images/thumbnails/sokomagattara/296/sokomagattara-1.png",
+    previewImage1: "/images/thumbnails/sokomagattara/296/sokomagattara-2.png",
+    previewImage2: "/images/thumbnails/sokomagattara/296/sokomagattara-3.png",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/file/tqchi8je8mscil0/260802_Soko_Magattara%252C_Sakurazaka_%2523296_Sub_Indo.ass/file",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260802-soko-magattara-sakurazaka-296-sub-indo-utiqf",
+    rawMp4Url:
+      "https://www.akari46.com/2026/08/260802-soko-magattara-sakurazaka-296.html",
+    description:
+      'Persaingan sengit antara Generasi ke-2 dan ke-3 Sakurazaka46 berlanjut ke babak penentuan dalam "Pertandingan Penentuan Pasangan Nomor Satu". Episode kali ini diwarnai oleh berbagai tantangan kocak yang menguji kekompakan dan nyali antar pasangan, mulai dari permainan Kompak Tatap Kamera, kuis estafet cangkir kertas balon, tebak kata pakai headphone, hingga kuis tsukkomi peniruan gaya member. Suasana semakin tegang sekaligus menggelikan di babak final saat para pasangan yang lolos harus menghadapi tantangan ekstrem Menjatuhkan Baskom Penuh Tekanan untuk menentukan siapa yang berhak menyabet gelar pasangan nomor satu. Sisanya bisa ditonton sendiri.',
+  },
+  {
+    id: "ep-162-meets",
+    showId: "sakura-meets",
+    showName: "Sakura Meets",
+    showSlug: "sakura-meets",
+    episodeTitle: "260730 {Sakura Meets} #162 Sub Indo",
+    episodeSubtitle: "Part 2: Kuis Only One Meets, Adu Strategi Antar-Generasi",
+    episodeNumber: "Episode 162",
+    releaseDate: "2026-07-30",
+    thumbnail: "/images/thumbnails/sakura-meets/162/sakura-meets-1.png",
+    previewImage1: "/images/thumbnails/sakura-meets/162/sakura-meets-2.png",
+    previewImage2: "/images/thumbnails/sakura-meets/162/sakura-meets-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260730-sakura-meets-162-sub-indo-0pNsc",
+    rawMp4Url: "https://www.akari46.com/",
+    description:
+      'Melanjutkan keseruan babak sebelumnya dalam proyek "Only One Meets", episode Sakura Meets kali ini, para member Sakurazaka46 bersama duo komedian Cotton kembali beradu strategi dalam membuat kuis pribadi demi mencetak poin tunggal. Di episode ini, deretan pertanyaan menggelitik bermunculan—mulai dari Nakashima Yuzuki yang mengulas momen kecerobohan Taniguchi Airi hingga pengakuan unik Yamashita Shizuki mengenai alasan ia meminta oleh-oleh sandal rumah beberapa tahun lalu. Serta momen tawa pun pecah saat giliran Masumoto Kira dan Onuma Akiho saling membongkar fakta konyol seputar preferensi tubuh, lokasi tempat belanja langganan, hingga syarat unik agar bisa bertamu ke rumah. Sisanya bisa ditonton sendiri.',
+  },
+  {
+    id: "ep-295-choko",
+    showId: "chokosaku",
+    showName: "Chokosaku",
+    showSlug: "chokosaku",
+    episodeTitle: "260726 {Chokosaku} #295 Sub Indo",
+    episodeSubtitle: "Kejuaraan Kombi Boneka Tangan Sakurazaka46",
+    episodeNumber: "Episode 295",
+    releaseDate: "2026-07-26",
+    thumbnail: "/images/thumbnails/chokosaku/295/chokosaku-1.png",
+    previewImage1: "/images/thumbnails/chokosaku/295/chokosaku-2.png",
+    previewImage2: "/images/thumbnails/chokosaku/295/chokosaku-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260726-chokosaku-295-sub-indo-VJ4tO",
+    rawMp4Url:
+      "https://www.akari46.com/2026/07/260726-sakurazaka46chokosaku295.html",
+    description:
+      'Chokosaku minggu ini menggelar "Kejuaraan Kombi Boneka Tangan", sebuah proyek unik yang menguji kekompakan para member dalam menyelesaikan tantangan kuis sambil menjiwai karakter boneka tangan masing-masing. Dipandu oleh Matsuda Rina dan Nakashima Yuzuki, tiga pasangan member—Fujiyoshi Karin & Yamazaki Ten, Kojima Nagisa & Yamashita Shizuki, serta Kosaka Marino & Odakura Reina—saling beradu dalam permainan tebak member hingga kuis  bertema kebiasaan dan fakta unik rekan grup mereka. Pembatasan ekspresi wajah yang digantikan oleh gestur lucu boneka justru memancing interaksi kocak dan celetukan spontan yang membuat suasana studio menjadi sangat ramai. Sisanya bisa ditonton sendiri.',
+  },
+  {
+    id: "ep-295-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "260726 {Soko Magattara, Sakurazaka} #295 Sub Indo",
+    episodeSubtitle:
+      "Pertandingan Penentuan Pasangan Nomor Satu: Uji Kekompakan dan Nyali Antar-Generasi",
+    episodeNumber: "Episode 295",
+    releaseDate: "2026-07-26",
+    thumbnail: "/images/thumbnails/sokomagattara/295/sokomagattara-1.png",
+    previewImage1: "/images/thumbnails/sokomagattara/295/sokomagattara-2.png",
+    previewImage2: "/images/thumbnails/sokomagattara/295/sokomagattara-3.png",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/file/4clsej0sfn1e25f/260726_Soko_Magattara%252C_Sakurazaka_%2523295_Sub_Indo.ass/file",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260726-soko-magattara-sakurazaka-295-sub-indo-hyZjs",
+    rawMp4Url:
+      "https://www.akari46.com/2026/07/260726-soko-magattara-sakurazaka-295.html",
+    description:
+      'Melanjutkan absennya Generasi 4 yang sedang menggelar konser, Sokosaku minggu ini menggelar "Pertandingan Penentuan Pasangan Nomor Satu Gen 2 & Gen 3" lewat pembagian 11 pasangan lintas generasi. Suasana studio langsung memanas saat para member saling beradu kekompakan dalam babak penyisihan lewat berbagai permainan adu ketangkasan dan pengetahuan, mulai dari Kuis Rebutan Hak Jawab yang mewajibkan tantangan menyusun menara kartu hingga push-up, permainan Shiritori kata panjang, Kuis Strike Out lempar bola, hingga ujian menyamakan onomatope dari makanan yang dicicipi dalam kondisi mata tertutup. Sisanya bisa ditonton sendiri.',
+  },
+  {
+    id: "ep-161-meets",
+    showId: "sakura-meets",
+    showName: "Sakura Meets",
+    showSlug: "sakura-meets",
+    episodeTitle: "260723 {Sakura Meets} #161 Sub Indo",
+    episodeSubtitle: "Kuis Only One Meets, Adu Strategi Antar-Generasi",
+    episodeNumber: "Episode 161",
+    releaseDate: "2026-07-23",
+    thumbnail: "/images/thumbnails/sakura-meets/161/sakura-meets-1.png",
+    previewImage1: "/images/thumbnails/sakura-meets/161/sakura-meets-2.png",
+    previewImage2: "/images/thumbnails/sakura-meets/161/sakura-meets-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260723-sakura-meets-161-sub-indo-5MWf9",
+    rawMp4Url: "https://www.akari46.com/2026/07/260723-sakura-meets-161.html",
+    description:
+      'Segmen Sakura Meets minggu ini menghadirkan proyek baru bertajuk "Only One Meets" bersama grup komedian Cotton, serta penampilan perdana Yamashita Shizuki sebagai bintang tamu. Kuis ini menguji seberapa dalam para member saling mengenal lewat aturan unik: pembuat soal harus bisa memancing tepat satu orang member agar menjawab benar demi meraih poin. Episode ini juga diselingi keseruan rapat ide untuk festival Sakura Meets Fest ke-4. Sisanya bisa ditonton sendiri.',
   },
 ];
 
