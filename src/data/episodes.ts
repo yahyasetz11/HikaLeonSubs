@@ -48,7 +48,7 @@ export const shows: Show[] = [
     name: "Chokosaku",
     description:
       "Short-form variety content featuring members in quick, fun challenges.",
-    thumbnail: "/images/thumbnails/chokosaku-show.jpg",
+    thumbnail: "/images/thumbnails/chokosaku-show.png",
   },
   {
     id: "sakura-meets",
@@ -64,7 +64,7 @@ export const shows: Show[] = [
     name: "Documentary",
     description:
       "In-depth documentary content covering Sakurazaka46 performances and events.",
-    thumbnail: "/images/thumbnails/documentary-show.jpg",
+    thumbnail: "/images/thumbnails/documentary-show.png",
   },
 ];
 

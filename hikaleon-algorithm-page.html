@@ -1,0 +1,377 @@
+<style>
+/* ── BASE ── */
+.alg-page{font-family:'Plus Jakarta Sans','Segoe UI',sans-serif;max-width:720px;margin:0 auto;padding:0 0 56px;color:inherit}
+
+/* ── HERO ── */
+.alg-hero{padding:36px 0 30px;border-bottom:1px solid rgba(194,48,94,.18);margin-bottom:32px}
+.alg-eyebrow{font-size:10px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:#E8508F;display:inline-flex;align-items:center;gap:7px;margin-bottom:14px}
+.alg-eyebrow::before{content:'';width:18px;height:2px;background:#E8508F;border-radius:2px}
+.alg-hero h1{font-size:26px;font-weight:800;margin:0 0 10px;line-height:1.25}
+.alg-hero h1 em{font-style:normal;color:#E8508F}
+.alg-hero p{font-size:14px;line-height:1.85;opacity:.78;margin:0}
+.alg-hero strong{color:inherit;opacity:1;font-weight:600}
+
+/* ── SECTION ── */
+.alg-section{margin-bottom:36px}
+.alg-section-title{font-size:11px;font-weight:700;color:#E8508F;letter-spacing:1.4px;text-transform:uppercase;display:flex;align-items:center;gap:8px;margin-bottom:18px}
+.alg-section-title::before{content:'';width:3px;height:14px;background:#E8508F;border-radius:2px;flex-shrink:0}
+.alg-divider{height:1px;background:rgba(194,48,94,.15);margin:32px 0}
+
+/* ── VERSION TIMELINE ── */
+.alg-versions{display:flex;flex-direction:column;gap:0}
+.alg-ver{display:grid;grid-template-columns:90px 1fr;gap:0}
+.alg-ver-spine{display:flex;flex-direction:column;align-items:center;padding-top:4px}
+.alg-ver-dot{width:14px;height:14px;border-radius:50%;background:rgba(194,48,94,.15);border:2px solid rgba(194,48,94,.35);flex:none;margin-top:2px;transition:background .2s}
+.alg-ver.latest .alg-ver-dot{background:#E8508F;border-color:#E8508F;box-shadow:0 0 0 4px rgba(232,80,143,.18)}
+.alg-ver-line{width:2px;background:rgba(194,48,94,.15);flex:1;margin-top:6px}
+.alg-ver:last-child .alg-ver-line{display:none}
+.alg-ver-body{padding:0 0 28px 16px}
+.alg-ver-head{display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap}
+.alg-ver-tag{font-size:11px;font-weight:800;letter-spacing:.06em;color:#fff;background:#C2305E;padding:3px 10px;border-radius:6px;white-space:nowrap}
+.alg-ver.latest .alg-ver-tag{background:#E8508F}
+.alg-ver-badge{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#E8508F;background:rgba(232,80,143,.10);border:1px solid rgba(194,48,94,.25);padding:3px 9px;border-radius:20px}
+.alg-ver-name{font-size:13px;font-weight:700;opacity:.85}
+.alg-ver-name a{color:#E8508F;text-decoration:underline}
+.alg-ver-desc{font-size:13.5px;line-height:1.8;opacity:.82;margin:0 0 10px}
+.alg-ver-desc strong{color:inherit;opacity:1;font-weight:600}
+.alg-ver-pills{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}
+.alg-pill{font-size:11.5px;padding:4px 11px;border-radius:20px;border:1px solid rgba(194,48,94,.22);opacity:.8;display:inline-flex;align-items:center;gap:5px}
+.alg-pill.cost{color:#E8508F;background:rgba(232,80,143,.08)}
+.alg-pill.tech{background:rgba(232,80,143,.05)}
+
+/* v3 pipeline diagram */
+.alg-pipeline{margin:12px 0 4px;display:flex;flex-direction:column;gap:0}
+.alg-pipe-step{display:flex;align-items:flex-start;gap:0}
+.alg-pipe-left{display:flex;flex-direction:column;align-items:center;width:32px;flex:none}
+.alg-pipe-icon{width:32px;height:32px;border-radius:8px;background:rgba(232,80,143,.12);border:1px solid rgba(194,48,94,.25);display:flex;align-items:center;justify-content:center;font-size:14px;flex:none}
+.alg-pipe-vline{width:2px;background:rgba(194,48,94,.15);flex:1;min-height:14px;margin:2px 0}
+.alg-pipe-step:last-child .alg-pipe-vline{display:none}
+.alg-pipe-content{padding:4px 0 16px 12px}
+.alg-pipe-label{font-size:12px;font-weight:700;margin-bottom:2px;color:inherit}
+.alg-pipe-sub{font-size:12px;opacity:.65;line-height:1.55}
+
+/* ── BENCHMARK CHARTS ── */
+.alg-chart-group{display:flex;flex-direction:column;gap:24px}
+.alg-chart-card{background:rgba(232,80,143,.04);border:1px solid rgba(194,48,94,.18);border-radius:12px;padding:18px 20px}
+.alg-chart-title{font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#E8508F;margin-bottom:16px;display:flex;align-items:center;gap:7px}
+.alg-chart-title::before{content:'';width:10px;height:10px;border-radius:3px;background:#E8508F;flex:none}
+.alg-bars{display:flex;flex-direction:column;gap:11px}
+.alg-bar-row{display:grid;grid-template-columns:52px 1fr 80px;align-items:center;gap:10px}
+.alg-bar-label{font-size:11.5px;font-weight:700;opacity:.75;text-align:right}
+.alg-bar-track{height:10px;border-radius:999px;background:rgba(194,48,94,.10);overflow:hidden;position:relative}
+.alg-bar-fill{height:100%;border-radius:999px;background:rgba(194,48,94,.35);transition:width .6s ease}
+.alg-bar-fill.v1{width:55%;background:rgba(194,48,94,.28)}
+.alg-bar-fill.v2{width:55%;background:rgba(194,48,94,.28)}
+.alg-bar-fill.v25{width:60%;background:rgba(194,48,94,.40)}
+.alg-bar-fill.v3{width:92%;background:#E8508F}
+/* cost bars */
+.alg-bar-fill.c1{width:22%;background:rgba(194,48,94,.28)}
+.alg-bar-fill.c2{width:22%;background:rgba(194,48,94,.28)}
+.alg-bar-fill.c25{width:10%;background:rgba(194,48,94,.40)}
+.alg-bar-fill.c3{width:100%;background:#E8508F}
+.alg-bar-val{font-size:12px;font-weight:700;opacity:.85}
+.alg-bar-note{font-size:11px;opacity:.55;margin-top:2px}
+.alg-bar-val-wrap{display:flex;flex-direction:column}
+
+.alg-quality-legend{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;padding-top:12px;border-top:1px solid rgba(194,48,94,.12)}
+.alg-ql-item{font-size:11px;opacity:.65;display:flex;align-items:center;gap:5px}
+.alg-ql-dot{width:8px;height:8px;border-radius:2px;flex:none}
+
+/* ── COST NOTE ── */
+.alg-cost-note{background:rgba(232,80,143,.07);border:1px solid rgba(194,48,94,.22);border-radius:10px;padding:13px 16px;display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.7;margin-top:14px;opacity:.9}
+.alg-cost-note strong{font-weight:600;color:inherit;opacity:1}
+
+@media(max-width:500px){
+  .alg-ver{grid-template-columns:60px 1fr}
+  .alg-bar-row{grid-template-columns:44px 1fr 70px}
+}
+</style>
+
+<div class="alg-page">
+
+  <!-- HERO -->
+  <div class="alg-hero">
+    <div class="alg-eyebrow">SubtitledByAI · Algorithm</div>
+    <h1>Bagaimana kami membuat<br>subtitle untuk <em>Sakurazaka46</em></h1>
+    <p>
+      Sebagai fans Sakurazaka46, saya ingin membantu para <strong>Buddies</strong> Indonesia menikmati konten mereka — dari kelucuan variety show, drama di balik layar, hingga penampilan panggung yang bikin merinding. Tapi membuat subtitle secara manual butuh waktu berhari-hari per episode.
+    </p>
+    <p style="margin-top:10px">
+      Maka lahirlah project ini: <strong>SubtitledByAI</strong> — sebuah pipeline yang memanfaatkan model AI untuk mentranskripsi audio Jepang dan menerjemahkannya ke Bahasa Indonesia secara otomatis, sehingga subtitle bisa rilis lebih cepat dan konsisten.
+    </p>
+  </div>
+
+  <!-- VERSION HISTORY -->
+  <div class="alg-section">
+    <div class="alg-section-title">Riwayat Versi</div>
+    <div class="alg-versions">
+
+      <!-- v1.0 -->
+      <div class="alg-ver">
+        <div class="alg-ver-spine">
+          <div class="alg-ver-dot"></div>
+          <div class="alg-ver-line"></div>
+        </div>
+        <div class="alg-ver-body">
+          <div class="alg-ver-head">
+            <span class="alg-ver-tag">v 1.0</span>
+            <span class="alg-ver-name"><a href="https://github.com/yahyasetz11/WhisperAI-subs.git" target="_blank">WhisperAI-subs ↗</a></span>
+          </div>
+          <p class="alg-ver-desc">
+            Versi pertama, berjalan sepenuhnya secara <strong>lokal</strong>. Proses transkripsi audio Jepang menggunakan <strong>Whisper API dari OpenAI</strong>, dan hasil transkrip diterjemahkan ke Bahasa Indonesia menggunakan <strong>GPT-4o</strong>. Sederhana, tapi sudah cukup untuk membuktikan konsepnya.
+          </p>
+          <div class="alg-ver-pills">
+            <span class="alg-pill tech">🔧 Lokal (Python)</span>
+            <span class="alg-pill tech">🎙️ Whisper API</span>
+            <span class="alg-pill tech">💬 GPT-4o</span>
+            <span class="alg-pill cost">~USD $0.33 / 30 menit</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- v2.0 -->
+      <div class="alg-ver">
+        <div class="alg-ver-spine">
+          <div class="alg-ver-dot"></div>
+          <div class="alg-ver-line"></div>
+        </div>
+        <div class="alg-ver-body">
+          <div class="alg-ver-head">
+            <span class="alg-ver-tag">v 2.0</span>
+            <span class="alg-ver-name"><a href="https://colab.research.google.com/drive/1n1N0iXRTf9mWO3fATJN2vfqo_jq3KrVT?usp=sharing" target="_blank">Google Colab ↗</a></span>
+          </div>
+          <p class="alg-ver-desc">
+            Pipeline yang sama dengan v1.0, namun dipindahkan ke <strong>Google Colab</strong>. Tujuannya agar tidak membebani mesin lokal, dan bisa dijalankan dari <strong>mobile</strong> kapan saja. Kualitas hasil identik dengan v1.0.
+          </p>
+          <div class="alg-ver-pills">
+            <span class="alg-pill tech">☁️ Google Colab</span>
+            <span class="alg-pill tech">🎙️ Whisper API</span>
+            <span class="alg-pill tech">💬 GPT-4o</span>
+            <span class="alg-pill cost">~USD $0.33 / 30 menit</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- v2.5 -->
+      <div class="alg-ver">
+        <div class="alg-ver-spine">
+          <div class="alg-ver-dot"></div>
+          <div class="alg-ver-line"></div>
+        </div>
+        <div class="alg-ver-body">
+          <div class="alg-ver-head">
+            <span class="alg-ver-tag">v 2.5</span>
+            <span class="alg-ver-name"><a href="https://colab.research.google.com/drive/1n1N0iXRTf9mWO3fATJN2vfqo_jq3KrVT?usp=sharing" target="_blank">Google Colab ↗</a></span>
+          </div>
+          <p class="alg-ver-desc">
+            Masih di Colab, tapi proses transkripsi diganti. Alih-alih memanggil Whisper API berbayar, v2.5 menjalankan model <strong>kotoba-whisper-v2.0</strong> secara langsung di dalam Colab (gratis). Kualitas transkripsi tetap setara, sementara biaya turun signifikan karena tidak ada lagi panggilan API untuk transkripsi.
+          </p>
+          <div class="alg-ver-pills">
+            <span class="alg-pill tech">☁️ Google Colab</span>
+            <span class="alg-pill tech">🎙️ kotoba-whisper-v2.0 (lokal)</span>
+            <span class="alg-pill tech">💬 GPT-4o</span>
+            <span class="alg-pill cost">~USD $0.10 / 30 menit</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- v3.0 LATEST -->
+      <div class="alg-ver latest">
+        <div class="alg-ver-spine">
+          <div class="alg-ver-dot"></div>
+          <div class="alg-ver-line"></div>
+        </div>
+        <div class="alg-ver-body">
+          <div class="alg-ver-head">
+            <span class="alg-ver-tag">v 3.0</span>
+            <span class="alg-ver-badge">🌸 Terbaru · Dalam Pengembangan</span>
+          </div>
+          <p class="alg-ver-desc">
+            Versi ini adalah <strong>perombakan total</strong> dari pipeline sebelumnya. Tidak ada lagi panggilan ke Whisper atau GPT untuk transkripsi. Seluruh proses transkripsi sekarang menggunakan <strong>Gemini 2.5 Pro via Files API</strong> — dan ini mengubah segalanya.
+          </p>
+          <p class="alg-ver-desc">
+            Tidak seperti GPT atau Claude, Gemini bisa menerima <strong>input audio secara langsung</strong> melalui API. Artinya AI bisa <em>mendengar</em> — bukan hanya membaca teks transkripsi mentah. Ia bisa membedakan siapa yang bicara, memahami konteks dari nada suara, mengoreksi kata-kata yang ambigu berdasarkan bunyi dan ekspresi, bahkan memahami sound effect latar belakang sebagai konteks. Hasilnya: akurasi jauh lebih tinggi, timing lebih presisi, dan terjemahan lebih natural.
+          </p>
+
+          <!-- Pipeline diagram -->
+          <div class="alg-pipeline">
+            <div class="alg-pipe-step">
+              <div class="alg-pipe-left">
+                <div class="alg-pipe-icon">🎬</div>
+                <div class="alg-pipe-vline"></div>
+              </div>
+              <div class="alg-pipe-content">
+                <div class="alg-pipe-label">Input sumber</div>
+                <div class="alg-pipe-sub">URL YouTube atau upload file video/audio via yt-dlp</div>
+              </div>
+            </div>
+            <div class="alg-pipe-step">
+              <div class="alg-pipe-left">
+                <div class="alg-pipe-icon">✂️</div>
+                <div class="alg-pipe-vline"></div>
+              </div>
+              <div class="alg-pipe-content">
+                <div class="alg-pipe-label">Normalisasi & chunking</div>
+                <div class="alg-pipe-sub">ffmpeg mendeteksi keheningan (silencedetect) lalu memotong audio menjadi chunk-chunk kecil untuk diproses bertahap</div>
+              </div>
+            </div>
+            <div class="alg-pipe-step">
+              <div class="alg-pipe-left">
+                <div class="alg-pipe-icon">👂</div>
+                <div class="alg-pipe-vline"></div>
+              </div>
+              <div class="alg-pipe-content">
+                <div class="alg-pipe-label">Transkripsi — Gemini 2.5 Pro</div>
+                <div class="alg-pipe-sub">Setiap chunk audio diunggah ke Gemini Files API. Gemini <em>mendengar</em> langsung: membedakan pembicara, memahami konteks emosi, mengoreksi kata ambigu dari nada suara. Hasil: transkrip Jepang per ujaran dengan timestamp presisi</div>
+              </div>
+            </div>
+            <div class="alg-pipe-step">
+              <div class="alg-pipe-left">
+                <div class="alg-pipe-icon">🔗</div>
+                <div class="alg-pipe-vline"></div>
+              </div>
+              <div class="alg-pipe-content">
+                <div class="alg-pipe-label">Merge & deduplikasi</div>
+                <div class="alg-pipe-sub">Transkrip dari semua chunk digabung, overlap antar-chunk dihilangkan secara deterministik</div>
+              </div>
+            </div>
+            <div class="alg-pipe-step">
+              <div class="alg-pipe-left">
+                <div class="alg-pipe-icon">🌐</div>
+                <div class="alg-pipe-vline"></div>
+              </div>
+              <div class="alg-pipe-content">
+                <div class="alg-pipe-label">Translasi — Gemini Flash / GPT-4o / Claude</div>
+                <div class="alg-pipe-sub">Teks Jepang diterjemahkan ke Indonesia dalam batch JSON ≤100 ujaran. Model bisa dipilih; checkpoint per batch agar tidak perlu mengulang jika gagal di tengah</div>
+              </div>
+            </div>
+            <div class="alg-pipe-step">
+              <div class="alg-pipe-left">
+                <div class="alg-pipe-icon">⚙️</div>
+                <div class="alg-pipe-vline"></div>
+              </div>
+              <div class="alg-pipe-content">
+                <div class="alg-pipe-label">Post-processing</div>
+                <div class="alg-pipe-sub">Durasi subtitle dinormalisasi (min 0.7s, max 7.5s), gap pendek digabung, baris dengan CPS>25 diflag untuk dicek manual</div>
+              </div>
+            </div>
+            <div class="alg-pipe-step">
+              <div class="alg-pipe-left">
+                <div class="alg-pipe-icon">📄</div>
+              </div>
+              <div class="alg-pipe-content">
+                <div class="alg-pipe-label">Output subtitle</div>
+                <div class="alg-pipe-sub">File .ass (style HikaLeon) dan .srt siap dipakai, plus transcript_jp.json, translated_id.json, dan ringkasan biaya token</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="alg-ver-pills" style="margin-top:14px">
+            <span class="alg-pill tech">🖥️ FastAPI + localhost</span>
+            <span class="alg-pill tech">👂 Gemini 2.5 Pro (audio)</span>
+            <span class="alg-pill tech">💬 Gemini Flash / GPT-4o / Claude</span>
+            <span class="alg-pill cost">~USD $1.00–1.50 / 30 menit</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="alg-divider"></div>
+
+  <!-- BENCHMARK -->
+  <div class="alg-section">
+    <div class="alg-section-title">Benchmark Kualitas</div>
+    <div class="alg-chart-group">
+
+      <!-- QUALITY CHART -->
+      <div class="alg-chart-card">
+        <div class="alg-chart-title">Kualitas Transkripsi &amp; Terjemahan (skor / 100)</div>
+        <div class="alg-bars">
+          <div class="alg-bar-row">
+            <span class="alg-bar-label">v 1.0</span>
+            <div class="alg-bar-track"><div class="alg-bar-fill v1"></div></div>
+            <div class="alg-bar-val-wrap">
+              <span class="alg-bar-val">55 / 100</span>
+              <span class="alg-bar-note">Timing buruk</span>
+            </div>
+          </div>
+          <div class="alg-bar-row">
+            <span class="alg-bar-label">v 2.0</span>
+            <div class="alg-bar-track"><div class="alg-bar-fill v2"></div></div>
+            <div class="alg-bar-val-wrap">
+              <span class="alg-bar-val">55 / 100</span>
+              <span class="alg-bar-note">Identik v1.0</span>
+            </div>
+          </div>
+          <div class="alg-bar-row">
+            <span class="alg-bar-label">v 2.5</span>
+            <div class="alg-bar-track"><div class="alg-bar-fill v25"></div></div>
+            <div class="alg-bar-val-wrap">
+              <span class="alg-bar-val">60 / 100</span>
+              <span class="alg-bar-note">Sedikit lebih baik</span>
+            </div>
+          </div>
+          <div class="alg-bar-row">
+            <span class="alg-bar-label">v 3.0</span>
+            <div class="alg-bar-track"><div class="alg-bar-fill v3"></div></div>
+            <div class="alg-bar-val-wrap">
+              <span class="alg-bar-val" style="color:#E8508F;font-weight:800">92 / 100</span>
+              <span class="alg-bar-note">Timing presisi</span>
+            </div>
+          </div>
+        </div>
+        <div class="alg-quality-legend">
+          <span class="alg-ql-item"><span class="alg-ql-dot" style="background:rgba(194,48,94,.28)"></span>v1–v2.5: ada dialog yang salah transkripsi, timing buruk di bagian dialog padat</span>
+          <span class="alg-ql-item"><span class="alg-ql-dot" style="background:#E8508F"></span>v3.0: konteks sangat cerdas, timing hampir sempurna (miss max ~0.5 detik)</span>
+        </div>
+      </div>
+
+      <!-- COST CHART -->
+      <div class="alg-chart-card">
+        <div class="alg-chart-title">Estimasi Biaya API per Episode ~30 Menit</div>
+        <div class="alg-bars">
+          <div class="alg-bar-row">
+            <span class="alg-bar-label">v 1.0</span>
+            <div class="alg-bar-track"><div class="alg-bar-fill c1"></div></div>
+            <div class="alg-bar-val-wrap">
+              <span class="alg-bar-val">$0.20–0.33</span>
+            </div>
+          </div>
+          <div class="alg-bar-row">
+            <span class="alg-bar-label">v 2.0</span>
+            <div class="alg-bar-track"><div class="alg-bar-fill c2"></div></div>
+            <div class="alg-bar-val-wrap">
+              <span class="alg-bar-val">$0.20–0.33</span>
+            </div>
+          </div>
+          <div class="alg-bar-row">
+            <span class="alg-bar-label">v 2.5</span>
+            <div class="alg-bar-track"><div class="alg-bar-fill c25"></div></div>
+            <div class="alg-bar-val-wrap">
+              <span class="alg-bar-val">$0.10–0.15</span>
+              <span class="alg-bar-note">Transkripsi gratis</span>
+            </div>
+          </div>
+          <div class="alg-bar-row">
+            <span class="alg-bar-label">v 3.0</span>
+            <div class="alg-bar-track"><div class="alg-bar-fill c3"></div></div>
+            <div class="alg-bar-val-wrap">
+              <span class="alg-bar-val" style="color:#E8508F;font-weight:800">$1.00–1.50</span>
+              <span class="alg-bar-note">Kualitas jauh lebih tinggi</span>
+            </div>
+          </div>
+        </div>
+        <div class="alg-cost-note">
+          <span style="font-size:16px;flex:none;margin-top:1px">💡</span>
+          <div>
+            <strong>Catatan v3.0:</strong> Gemini memiliki free tier yang mengizinkan ~1x transkripsi episode 30 menit per hari. Namun untuk rilis yang konsisten dan cepat, API berbayar diperlukan — inilah mengapa dukungan dari para <strong>Supporter</strong> sangat berarti bagi keberlangsungan project ini.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

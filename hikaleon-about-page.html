@@ -1,0 +1,650 @@
+<style>
+  .about-page {
+    font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 0 48px;
+    color: inherit;
+  }
+  .ap-hero {
+    text-align: center;
+    padding: 36px 20px 32px;
+    border-bottom: 1px solid rgba(194, 48, 94, 0.18);
+    margin-bottom: 32px;
+  }
+  .ap-avatar {
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    background: rgba(232, 80, 143, 0.15);
+    border: 2px solid #e8508f;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+  }
+  .ap-hero h1 {
+    font-size: 21px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    color: inherit;
+  }
+  .ap-hero p {
+    font-size: 13px;
+    opacity: 0.65;
+    margin: 0;
+    line-height: 1.6;
+  }
+  .ap-hero-badge {
+    display: inline-block;
+    background: rgba(232, 80, 143, 0.12);
+    color: #e8508f;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(194, 48, 94, 0.3);
+    margin-bottom: 14px;
+    font-weight: 700;
+  }
+
+  .ap-section {
+    margin-bottom: 28px;
+  }
+  .ap-section-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: #e8508f;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .ap-section-title::before {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 14px;
+    background: #e8508f;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .ap-card {
+    background: rgba(232, 80, 143, 0.05);
+    border: 1px solid rgba(194, 48, 94, 0.18);
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin-bottom: 10px;
+  }
+  .ap-card p {
+    font-size: 13.5px;
+    opacity: 0.85;
+    line-height: 1.85;
+    margin: 0;
+  }
+  .ap-card p + p {
+    margin-top: 10px;
+  }
+  .ap-card strong {
+    color: #e8508f;
+    font-weight: 600;
+  }
+  .ap-card a {
+    color: #e8508f;
+    text-decoration: underline;
+  }
+
+  /* ── PLAN COMPARISON ── */
+  .ap-plans-intro {
+    font-size: 13.5px;
+    opacity: 0.85;
+    line-height: 1.8;
+    margin-bottom: 18px;
+  }
+  .ap-plans-intro strong {
+    color: #e8508f;
+    font-weight: 600;
+  }
+  .ap-plans-intro a {
+    color: #e8508f;
+    text-decoration: underline;
+  }
+  .ap-plans {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+  .ap-plan {
+    border-radius: 14px;
+    padding: 18px 18px 20px;
+    border: 1px solid rgba(194, 48, 94, 0.22);
+    background: rgba(232, 80, 143, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .ap-plan.featured {
+    border: 2px solid #e8508f;
+    background: rgba(232, 80, 143, 0.09);
+  }
+  .ap-plan-badge {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    width: fit-content;
+  }
+  .ap-plan.free .ap-plan-badge {
+    background: rgba(194, 48, 94, 0.12);
+    color: #c2305e;
+    border: 1px solid rgba(194, 48, 94, 0.25);
+  }
+  .ap-plan.tier1 .ap-plan-badge {
+    border: 2px solid rgba(232, 80, 143, 0.55);
+    background: rgba(232, 80, 143, 0.05);
+  }
+  .ap-plan.featured .ap-plan-badge {
+    background: #e8508f;
+    color: #fff;
+  }
+  .ap-plan-price {
+    font-size: 22px;
+    font-weight: 800;
+    margin: 0 0 2px;
+    color: inherit;
+  }
+  .ap-plan-price span {
+    font-size: 13px;
+    font-weight: 400;
+    opacity: 0.6;
+  }
+  .ap-plan-sub {
+    font-size: 12px;
+    opacity: 0.55;
+    margin-bottom: 16px;
+  }
+  .ap-plan-divider {
+    height: 1px;
+    background: rgba(194, 48, 94, 0.15);
+    margin-bottom: 16px;
+  }
+  .ap-plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    flex: 1;
+  }
+  .ap-plan-features li {
+    font-size: 13px;
+    line-height: 1.55;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    opacity: 0.88;
+  }
+  .ap-plan-features li .ic {
+    font-size: 14px;
+    flex: none;
+    margin-top: 1px;
+  }
+  .ap-plan.free .ap-plan-features li .ic {
+    color: rgba(194, 48, 94, 0.55);
+  }
+  .ap-plan.tier1 .ap-plan-features li .ic {
+    color: #c2305e;
+  }
+  .ap-plan.featured .ap-plan-features li .ic {
+    color: #e8508f;
+  }
+  .ap-plan-features li.dim {
+    opacity: 0.45;
+  }
+  .ap-plan-features li.dim .ic {
+    color: rgba(128, 128, 128, 0.4);
+  }
+  .ap-plan-cta {
+    display: block;
+    text-align: center;
+    margin-top: 18px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .ap-plan.free .ap-plan-cta {
+    background: rgba(194, 48, 94, 0.12);
+    color: #c2305e;
+    border: 1px solid rgba(194, 48, 94, 0.28);
+  }
+  .ap-plan.tier1 .ap-plan-cta {
+    background: rgba(232, 80, 143, 0.14);
+    color: #e8508f;
+    border: 1px solid rgba(194, 48, 94, 0.3);
+  }
+  .ap-plan.featured .ap-plan-cta {
+    background: #e8508f;
+    color: #fff;
+    border: 1px solid transparent;
+  }
+  .ap-plan-cta:hover {
+    opacity: 0.82;
+  }
+
+  .ap-algo-note {
+    background: rgba(232, 80, 143, 0.07);
+    border: 1px solid rgba(194, 48, 94, 0.22);
+    border-radius: 10px;
+    padding: 13px 16px;
+    display: flex;
+    gap: 11px;
+    align-items: flex-start;
+    font-size: 13px;
+    line-height: 1.7;
+    opacity: 0.9;
+  }
+  .ap-algo-note .ico {
+    color: #e8508f;
+    font-size: 16px;
+    flex: none;
+    margin-top: 2px;
+  }
+  .ap-algo-note a {
+    color: #e8508f;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  /* ── STEPS ── */
+  .ap-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .ap-step {
+    background: rgba(232, 80, 143, 0.05);
+    border: 1px solid rgba(194, 48, 94, 0.18);
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .ap-step-num {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(232, 80, 143, 0.15);
+    border: 1px solid rgba(194, 48, 94, 0.3);
+    color: #e8508f;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .ap-step-text {
+    font-size: 13.5px;
+    opacity: 0.85;
+    line-height: 1.75;
+  }
+  .ap-step-text strong {
+    color: inherit;
+    font-weight: 600;
+    opacity: 1;
+  }
+  .ap-step-text a {
+    color: #e8508f;
+    text-decoration: underline;
+  }
+
+  /* ── CONTACTS ── */
+  .ap-contacts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .ap-contact-item {
+    background: rgba(232, 80, 143, 0.05);
+    border: 1px solid rgba(194, 48, 94, 0.18);
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    transition: border-color 0.2s;
+  }
+  .ap-contact-item:hover {
+    border-color: #e8508f;
+  }
+  .ap-contact-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(232, 80, 143, 0.14);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+  .ap-contact-label {
+    font-size: 10px;
+    opacity: 0.5;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .ap-contact-value {
+    font-size: 13px;
+    font-weight: 600;
+    color: inherit;
+  }
+
+  /* ── SUPPORT ── */
+  .ap-support {
+    background: rgba(232, 80, 143, 0.07);
+    border: 1px solid rgba(194, 48, 94, 0.25);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+  }
+  .ap-support p {
+    font-size: 13.5px;
+    opacity: 0.8;
+    line-height: 1.75;
+    margin: 0 0 14px;
+  }
+  .ap-support a {
+    display: inline-block;
+    background: #e8508f;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 24px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .ap-support a:hover {
+    opacity: 0.82;
+  }
+
+  .ap-divider {
+    height: 1px;
+    background: rgba(194, 48, 94, 0.15);
+    margin: 28px 0;
+  }
+
+  @media (max-width: 500px) {
+    .ap-plans {
+      grid-template-columns: 1fr;
+    }
+    .ap-contacts {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="about-page">
+  <div class="ap-hero">
+    <div class="ap-hero-badge">Sakurazaka46 Fansub</div>
+    <div class="ap-avatar">🌸</div>
+    <h1>HikaLeon Subs</h1>
+    <p>Fan subtitle Indonesia untuk konten Sakurazaka46</p>
+  </div>
+
+  <!-- TENTANG -->
+  <div class="ap-section">
+    <div class="ap-section-title">Tentang</div>
+    <div class="ap-card">
+      <p>
+        Hi! HikaLeon Subs menyediakan subtitle Bahasa Indonesia untuk konten
+        <strong>Sakurazaka46</strong> — mulai dari variety show, music show,
+        hingga dokumenter — dengan bantuan AI untuk proses transkripsi dan
+        terjemahan agar rilis bisa lebih cepat.
+      </p>
+      <p>
+        Akurasi terjemahan diusahakan sebaik mungkin, namun tidak menutup
+        kemungkinan adanya kesalahan kecil. Masukan selalu terbuka!
+      </p>
+    </div>
+  </div>
+
+  <div class="ap-divider"></div>
+
+  <!-- SISTEM SUB -->
+  <div class="ap-section">
+    <div class="ap-section-title">Sistem Sub</div>
+
+    <p class="ap-plans-intro">
+      Subtitle di sini diproduksi menggunakan
+      <strong>API dari beberapa model AI</strong> (transkripsi &amp;
+      terjemahan), yang memiliki biaya operasional. Per
+      <strong>1 Agustus 2026</strong>, satuan Trakteer berubah menjadi
+      <strong>1 Ramen = Rp7.500</strong>, dan sistem akses dibagi menjadi tiga:
+      <strong>Free</strong>, <strong>Tier 1</strong>, dan
+      <strong>Tier 2</strong>. Kamu bisa pelajari lebih lanjut cara kerja
+      prosesnya di <a href="/p/algorithm.html">halaman Algorithm ↗</a>.
+    </p>
+
+    <div class="ap-plans">
+      <!-- FREE PLAN -->
+      <div class="ap-plan free">
+        <div class="ap-plan-badge">Free</div>
+        <div class="ap-plan-price">Rp 0 <span>/ bulan</span></div>
+        <div class="ap-plan-sub">Tanpa daftar, langsung akses</div>
+        <div class="ap-plan-divider"></div>
+        <ul class="ap-plan-features">
+          <li>
+            <span class="ic">✦</span
+            ><span
+              >Konten <strong>Soko Magattara, Sakurazaka?</strong> saja</span
+            >
+          </li>
+          <li>
+            <span class="ic">✦</span
+            ><span
+              >Akses subtitle <strong>1 minggu setelah</strong> tanggal
+              rilis</span
+            >
+          </li>
+          <li>
+            <span class="ic">✦</span
+            ><span><strong>Soft-Sub</strong> (.ass / .srt) tersedia</span>
+          </li>
+          <li class="dim">
+            <span class="ic">✕</span><span>Konten lain tidak tersedia</span>
+          </li>
+          <li class="dim">
+            <span class="ic">✕</span><span>Hard-Sub tidak disediakan</span>
+          </li>
+          <li class="dim">
+            <span class="ic">✕</span><span>Tidak bisa akses di hari rilis</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- TIER 1 -->
+      <div class="ap-plan tier1">
+        <div class="ap-plan-badge">Tier 1</div>
+        <div class="ap-plan-price">1 Ramen <span>Rp7.500 / bulan</span></div>
+        <div class="ap-plan-sub">Via Trakteer · bisa dihentikan kapan saja</div>
+        <div class="ap-plan-divider"></div>
+        <ul class="ap-plan-features">
+          <li>
+            <span class="ic">✦</span
+            ><span><strong>Sokomagattara, Sakurazaka</strong></span>
+          </li>
+          <li>
+            <span class="ic">✦</span
+            ><span><strong>Sakurazaka Channel</strong></span>
+          </li>
+          <li>
+            <span class="ic">✦</span
+            ><span>Akses subtitle lebih cepat dibanding Free</span>
+          </li>
+          <li class="dim">
+            <span class="ic">✕</span
+            ><span>Chokosaku, Sakura Meets, Documentary belum termasuk</span>
+          </li>
+        </ul>
+        <a
+          class="ap-plan-cta"
+          href="https://trakteer.id/hikaleon/rewards"
+          target="_blank"
+          >Jadi Tier 1 di Trakteer ↗</a
+        >
+      </div>
+
+      <!-- TIER 2 -->
+      <div class="ap-plan featured tier2">
+        <div class="ap-plan-badge">✦ Tier 2</div>
+        <div class="ap-plan-price">2 Ramen <span>Rp15.000 / bulan</span></div>
+        <div class="ap-plan-sub">Via Trakteer · bisa dihentikan kapan saja</div>
+        <div class="ap-plan-divider"></div>
+        <ul class="ap-plan-features">
+          <li>
+            <span class="ic">✦</span
+            ><span><strong>Akses Tier 1 otomatis terbuka</strong></span>
+          </li>
+          <li>
+            <span class="ic">✦</span><span><strong>Chokosaku</strong></span>
+          </li>
+          <li>
+            <span class="ic">✦</span><span><strong>Sakura Meets</strong></span>
+          </li>
+          <li>
+            <span class="ic">✦</span><span><strong>Documentary</strong></span>
+          </li>
+          <li>
+            <span class="ic">✦</span
+            ><span>Mendukung keberlangsungan project 🌸</span>
+          </li>
+        </ul>
+        <a
+          class="ap-plan-cta"
+          href="https://trakteer.id/hikaleon/rewards"
+          target="_blank"
+          >Jadi Tier 2 di Trakteer ↗</a
+        >
+      </div>
+    </div>
+
+    <!-- ALGO NOTE -->
+    <div class="ap-algo-note">
+      <span class="ico">⚙️</span>
+      <div>
+        Subtitle diproduksi dengan pipeline AI — mulai dari transkripsi audio,
+        segmentasi, hingga terjemahan otomatis. Penasaran cara kerjanya? Baca
+        selengkapnya di <a href="/p/algorithm.html">halaman Algorithm</a>.
+      </div>
+    </div>
+  </div>
+
+  <div class="ap-divider"></div>
+
+  <!-- CARA PAKAI -->
+  <div class="ap-section">
+    <div class="ap-section-title">Cara Menggunakan Subtitle</div>
+    <ul class="ap-steps">
+      <li class="ap-step">
+        <div class="ap-step-num">1</div>
+        <div class="ap-step-text">
+          <strong>Cari episode</strong> yang ingin ditonton di halaman
+          <a href="/">Beranda</a> atau lewat label di navigasi atas.
+        </div>
+      </li>
+      <li class="ap-step">
+        <div class="ap-step-num">2</div>
+        <div class="ap-step-text">
+          <strong>Buka postingan</strong> episode tersebut, lalu download file
+          <strong>.ass</strong> atau <strong>.srt</strong> yang tersedia di
+          bagian download.
+        </div>
+      </li>
+      <li class="ap-step">
+        <div class="ap-step-num">3</div>
+        <div class="ap-step-text">
+          <strong>Putar video</strong> menggunakan media player yang mendukung
+          subtitle eksternal seperti
+          <strong>MPC-HC, VLC, atau MX Player</strong>. Pastikan nama file
+          subtitle sama dengan nama file videonya.
+        </div>
+      </li>
+      <li class="ap-step">
+        <div class="ap-step-num">4</div>
+        <div class="ap-step-text">
+          Jika ada <strong>masalah sinkronisasi</strong>, kamu bisa sesuaikan
+          timing lewat fitur delay subtitle di media player masing-masing.
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="ap-divider"></div>
+
+  <!-- KONTAK -->
+  <div class="ap-section">
+    <div class="ap-section-title">Hubungi Aku</div>
+    <div class="ap-contacts">
+      <a
+        class="ap-contact-item"
+        href="https://x.com/hikaleon11"
+        target="_blank"
+      >
+        <div class="ap-contact-icon">𝕏</div>
+        <div>
+          <div class="ap-contact-label">Twitter / X</div>
+          <div class="ap-contact-value">@hikaleon11</div>
+        </div>
+      </a>
+      <a
+        class="ap-contact-item"
+        href="https://discord.com/users/516573078977904660"
+        target="_blank"
+      >
+        <div class="ap-contact-icon">💬</div>
+        <div>
+          <div class="ap-contact-label">Discord</div>
+          <div class="ap-contact-value">@hikaleon</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="ap-divider"></div>
+
+  <!-- SUPPORT -->
+  <div class="ap-section">
+    <div class="ap-section-title">Dukung Blog Ini</div>
+    <div class="ap-support">
+      <p>
+        Setiap support sangat berarti untuk menjaga API tetap berjalan dan
+        subtitle terus rilis. Kalau kamu menikmati konten di sini, traktir satu
+        kopi ya! ☕
+      </p>
+      <a href="https://trakteer.id/hikaleon" target="_blank"
+        >☕ Traktir di Trakteer</a
+      >
+    </div>
+  </div>
+</div>

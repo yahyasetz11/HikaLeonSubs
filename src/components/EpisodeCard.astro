@@ -24,7 +24,7 @@ const cardId = `card-${episode.id}`;
 
     <div class="card-layer card-front group relative flex gap-0 rounded-2xl overflow-hidden bg-ground-card dark:bg-dark-card border border-ground-border dark:border-dark-border transition-shadow duration-200 ease-out hover:shadow-[0_8px_24px_rgba(232,99,138,0.10),0_2px_8px_rgba(0,0,0,0.05)] dark:hover:shadow-[0_8px_24px_rgba(232,99,138,0.18),0_2px_8px_rgba(0,0,0,0.3)]">
       <a
-        href={`/episode/${episode.id}`}
+        href={`/shows/${episode.showSlug}/${episode.id}`}
         class="relative flex-shrink-0 w-28 sm:w-44 md:w-52 overflow-hidden bg-ground-border dark:bg-dark-border rounded-l-2xl"
         tabindex="-1"
         aria-hidden="true"
@@ -61,7 +61,7 @@ const cardId = `card-${episode.id}`;
           </div>
 
           <a
-            href={`/episode/${episode.id}`}
+            href={`/shows/${episode.showSlug}/${episode.id}`}
             class="block font-display font-bold text-sm sm:text-xl md:text-2xl leading-snug text-ink dark:text-dark-ink hover:text-sakura-600 dark:hover:text-sakura-400 transition-colors duration-150 line-clamp-2 mb-1"
           >
             {cleanTitle}

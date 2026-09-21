@@ -61,7 +61,7 @@ const hasEpisodes = episodes.length > 0;
               </div>
 
               <a
-                href={`/episode/${ep.id}`}
+                href={`/shows/${ep.showSlug}/${ep.id}`}
                 class="font-display font-bold text-lg sm:text-2xl md:text-3xl lg:text-4xl leading-tight text-ink dark:text-white md:text-ink md:dark:text-dark-ink hover:text-sakura-600 dark:hover:text-sakura-300 md:hover:text-sakura-600 md:dark:hover:text-sakura-400 transition-colors duration-150 mb-1.5 sm:mb-2 line-clamp-2 break-words [overflow-wrap:anywhere]"
               >
                 {parseTitle(ep.episodeTitle).map((part) =>
@@ -99,7 +99,7 @@ const hasEpisodes = episodes.length > 0;
                 </a>
 
                 <a
-                  href={`/episode/${ep.id}`}
+                  href={`/shows/${ep.showSlug}/${ep.id}`}
                   class="inline-flex items-center gap-1.5 font-display font-medium text-xs sm:text-sm text-ink-muted dark:text-dark-muted hover:text-sakura-600 dark:hover:text-sakura-400 transition-colors duration-150 py-1"
                 >
                   Detail
