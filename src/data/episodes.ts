@@ -783,6 +783,396 @@ export const episodes: Episode[] = [
     description:
       'Segmen Sakura Meets minggu ini menghadirkan proyek baru bertajuk "Only One Meets" bersama grup komedian Cotton, serta penampilan perdana Yamashita Shizuki sebagai bintang tamu. Kuis ini menguji seberapa dalam para member saling mengenal lewat aturan unik: pembuat soal harus bisa memancing tepat satu orang member agar menjawab benar demi meraih poin. Episode ini juga diselingi keseruan rapat ide untuk festival Sakura Meets Fest ke-4. Sisanya bisa ditonton sendiri.',
   },
+  {
+    id: "ep-019-channel",
+    showId: "sakurazaka-channel",
+    showName: "Sakurazaka Channel",
+    showSlug: "sakurazaka-channel",
+    episodeTitle: "260724 {Sakurazaka Channel} Sub Indo",
+    episodeSubtitle:
+      "Drama 'Terjun ke Laut' Akiho Onuma Dimulai! Tantangan Membuat Ramen Kakap Merah yang Lezat!!",
+    episodeNumber: "#",
+    releaseDate: "2026-07-24",
+    thumbnail: "/images/thumbnails/sakura-channel/260724/sakura-channel-1.jpg",
+    previewImage1:
+      "/images/thumbnails/sakura-channel/260724/sakura-channel-2.png",
+    previewImage2:
+      "/images/thumbnails/sakura-channel/260724/sakura-channel-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260724-sakurazaka-channel-drama-terjun-ke-laut-akiho-onuma-dimulai-tantangan-membuat-ramen-kakap-merah-yang-lezat-sub-indo-EgPXY",
+    rawMp4Url: "https://www.youtube.com/watch?v=R4t6f23GBlU",
+    description:
+      "Konten vlog Sakurazaka Channel kali ini menampilkan Onuma Akiho membagikan momen kulineran uniknya dengan memasak ramen ikan kakap merah (tai). Menariknya, bahan utama ikan tersebut ditangkap langsung dari keramba laut milik sang ayah. Proses berlanjut ke dapur, di mana Onuma menunjukkan keterampilannya memfilet ikan, meracik kaldu gurih dari sisa kepala dan tulang, hingga memanggang dagingnya untuk topping ramen. Demi mencari suasana makan yang pas, ia bahkan membawa mangkuk ramen buatannya ke atas tanggul laut di tengah terpaan angin dingin, hingga harus mengambil garam dan rumput laut tambahan untuk menyempurnakan rasanya. Sisanya bisa ditonton sendiri.",
+  },
+  {
+    id: "ep-018-channel",
+    showId: "sakurazaka-channel",
+    showName: "Sakurazaka Channel",
+    showSlug: "sakurazaka-channel",
+    episodeTitle: "260721 {Sakurazaka Channel} Sub Indo",
+    episodeSubtitle:
+      "Perjalanan Sakura! Ayo Jalan-jalan Naik Kereta Bareng Hono Tamura & Yuzuki Nakajima! Edisi Niigata",
+    episodeNumber: "#",
+    releaseDate: "2026-07-21",
+    thumbnail: "/images/thumbnails/sakura-channel/260721/sakura-channel-1.jpg",
+    previewImage1:
+      "/images/thumbnails/sakura-channel/260721/sakura-channel-2.png",
+    previewImage2:
+      "/images/thumbnails/sakura-channel/260721/sakura-channel-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260721-sakurazaka-channel-perjalanan-sakura-ayo-jalan-jalan-naik-kereta-bareng-hono-tamura-yuzuki-nakajima-edisi-niigata-sub-indo-W6UZN",
+    rawMp4Url: "https://www.youtube.com/watch?v=9srP51koR-s",
+    description:
+      'Vlog Sakurazaka Channel kali ini, dalam edisi kolaborasi bersama JR East bertajuk "Sakura Tabi", Tamura Hono dan Nakashima Yuzuki menjalani wisata singkat ke Prefektur Niigata hingga menyeberang ke Pulau Sado. Perjalanan hari pertama diisi dengan berburu kuliner laut segar di pasar Pia Bandai, menjajal cita rasa unik air mineral di Tsukioka Onsen, hingga bermalam di penginapan tradisional berlatar pemandangan sawah. Memasuki hari kedua, petualangan berlanjut ke Pulau Sado menggunakan jetfoil, di mana keduanya menaiki perahu bak (taraibune), menjajal pengalaman mendulang serpihan emas di Sado Gold Park, serta menikmati pemandangan laut dari Dermaga Ameya sebelum akhirnya kembali ke Stasiun Niigata untuk berbelanja oleh-oleh. Sisanya bisa ditonton sendiri.',
+  },
+  {
+    id: "ep-294-choko",
+    showId: "chokosaku",
+    showName: "Chokosaku",
+    showSlug: "chokosaku",
+    episodeTitle: "260719 {Chokosaku} #294 Sub Indo",
+    episodeSubtitle: "Rapat Kelas Update",
+    episodeNumber: "Episode 294",
+    releaseDate: "2026-07-19",
+    thumbnail: "/images/thumbnails/chokosaku/294/chokosaku-1.png",
+    previewImage1: "/images/thumbnails/chokosaku/294/chokosaku-2.png",
+    previewImage2: "/images/thumbnails/chokosaku/294/chokosaku-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260719-chokosaku-294-sub-indo-ODUdA",
+    rawMp4Url:
+      "https://www.akari46.com/2026/07/260719-sakurazaka46chokosaku294.html",
+    description:
+      'Segmen Chokosaku kali ini menghadirkan "Rapat Kelas Update", di mana Kojima Nagisa mengambil peran sebagai ketua kelas untuk memimpin pemungutan suara terkait usulan pembaruan karakter para member.  Dalam episode ini, Onuma Akiho mencoba meyakinkan rekan-rekannya demi mendapatkan citra "keren", sementara Masumoto Kira dan Murai Yu saling beradu pola hidup sehat lewat kebiasaan makan serta keahlian memasak. Suasana berlanjut saat Ishimori Rika membagikan hobi memotret bulan yang romantis, hingga Odakura Reina yang menantang Rika dalam duel melipat kaos demi membuktikan kelincahannya. Sisanya bisa ditonton sendiri.',
+  },
+  {
+    id: "ep-294-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "260719 {Soko Magattara, Sakurazaka} #294 Sub Indo",
+    episodeSubtitle: "Sesi Laporan Karakter Update Sakurazaka46",
+    episodeNumber: "Episode 294",
+    releaseDate: "2026-07-19",
+    thumbnail: "/images/thumbnails/sokomagattara/294/sokomagattara-1.png",
+    previewImage1: "/images/thumbnails/sokomagattara/294/sokomagattara-2.png",
+    previewImage2: "/images/thumbnails/sokomagattara/294/sokomagattara-3.png",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/file/dhq8an2bhgyo8t6/260719_Soko_Magattara%252C_Sakurazaka_%2523294_Sub_Indo.ass/file",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260719-soko-magattara-sakurazaka-294-sub-indo-kLQTc",
+    rawMp4Url:
+      "https://www.akari46.com/2026/07/260719-soko-magattara-sakurazaka-294.html",
+    description:
+      'Eps minggu ini dari Sokosaku menghadirkan segmen "Sesi Laporan Karakter Update Sakurazaka46". Memanfaatkan absennya Generasi ke-4, member Generasi ke-2 dan ke-3 mengambil alih acara untuk melaporkan berbagai kebiasaan unik, hobi baru, hingga perubahan karakter rekan-rekannya kepada duo MC Sawabe dan Tsuchida. Mulai dari hobi jalan-jalan sendirian, tren kekinian, hingga respons jenaka saat mengamati ekspresi sang MC, episode ini dipenuhi cerita menarik dari balik layar para member. Sisanya bisa ditonton sendiri.',
+  },
+  {
+    id: "ep-017-channel",
+    showId: "sakurazaka-channel",
+    showName: "Sakurazaka Channel",
+    showSlug: "sakurazaka-channel",
+    episodeTitle: "260718 {Sakurazaka Channel} Sub Indo",
+    episodeSubtitle:
+      "amashita Shizuki & Yamashita Haruka, Menjelang Libur Musim Panas! Spesial Penelitian Bebas!",
+    episodeNumber: "#",
+    releaseDate: "2026-07-18",
+    thumbnail: "/images/thumbnails/sakura-channel/260718/sakura-channel-1.jpg",
+    previewImage1:
+      "/images/thumbnails/sakura-channel/260718/sakura-channel-2.png",
+    previewImage2:
+      "/images/thumbnails/sakura-channel/260718/sakura-channel-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260718-sakurazaka-channel-yamashita-shizuki-yamashita-haruka-menjelang-libur-musim-panas-spesial-penelitian-bebas-sub-indo-ZAkWs",
+    rawMp4Url: "https://www.youtube.com/watch?v=9q_r_a_HIIU",
+    description:
+      'Vlog Sakurazaka Channel kali ini menghadirkan edisi spesial liburan musim panas bertajuk "Penelitian Bebas Kelompok Yamashita", yang mempertemukan duo Yamashita—Yamashita Shizuki (Sakurazaka46) dan Yamashita Haruka (Hinatazaka46). Kembali berkolaborasi setelah dua tahun, keduanya menjajal serangkaian eksperimen sains seru yang bisa dilakukan di rumah. Mulai dari tantangan berlari di atas cairan dilatansi, menguji tren permainan keseimbangan jungkat-jungkit, membuat bola air yang bisa digenggam, hingga membuktikan ketahanan balon di atas paku payung. Selain diwarnai aksi eksperimen dan adegan kocak "Profesor & Asisten", vlog ini juga diisi momen makan santai sambil mengobrolkan perkembangan diri dan kenangan konser satu sama lain. Sisanya bisa ditonton sendiri.',
+  },
+  {
+    id: "ep-016-channel",
+    showId: "sakurazaka-channel",
+    showName: "Sakurazaka Channel",
+    showSlug: "sakurazaka-channel",
+    episodeTitle: "260717 {Sakurazaka Channel} Sub Indo",
+    episodeSubtitle:
+      "Taniguchi Airi & Yamaguchi Haruyo, Jalan-jalan Santai ke Hakone Bareng Sahabat! Kulineran・Pengalaman Baru・Berendam Kaki!",
+    episodeNumber: "#",
+    releaseDate: "2026-07-17",
+    thumbnail: "/images/thumbnails/sakura-channel/260717/sakura-channel-1.jpg",
+    previewImage1:
+      "/images/thumbnails/sakura-channel/260717/sakura-channel-2.png",
+    previewImage2:
+      "/images/thumbnails/sakura-channel/260717/sakura-channel-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260717-sakurazaka-channel-taniguchi-airi-yamaguchi-haruyo-jalan-jalan-santai-ke-hakone-bareng-sahabat-kulineranpengalaman-baruberendam-kaki-sub-indo-drG04",
+    rawMp4Url: "https://www.youtube.com/watch?v=o0FFV0qKiN8",
+    description:
+      "Vlog Sakurazaka Channel kali ini menampilkan perjalanan santai Taniguchi Airi (Sakurazaka46) yang berlibur ke Hakone bersama teman dekatnya dari grup sebelah, Yamaguchi Haruyo (Hinatazaka46). Selama di sana, keduanya menikmati berbagai momen seru, mulai dari mencicipi kuliner khas, naik kapal bajak laut dengan terpaan angin kencang, menaiki kereta gantung, hingga membuat kerajinan ukir kaca sebagai kenang-kenangan. Ditemani momen wisata kuliner di area perbelanjaan dan obrolan hangat saat merendam kaki di pemandian air panas, vlog ini memperlihatkan sisi kasual serta keakraban manis antara member Sakurazaka46 dan Hinatazaka46 di luar panggung. Sisanya bisa ditonton sendiri.",
+  },
+  {
+    id: "ep-160-meets",
+    showId: "sakura-meets",
+    showName: "Sakura Meets",
+    showSlug: "sakura-meets",
+    episodeTitle: "260716 {Sakura Meets} #160 Sub Indo",
+    episodeSubtitle: "Kolaborasi Skit Komedi Bersama Shizuru, Tes Penglihatan",
+    episodeNumber: "Episode 160",
+    releaseDate: "2026-07-16",
+    thumbnail: "/images/thumbnails/sakura-meets/160/sakura-meets-1.png",
+    previewImage1: "/images/thumbnails/sakura-meets/160/sakura-meets-2.png",
+    previewImage2: "/images/thumbnails/sakura-meets/160/sakura-meets-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260716-sakura-meets-160-sub-indo-9jptk",
+    rawMp4Url: "https://www.akari46.com/2026/07/260716-sakura-meets-160.html",
+    description:
+      'Eps minggu ini dari Sakura Meets menghadirkan segmen kolaborasi skit komedi spesial bersama komedian Shizuru. Dengan mengangkat tema "Skit Masa Muda", para member ditantang untuk bermain peran dengan totalitas tinggi dalam cerita sekolah bertema "Tes Penglihatan", di mana Kojima Nagisa menghadapi tekanan berat dalam skit pertamanya sebagai tokoh utama. Tak hanya itu, keseruan berlanjut saat para member mencicipi dan memperkenalkan menu unadon serta somen kolaborasi orisinal mereka untuk menyambut festival musim panas. Sisanya bisa ditonton sendiri.',
+  },
+  {
+    id: "ep-293-choko",
+    showId: "chokosaku",
+    showName: "Chokosaku",
+    showSlug: "chokosaku",
+    episodeTitle: "260712 {Chokosaku} #293 Sub Indo",
+    episodeSubtitle:
+      "Teater Azakyun: Babak Lanjutan, Sisi Genit & Menggemaskan Para Member",
+    episodeNumber: "Episode 293",
+    releaseDate: "2026-07-12",
+    thumbnail: "/images/thumbnails/chokosaku/293/chokosaku-1.png",
+    previewImage1: "/images/thumbnails/chokosaku/293/chokosaku-2.png",
+    previewImage2: "/images/thumbnails/chokosaku/293/chokosaku-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260712-chokosaku-293-sub-indo-qP8fM",
+    rawMp4Url:
+      "https://www.akari46.com/2026/07/260712-sakurazaka46chokosaku293.html",
+    description:
+      'Eps minggu ini dari Chokosaku menghadirkan babak lanjutan yang penuh keceriaan dalam proyek dadakan "Teater Azakyun" di Sakurazaka46, di mana para member ditantang untuk menunjukkan sisi paling genit dan menggemaskan (azatoi) mereka melalui skenario yang dirancang oleh para member sendiri. Dengan dipandu oleh MC Kojima Nagisa serta juri Tamura Hono yang siap dibuat menangis karena gemas. Sepanjang episode, persaingan sengit namun hangat antara Matono Mio dan Morita Hikaru yang memperagakan naskah manis buatan Sutradara Ishimori Rika, Murai Yu, dan Katsumata Haruka ini menyuguhkan berbagai interaksi yang membuat hati berdebar, sekaligus menjadi kesempatan bagi setiap member untuk mengekspresikan karakter unik mereka di luar penampilan panggung yang biasanya. Sisanya bisa ditonton sendiri.',
+  },
+  {
+    id: "ep-293-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "260712 {Soko Magattara, Sakurazaka} #293 Sub Indo",
+    episodeSubtitle:
+      "Part 2 Kompetisi Perebutan Gelar Azato Queen Sakurazaka46, Babak Final",
+    episodeNumber: "Episode 293",
+    releaseDate: "2026-07-12",
+    thumbnail: "/images/thumbnails/sokomagattara/293/sokomagattara-1.png",
+    previewImage1: "/images/thumbnails/sokomagattara/293/sokomagattara-2.png",
+    previewImage2: "/images/thumbnails/sokomagattara/293/sokomagattara-3.png",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/file/uwj6v2egcvh5mlz/260712_Soko_Magattara%252C_Sakurazaka_%2523293_Sub_Indo.ass/file",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260712-soko-magattara-sakurazaka-293-sub-indo-aXSrL",
+    rawMp4Url:
+      "https://www.akari46.com/2026/07/260712-soko-magattara-sakurazaka-293.html",
+    description:
+      "Eps minggu ini dari Sokomagattara, Sakurazaka? melanjutkan keseruan kompetisi \"Perebutan Gelar Azato Queen Sakurazaka46\" bagian kedua bersama Sunshine Ikezaki sebagai ketua juri. Di tantangan kali ini, para member diuji melalui segmen ekspresi wajah seperti 'Aku cemburu tahu!' dan 'Ada krim tuh di hidungmu', serta tes kepintaran bertingkah menggemaskan secara praktis dalam berbagai situasi fantasi. Kompetisi ditutup dengan babak final bertema \"Kucing Azato\" yang menampilkan persaingan sengit antara 3 member terbaik demi memperebutkan mahkota Ratu Azatoi. Sisanya bisa ditonton sendiri.",
+  },
+  {
+    id: "ep-159-meets",
+    showId: "sakura-meets",
+    showName: "Sakura Meets",
+    showSlug: "sakura-meets",
+    episodeTitle: "260709 {Sakura Meets} #159 Sub Indo",
+    episodeSubtitle: "Babak Lanjutan Meets Derby ke-7, Prediksi Balapan Gen 4",
+    episodeNumber: "Episode 159",
+    releaseDate: "2026-07-09",
+    thumbnail: "/images/thumbnails/sakura-meets/159/sakura-meets-1.png",
+    previewImage1: "/images/thumbnails/sakura-meets/159/sakura-meets-2.png",
+    previewImage2: "/images/thumbnails/sakura-meets/159/sakura-meets-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260709-sakura-meets-159-sub-indo-EPGXi",
+    rawMp4Url: "https://www.akari46.com/2026/07/260709-sakura-meets-159.html",
+    description:
+      'Eps minggu ini dari Sakura Meets menghadirkan babak lanjutan dalam segmen kelanjutan "Meets Derby ke-7", di mana para member ditantang untuk membuat prediksi balapan unik yang diikuti oleh para member Generasi ke-4. Dengan dipandu oleh MC Yamazoe (Aiseki Start) serta persaingan ketat dalam perolehan poin antara Tim Generasi ke-2 (Onuma & Masumoto) melawan Tim Generasi ke-3 (Nakajima, Taniguchi, & Kojima). Sepanjang episode, persaingan sengit namun hangat dalam "Stakes Barang Pinjaman", "Beach Flags Derby" seputar kuis senpai, "Gulat Sumo Battle Royale", hingga "Piala Halang Rintang TV Asahi" antara Matsumoto Wako, Yamada Momomi, Nakagawa Chihiro, dan Inaguma Hina. Sisanya bisa ditonton sendiri.',
+  },
+  {
+    id: "ep-015-channel",
+    showId: "sakurazaka-channel",
+    showName: "Sakurazaka Channel",
+    showSlug: "sakurazaka-channel",
+    episodeTitle: "260707 {Sakurazaka Channel} Sub Indo",
+    episodeSubtitle:
+      "Pertemuan Pertama Matsuda dan Iwashika-chan di Museum Iwashita no Shinshoga!",
+    episodeNumber: "#",
+    releaseDate: "2026-07-07",
+    thumbnail: "/images/thumbnails/sakura-channel/260707/sakura-channel-1.jpg",
+    previewImage1: "#",
+    previewImage2: "#",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260707-sakurazaka-channel-pertemuan-pertama-matsuda-dan-iwashika-chan-di-museum-iwashita-no-shinshoga-sub-indo-ko0uX",
+    rawMp4Url: "https://www.youtube.com/watch?v=0rOddNgUDQU",
+    description:
+      "Konten kali ini dari Sakurazaka Channel menampilkan perjalanan Matsuda Rina, yang mewujudkan impiannya untuk mengunjungi Iwashita New Ginger Museum yang ikonis dan serba berwarna merah muda. Sebagai penggemar berat produk jahe muda tersebut, Rina membagikan kegembiraannya saat berinteraksi dengan maskot museum, Iwashika-chan, mempelajari proses panen jahe muda yang lembut, serta mengeksplorasi berbagai produk kolaborasi unik yang tersedia. Perjalanan ini menjadi pengalaman yang sangat memuaskan bagi Matsuda, di mana ia tidak hanya menikmati hidangan lezat berbahan jahe muda di kafe museum, tetapi juga memborong berbagai cendera mata untuk dibagikan kepada para member lainnya. Sisanya bisa ditonton sendiri.",
+  },
+  {
+    id: "ep-292-choko",
+    showId: "chokosaku",
+    showName: "Chokosaku",
+    showSlug: "chokosaku",
+    episodeTitle: "260705 {Chokosaku} #292 Sub Indo",
+    episodeSubtitle:
+      "Kompetisi Perebutan Gelar Azato Queen Sakurazaka46, Babak Lanjutan",
+    episodeNumber: "Episode 292",
+    releaseDate: "2026-07-05",
+    thumbnail: "/images/thumbnails/chokosaku/292/chokosaku-1.png",
+    previewImage1: "/images/thumbnails/chokosaku/292/chokosaku-2.png",
+    previewImage2: "/images/thumbnails/chokosaku/292/chokosaku-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260705-chokosaku-292-sub-indo-6y7Ud",
+    rawMp4Url: "https://www.akari46.com/2026/07/260705-chokosaku-292.html",
+    description:
+      'Eps minggu ini dari Chokosaku menghadirkan babak lanjutan yang penuh keceriaan dalam kompetisi perebutan gelar "Queen Azatoi" di Sakurazaka46, di mana para member ditantang untuk menunjukkan sisi paling genit dan menggemaskan (azatoi) mereka melalui berbagai skenario fantasi yang dirancang sendiri. Dengan dipandu oleh MC Yamashita serta juri tamu Onuma dan Ten-chan yang antusias. Sepanjang episode, persaingan sengit namun hangat antara Yamakawa, Matono, Karin-chan, dan Wakochi ini menyuguhkan berbagai interaksi yang membuat hati berdebar, sekaligus menjadi kesempatan bagi setiap member untuk mengekspresikan karakter unik mereka di luar penampilan panggung yang biasanya. Sisanya bisa ditonton sendiri.',
+  },
+  {
+    id: "ep-292-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "260705 {Soko Magattara, Sakurazaka} #292 Sub Indo",
+    episodeSubtitle:
+      "Perebutan Gelar Azato Queen Sakurazaka46, Tantangan Fantasi Musim Panas",
+    episodeNumber: "Episode 292",
+    releaseDate: "2026-07-05",
+    thumbnail: "/images/thumbnails/sokomagattara/292/sokomagattara-1.png",
+    previewImage1: "/images/thumbnails/sokomagattara/292/sokomagattara-2.png",
+    previewImage2: "/images/thumbnails/sokomagattara/292/sokomagattara-3.png",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/file/rga2o2tipdun3oz/260705_Soko_Magattara%252C_Sakurazaka_%2523292_Sub_Indo.ass/file",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260705-soko-magattara-sakurazaka-292-sub-indo-lNarx",
+    rawMp4Url:
+      "https://www.akari46.com/2026/07/260705-soko-magattara-sakurazaka-292.html",
+    description:
+      'Eps minggu ini menghadirkan tantangan seru bertajuk "Perebutan Gelar Azato Queen Sakurazaka46", di mana para member bersaing untuk membuktikan siapa yang paling imut dan genit (azatoi) di mata tamu spesial, Sunshine Ikezaki. Kompetisi ini menampilkan berbagai skenario fantasi musim panas yang diperagakan Asai, Yamashita, Ten-chan, dan Ishimori. Salah satu sorotan utama adalah penampilan Ishimori Rika yang berhasil memikat perhatian Ikezaki dengan konsep uniknya sampai membuat sang juri sampai terpaku. Episode ini dipenuhi dengan momen-momen menggemaskan, aksi azatoi yang memicu tawa, serta interaksi kocak antara para member dan Ikezaki yang terlihat sangat menikmati tantangan tersebut. Sisanya bisa ditonton sendiri.',
+  },
+  {
+    id: "ep-158-meets",
+    showId: "sakura-meets",
+    showName: "Sakura Meets",
+    showSlug: "sakura-meets",
+    episodeTitle: "260702 {Sakura Meets} #158 Sub Indo",
+    episodeSubtitle: "Meets Derby ke-7, Prediksi Balapan Gen 4",
+    episodeNumber: "Episode 158",
+    releaseDate: "2026-07-02",
+    thumbnail: "/images/thumbnails/sakura-meets/158/sakura-meets-1.png",
+    previewImage1: "/images/thumbnails/sakura-meets/158/sakura-meets-2.png",
+    previewImage2: "/images/thumbnails/sakura-meets/158/sakura-meets-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260702-sakura-meets-158-sub-indo-RLhui",
+    rawMp4Url: "https://www.akari46.com/2026/07/260702-sakura-meets-158.html",
+    description:
+      'Eps minggu ini dari Sakura Meets menghadirkan segmen "Meets Derby ke-7", di mana para member ditantang untuk membuat prediksi unik layaknya balapan kuda yang kali ini diikuti oleh para member Generasi ke-4 yang baru pertama kali tampil. Dengan dipandu oleh MC Yamazoe (Aiseki Start) serta persaingan prediksi antara Tim Generasi ke-2 (Onuma & Masumoto) melawan Tim Generasi ke-3 (Nakajima, Taniguchi, & Kojima). Sepanjang episode, persaingan sengit namun hangat dalam "Piala Siapa yang Paling Cepat Masuk Studio" serta "Piala Siapa Cepat Makan Donat" antara Matsumoto Wako, Yamada Momomi, Nakagawa Chihiro, dan Inaguma Hina.sanya. Sisanya bisa ditonton sendiri.',
+  },
+  {
+    id: "ep-014-channel",
+    showId: "sakurazaka-channel",
+    showName: "Sakurazaka Channel",
+    showSlug: "sakurazaka-channel",
+    episodeTitle: "260630 {Sakurazaka Channel} Sub Indo",
+    episodeSubtitle:
+      "Vlog Enriko yang bangun pagi dan bersemangat sejak awal hari",
+    episodeNumber: "#",
+    releaseDate: "2026-06-30",
+    thumbnail: "/images/thumbnails/sakura-channel/260630/sakura-channel-1.jpg",
+    previewImage1: "#",
+    previewImage2: "#",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260630-sakurazaka-channel-vlog-enriko-yang-bangun-pagi-dan-bersemangat-sejak-awal-hari-sub-indo-d9j3p",
+    rawMp4Url: "https://www.youtube.com/watch?v=ci4m7HdJQUg",
+    description:
+      "Segmen kali ini menampilkan Vlog aktivitas pagi yang santai dari Enriko, yang menunjukkan kebiasaannya memulai hari lebih awal. Riko membagikan rutinitasnya sejak bangun tidur, termasuk momen santai saat ia melakukan peregangan, jalan kaki, dan menikmati sarapan. Tidak hanya itu, ia juga meluangkan waktu untuk berolahraga ringan seperti yoga di taman dan berinteraksi dengan anjing-anjing disana, sebelum akhirnya menutup petualangan paginya dengan mengunjungi toko roti favoritnya. Sisanya bisa ditonton sendiri.",
+  },
+  {
+    id: "ep-291-choko",
+    showId: "chokosaku",
+    showName: "Chokosaku",
+    showSlug: "chokosaku",
+    episodeTitle: "260628 {Chokosaku} #291 Sub Indo",
+    episodeSubtitle: "Pertarungan Perebutan Gelar Chokotto Queen",
+    episodeNumber: "Episode 291",
+    releaseDate: "2026-06-28",
+    thumbnail: "/images/thumbnails/chokosaku/291/chokosaku-1.png",
+    previewImage1: "/images/thumbnails/chokosaku/291/chokosaku-2.png",
+    previewImage2: "/images/thumbnails/chokosaku/291/chokosaku-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260628-chokosaku-291-sub-indo-JVPxz",
+    rawMp4Url:
+      "https://www.akari46.com/2026/06/260628-sakurazaka46chokosaku291.html",
+    description:
+      'Dalam episode Chokosaku minggu ini, Matono dan Yamashita akan memandu "Pertarungan Perebutan Gelar Chokotto Queen," di mana para member berkompetisi untuk meraih gelar melalui tantangan unik seperti "Queen Topik Setengah-Setengah", "Queen Refleks", serta "Queen Paling Peka Perubahan Member"dengan menebak dengan tepat lima perubahan penampilan 5 member yang hadir minggu ini.',
+  },
+  {
+    id: "ep-291-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "260628 {Soko Magattara, Sakurazaka} #291 Sub Indo",
+    episodeSubtitle: "Part 2 Kompetisi Perebutan Gelar Queen Sakurazaka46",
+    episodeNumber: "Episode 291",
+    releaseDate: "2026-06-28",
+    thumbnail: "/images/thumbnails/sokomagattara/291/sokomagattara-1.png",
+    previewImage1: "/images/thumbnails/sokomagattara/291/sokomagattara-2.png",
+    previewImage2: "/images/thumbnails/sokomagattara/291/sokomagattara-3.png",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/file/tz038ucbc6g1u6p/260628_Soko_Magattara%252C_Sakurazaka_%2523291_Sub_Indo.ass/file",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260628-soko-magattara-sakurazaka-291-sub-indo-YyctZ",
+    rawMp4Url:
+      "https://www.akari46.com/2026/06/260628-soko-magattara-sakurazaka-291.html",
+    description:
+      'Eps minggu ini merupakan part 2 melanjutkan kompetisi perebutan gelar "Queen" untuk mencari Ratu baru bagi para member Sakurazaka46 yang belum memiliki gelar. Episode ini diawali dengan tantangan pukul-tutup batu-gunting-kertas (permainan palu dan perisai) antara Yamashita Shizuki, Nakagawa Chihiro, dan Matsumoto Wako untuk memperebutkan gelar "Ratu Terlemah". Selain itu, episode ini juga Derby Kayang dari Katsumata Haru, Asai Konomi, Endo Riko, dan Taniguchi Airi. Serta ada tantangan minum cepat menggunakan sedotan sepanjang 1,8 meter oleh Kojima Nagisa, Yamasaki Ten, Odakura Reina, dan Mukai Itoha. Dan terakhir Wakochi juga mengajukan untuk melakukan blind test kecap asin. Sisanya bisa ditonton sendiri.',
+  },
+  {
+    id: "ep-013-channel",
+    showId: "sakurazaka-channel",
+    showName: "Sakurazaka Channel",
+    showSlug: "sakurazaka-channel",
+    episodeTitle: "260624 {Sakurazaka Channel} Sub Indo",
+    episodeSubtitle:
+      "Meliput di balik layar Live Generasi ke-4, puncak perjuangan mereka!",
+    episodeNumber: "#",
+    releaseDate: "2026-06-24",
+    thumbnail: "/images/thumbnails/sakura-channel/260624/sakura-channel-1.jpg",
+    previewImage1: "#",
+    previewImage2: "#",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260624-sakurazaka-channel-meliput-di-balik-layar-live-generasi-ke-4-puncak-perjuangan-mereka-sub-indo-btFKq",
+    rawMp4Url: "https://www.youtube.com/watch?v=FasWElvoy9c",
+    description:
+      "Konten kali ini dari Sakurazaka Channel menampilkan liputan mendalam di balik layar konser generasi ke-4 Sakurazaka46. Episode ini menyoroti persiapan emosional dan teknis para member, termasuk momen-momen latihan intensif, serta keceriaan mereka di belakang panggung konser. Perjalanan ini memuncak pada penampilan konser yang sukses, di mana para senpai turut hadir memberikan dukungan, yang membuat para member generasi ke-4 merasa sangat terharu dan bangga akan perkembangan mereka selama satu tahun ini. Sisanya bisa ditonton sendiri.",
+  },
 ];
 
 export const latestEpisodes = episodes.slice(0, 3);
