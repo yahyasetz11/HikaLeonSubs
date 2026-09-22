@@ -1115,7 +1115,7 @@ export const episodes: Episode[] = [
     showName: "Chokosaku",
     showSlug: "chokosaku",
     episodeTitle: "260628 {Chokosaku} #291 Sub Indo",
-    episodeSubtitle: "Pertarungan Perebutan Gelar Chokotto Queen",
+    episodeSubtitle: "Pertarungan Perebutan Gelar Chokotto Queen Part 2",
     episodeNumber: "Episode 291",
     releaseDate: "2026-06-28",
     thumbnail: "/images/thumbnails/chokosaku/291/chokosaku-1.png",
@@ -1172,6 +1172,435 @@ export const episodes: Episode[] = [
     rawMp4Url: "https://www.youtube.com/watch?v=FasWElvoy9c",
     description:
       "Konten kali ini dari Sakurazaka Channel menampilkan liputan mendalam di balik layar konser generasi ke-4 Sakurazaka46. Episode ini menyoroti persiapan emosional dan teknis para member, termasuk momen-momen latihan intensif, serta keceriaan mereka di belakang panggung konser. Perjalanan ini memuncak pada penampilan konser yang sukses, di mana para senpai turut hadir memberikan dukungan, yang membuat para member generasi ke-4 merasa sangat terharu dan bangga akan perkembangan mereka selama satu tahun ini. Sisanya bisa ditonton sendiri.",
+  },
+  {
+    id: "ep-290-choko",
+    showId: "chokosaku",
+    showName: "Chokosaku",
+    showSlug: "chokosaku",
+    episodeTitle: "260621 {Chokosaku} #290 Sub Indo",
+    episodeSubtitle: "Pertarungan Gelar Chokosaku Queen Sakurazaka46",
+    episodeNumber: "Episode 290",
+    releaseDate: "2026-06-21",
+    thumbnail: "/images/thumbnails/chokosaku/290/chokosaku-1.png",
+    previewImage1: "/images/thumbnails/chokosaku/290/chokosaku-2.png",
+    previewImage2: "/images/thumbnails/chokosaku/290/chokosaku-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260621-chokosaku-290-sub-indo-Jp3EK",
+    rawMp4Url:
+      "https://www.akari46.com/2026/06/260621-sakurazaka46chokosaku290.html",
+    description:
+      'Eps minggu ini dari Chokosaku menghadirkan "Pertarungan Gelar Queen", sebuah babak tambahan dari turnamen perebutan gelar Queen yang menantang para member untuk mempraktikkan keahlian khusus mereka. Episode ini menguji ketahanan dan kemampuan unik member melalui serangkaian tantangan, termasuk tantangan "No Reaction Queen" yang diusulkan Yamakawa, serta kompetisi makan lemon cepat yang memperlihatkan keahlian luar biasa dari Yamakawa dan Nakagawa. Selain itu, ada kompetisi hafalan daftar kota penyelenggara Olimpiade Musim Panas, yang diusulkan oleh Tamura. Sisanya bisa ditonton sendiri.',
+  },
+  {
+    id: "ep-290-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "260621 {Soko Magattara, Sakurazaka} #290 Sub Indo",
+    episodeSubtitle: "Kompetisi Perebutan Gelar Queen Sakurazaka46",
+    episodeNumber: "Episode 290",
+    releaseDate: "2026-06-21",
+    thumbnail: "/images/thumbnails/sokomagattara/290/sokomagattara-1.png",
+    previewImage1: "/images/thumbnails/sokomagattara/290/sokomagattara-2.png",
+    previewImage2: "/images/thumbnails/sokomagattara/290/sokomagattara-3.png",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/file/8gmd0ekcxzx49x7/260621_Soko_Magattara%252C_Sakurazaka_%2523290_Sub_Indo.ass/file",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260621-soko-magattara-sakurazaka-290-sub-indo-fqV0S",
+    rawMp4Url:
+      "https://www.akari46.com/2026/06/260614-soko-magattara-sakurazaka-289_01070465990.html",
+    description:
+      'Eps minggu ini menyajikan "Pertarungan Perebutan Gelar Ratu" yang sengit, di mana para member Sakurazaka46 bersaing untuk memperebutkan berbagai gelar Ratu di bidang yang unik. Dalam segmen pembuka, penonton diajak bernostalgia dengan daftar gelar Ratu yang pernah diraih member sebelumnya, sebelum akhirnya beralih ke kompetisi baru yang melibatkan adu ketangkasan fisik seperti Lompat tali, Beach Flag dan tantangan Gyoza yang menguji kecepatan serta kerapian dalam membungkus gyoza.Sisanya bisa ditonton sendiri.',
+  },
+  {
+    id: "ep-012-channel",
+    showId: "sakurazaka-channel",
+    showName: "Sakurazaka Channel",
+    showSlug: "sakurazaka-channel",
+    episodeTitle: "260616 {Sakurazaka Channel} Sub Indo",
+    episodeSubtitle:
+      "Berwisata dan Kuliner ke Kagawa Lebih Dulu & Meninjau Lokasi Acara! Tampil sebagai Pembicara di Machi★Asobi Vol. 30!",
+    episodeNumber: "#",
+    releaseDate: "2026-06-16",
+    thumbnail: "/images/thumbnails/sakura-channel/260616/sakura-channel-1.jpg",
+    previewImage1: "#",
+    previewImage2: "#",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260616-sakurazaka-channel-berwisata-dan-kuliner-ke-kagawa-lebih-dulu-meninjau-lokasi-acara-tampil-sebagai-pembicara-di-machiasobi-vol-30-sub-indo-9ZjZG",
+    rawMp4Url: "https://www.youtube.com/watch?v=irlxdNA-gxs",
+    description:
+      "Segmen kali ini menampilkan perjalanan penuh keceriaan Matsuda Rina dan Matono Mio di wilayah Shikoku, tepatnya di Prefektur Tokushima dan Kagawa. Perjalanan ini dilakukan dalam rangka penampilan mereka di acara Machi Asobi di Tokushima sekaligus persiapan tur konser mereka di Anabuki Arena, Kagawa. Selama di sana, mereka menjelajahi keindahan Jembatan Seto Ohashi, mencoba pengalaman mewarnai kain dengan teknik indigo, serta mencicipi kuliner lokal yang ikonik, yaitu udon Kagawa dengan berbagai varian penyajian. Episode ini ditutup dengan kunjungan ke Akuarium Shikoku, di mana mereka terpesona melihat lumba-lumba dan berbagai biota laut lainnya. Sisanya bisa ditonton sendiri.",
+  },
+  {
+    id: "ep-289-choko",
+    showId: "chokosaku",
+    showName: "Chokosaku",
+    showSlug: "chokosaku",
+    episodeTitle: "260614 {Chokosaku} #289 Sub Indo",
+    episodeSubtitle:
+      "Proyek Pembinaan Wakil Kapten Sakurazaka46, Babak Tambahan",
+    episodeNumber: "Episode 289",
+    releaseDate: "2026-06-14",
+    thumbnail: "/images/thumbnails/chokosaku/289/chokosaku-1.png",
+    previewImage1: "/images/thumbnails/chokosaku/289/chokosaku-2.png",
+    previewImage2: "/images/thumbnails/chokosaku/289/chokosaku-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260614-chokosaku-289-sub-indo-MQ360",
+    rawMp4Url: "https://www.bilibili.com/video/BV1BTJK6hEnw/",
+    description:
+      'Eps minggu ini dari Chokosaku memulai "Proyek Pembinaan Wakil Kapten" yang dirancang untuk meningkatkan kemampuan Yamasaki Ten setelah penunjukannya sebagai wakil kapten Sakurazaka46. Proyek ini menguji keterampilan krusial seorang wakil kapten melalui serangkaian tantangan, termasuk "Kuis Gerakan Masalah" untuk menguji daya observasi, serta "Game Pesan Berantai Dukungan Menggambar" dan "Support Bentuk Challenge" untuk mengasah kemampuan memahami dan mendukung member.',
+  },
+  {
+    id: "ep-289-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "260614 {Soko Magattara, Sakurazaka} #289 Sub Indo",
+    episodeSubtitle: "Proyek Pembinaan Wakil Kapten Sakurazaka46",
+    episodeNumber: "Episode 289",
+    releaseDate: "2026-06-14",
+    thumbnail: "/images/thumbnails/sokomagattara/289/sokomagattara-1.png",
+    previewImage1: "/images/thumbnails/sokomagattara/289/sokomagattara-2.png",
+    previewImage2: "/images/thumbnails/sokomagattara/289/sokomagattara-3.png",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/file/ao0tihqql6fe325/260614_Soko_Magattara%252C_Sakurazaka_%2523289_Sub_Indo.ass/file",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260614-soko-magattara-sakurazaka-289-sub-indo-tMjqP",
+    rawMp4Url:
+      "https://www.akari46.com/2026/06/260614-soko-magattara-sakurazaka-289.html",
+    description:
+      'Eps minggu ini adalah episode spesial perayaan penunjukan Yamasaki Ten sebagai wakil kapten Sakurazaka46, yang dilakukan bersama Kapten Matsuda Rina untuk memperkuat kekompakan mereka. Dalam segmen ini, mereka harus menyelesaikan berbagai permainan kuis dan tantangan fisik—seperti kuis seberapa kenal dengan member, adu tahan napas di air, pertarungan keseimbangan sapu, hingga tantangan menggendong putri dengan fuurin (lonceng angin)—sebagai misi untuk menjadi "Buddies terkuat".',
+  },
+  {
+    id: "ep-288-choko",
+    showId: "chokosaku",
+    showName: "Chokosaku",
+    showSlug: "chokosaku",
+    episodeTitle: "260607 {Chokosaku} #288 Sub Indo",
+    episodeSubtitle:
+      "Segmen Kampanye Hit Single ke-15 Sakurazaka46, Lonesome Rabbit/What's KAZOKU, Babak Tantangan Teka-Teki",
+    episodeNumber: "Episode 288",
+    releaseDate: "2026-06-07",
+    thumbnail: "/images/thumbnails/chokosaku/288/chokosaku-1.png",
+    previewImage1: "/images/thumbnails/chokosaku/288/chokosaku-2.png",
+    previewImage2: "/images/thumbnails/chokosaku/288/chokosaku-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260607-chokosaku-288-sub-indo-IYG56",
+    rawMp4Url: "https://www.bilibili.com/video/BV19PET6tE9J/",
+    description:
+      'Eps minggu ini adalah segmen kampanye hit single ke-15 Sakurazaka46, Lonesome Rabbit/What\'s "KAZOKU". Di kampanye ini, Ozono, Moriya, Endo, Taniguchi, Murayama, dan Mukai akan mencoba memecahkan teka-teki yang diberikan staff. Jika mereka bisa berhasil menyelesaikan teka-teki dalam kurang dari 20 menit, maka dianggap sukses.',
+  },
+  {
+    id: "ep-288-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "260607 {Soko Magattara, Sakurazaka} #288 Sub Indo",
+    episodeSubtitle:
+      "Kampanye Hit Single ke-15 Sakurazaka46, Lonesome Rabbit/What's KAZOKU",
+    episodeNumber: "Episode 288",
+    releaseDate: "2026-06-07",
+    thumbnail: "/images/thumbnails/sokomagattara/288/sokomagattara-1.png",
+    previewImage1: "/images/thumbnails/sokomagattara/288/sokomagattara-2.png",
+    previewImage2: "/images/thumbnails/sokomagattara/288/sokomagattara-3.png",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/file/ju1y90nnd5x6myx/260607_Soko_Magattara%252C_Sakurazaka_%2523288_Sub_Indo.ass/file",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260607-soko-magattara-sakurazaka-288-sub-indo-STRGe",
+    rawMp4Url:
+      "https://www.akari46.com/2026/06/260607-soko-magattara-sakurazaka-288.html",
+    description:
+      'Eps minggu ini adalah segmen kampanye hit single ke-15 Sakurazaka46, Lonesome Rabbit/What\'s "KAZOKU". Di kampanye ini, 3 member terdepan, Morita, Yamashita, dan Asai akan mempromosikan single ini di jalan-jalan sambil memakai kostum kelinci. Jika kampanye ini berhasil masuk trending top 30 di X, maka akan dianggap sukses. Tantangan utamanya kali ini adalah mereka tidak boleh berbicara atau kasih tahu bahwa member asli sakurazaka46 ada di dalam kostum. Sisanya bisa ditonton sendiri.',
+  },
+  {
+    id: "ep-001-channel",
+    showId: "sakurazaka-channel",
+    showName: "Sakurazaka Channel",
+    showSlug: "sakurazaka-channel",
+    episodeTitle: "260604 {Sakurazaka Channel} Sub Indo",
+    episodeSubtitle:
+      "Jalan-jalan Santai Karin Belanja di Pasar Keramik Mashiko",
+    episodeNumber: "#",
+    releaseDate: "2026-06-04",
+    thumbnail: "/images/thumbnails/sakura-channel/260604/sakura-channel-1.jpg",
+    previewImage1: "#",
+    previewImage2: "#",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260604-sakurazaka-channel-jalan-jalan-santai-karin-belanja-di-pasar-keramik-mashiko-U6vQw",
+    rawMp4Url: "https://www.youtube.com/watch?v=d7sqBzFC5QQ",
+    description:
+      "Eps kali ini menampilkan Karin Fujiyoshi yang berkunjung ke Festival Pasar Keramik Mashiko untuk mencari peralatan makan unik, meskipun ia sempat berniat untuk tidak membeli gelas lagi. Di sela-sela aktivitasnya, ia berbagi cerita mendalam mulai dari tantangan koreografi lagu baru Sakurazaka46 hingga kenangan emosional saat konser di Stadion Nasional.",
+  },
+  {
+    id: "ep-287-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "260531 {Soko Magattara, Sakurazaka} #287 Sub Indo",
+    episodeSubtitle:
+      "Segmen Kelulusan Takemoto Yui, Penampilan Terakhir di Sokosaku",
+    episodeNumber: "Episode 287",
+    releaseDate: "2026-05-31",
+    thumbnail: "/images/thumbnails/sokomagattara/287/sokomagattara-1.png",
+    previewImage1: "/images/thumbnails/sokomagattara/287/sokomagattara-2.png",
+    previewImage2: "/images/thumbnails/sokomagattara/287/sokomagattara-3.png",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/file/1lxl7wwk174o73c/260531_Soko_Magattara%252C_Sakurazaka_%2523287_Sub_Indo.ass/file",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260531-soko-magattara-sakurazaka-287-sub-indo-O3tbn",
+    rawMp4Url:
+      "https://www.akari46.com/2026/06/260531-soko-magattara-sakurazaka-287.html",
+    description:
+      "Eps minggu ini adalah segmen kelulusan Takemoto Yui. Di penampilan terakhirnya ini, Takemoto dan member akan melakukan hal-hal yang ingin dilakukan di Sokosaku sebelum benar-benar lulus dari Sakurazaka46. Sesuai image dari Takemoto, akan banyak segmen komedi di eps kelulusan ini.",
+  },
+  {
+    id: "ep-011-channel",
+    showId: "sakurazaka-channel",
+    showName: "Sakurazaka Channel",
+    showSlug: "sakurazaka-channel",
+    episodeTitle: "260529 {Sakurazaka Channel} Sub Indo",
+    episodeSubtitle:
+      "Katsumata & Meguro Tidak Boleh Pulang Sampai Berhasil Memotret 100 Ekor Kelinci!",
+    episodeNumber: "#",
+    releaseDate: "2026-05-29",
+    thumbnail: "/images/thumbnails/sakura-channel/260529/sakura-channel-1.jpg",
+    previewImage1: "#",
+    previewImage2: "#",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260529-sakurazaka-channel-katsumata-meguro-tidak-boleh-pulang-sampai-berhasil-memotret-100-ekor-kelinci-sub-indo-dOX4S",
+    rawMp4Url: "https://youtu.be/1x-iNIfrijk?si=PydIy19aNCh8mOTI",
+    description:
+      "Segmen kali ini dari Sakurazaka Channel menampilkan perjalanan Meguro Hiiro dan Katsumata Haru, yang mengunjungi Pulau Okunoshima di Hiroshima untuk menjalankan misi khusus: memotret 100 ekor kelinci liar. Tantangan ini menjadi momen yang emosional bagi Haru, yang secara jujur mengakui rasa takutnya terhadap kelinci, menjadikannya kesempatan untuk mengatasi ketakutan tersebut. Sepanjang perjalanan, mereka berinteraksi dengan ratusan kelinci di pulau tersebut, saling membantu mengambil foto close-up yang menjadi target tantangan, hingga akhirnya Haru perlahan mulai merasa nyaman dan berhasil menaklukkan ketakutannya. Sisanya bisa ditonton sendiri.",
+  },
+  {
+    id: "ep-286-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "260524 {Soko Magattara, Sakurazaka} #286 Sub Indo",
+    episodeSubtitle: "Sesi Penyelesaian Masalah Pribadi Member",
+    episodeNumber: "Episode 286",
+    releaseDate: "2026-05-24",
+    thumbnail: "/images/thumbnails/sokomagattara/286/sokomagattara-1.png",
+    previewImage1: "/images/thumbnails/sokomagattara/286/sokomagattara-2.png",
+    previewImage2: "/images/thumbnails/sokomagattara/286/sokomagattara-3.png",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/file/l3ald5ck4lwcwn1/260524_Soko_Magattara%252C_Sakurazaka_%2523286_Sub_Indo.ass/file",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260524-soko-magattara-sakurazaka-286-sub-indo-m5LSr",
+    rawMp4Url:
+      "https://www.akari46.com/2026/05/260524-soko-magattara-sakurazaka-286.html",
+    description:
+      "Eps minggu ini adalah segmen penyelesaian masalah pribadi member. Dikarenakan Wakochi sedang bimbang untuk tetap mempertahankan karakter Wakochiboshi-nya atau tidak, jadi member lain yang punya masalah pribadi serupa akan speak up juga, lalu member lainnya akan mencoba membantu memberikan saran untuk menyelesaikan masalah tersebut.",
+  },
+  {
+    id: "ep-010-channel",
+    showId: "sakurazaka-channel",
+    showName: "Sakurazaka Channel",
+    showSlug: "sakurazaka-channel",
+    episodeTitle: "260508 {Sakurazaka Channel} Sub Indo",
+    episodeSubtitle:
+      "Klub Minecraft Sakurazaka Dimulai! Menggali Banyak Berlian dengan Peta Harta Karun & Jalan Menuju Penaklukan Ender Dragon!",
+    episodeNumber: "#",
+    releaseDate: "2026-05-08",
+    thumbnail: "/images/thumbnails/sakura-channel/260508/sakura-channel-1.jpg",
+    previewImage1: "#",
+    previewImage2: "#",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260508-sakurazaka-channel-klub-minecraft-sakurazaka-dimulai-menggali-banyak-berlian-dengan-peta-harta-karun-jalan-menuju-penaklukan-ender-dragon-sub-indo-rEC8k",
+    rawMp4Url:
+      "https://drive.google.com/file/d/1tG-mo-Myg_t87huY6frNyZZVpHNyYqOY/view?usp=sharing",
+    description:
+      'Segmen kali ini menampilkan keseruan lima member Sakurazaka46—Odakura Reina, Kojima Nagisa, Matono Mio, Nakashima Yuzuki, dan Taniguchi Airi—yang tergabung dalam "Klub Minecraft" untuk menjalankan misi menantang: mengalahkan Ender Dragon. Sebagai tahap persiapan agar menjadi tim yang kuat, mereka melakukan ekspedisi berburu harta karun dengan peta dan menjelajahi Nether untuk mengumpulkan Blaze Rod. Di tengah petualangan yang penuh aksi—termasuk momen panik saat berhadapan dengan Ghast dan zombie, serta keberuntungan Nakashima yang berhasil menemukan berlian dalam jumlah besar—mereka bekerja sama dengan penuh tawa dan kekacauan lucu hingga akhirnya berhasil mengumpulkan bahan yang dibutuhkan. Sisanya bisa ditonton sendiri.',
+  },
+  {
+    id: "ep-009-channel",
+    showId: "sakurazaka-channel",
+    showName: "Sakurazaka Channel",
+    showSlug: "sakurazaka-channel",
+    episodeTitle: "260430 {Sakurazaka Channel} Sub Indo",
+    episodeSubtitle:
+      "Nakagawa Menggenggam Uang 5000 Yen dan Menantang Mesin Capit! Ingin Memberikan Balasan kepada Yamashita!",
+    episodeNumber: "#",
+    releaseDate: "2026-04-30",
+    thumbnail: "/images/thumbnails/sakura-channel/260430/sakura-channel-1.jpg",
+    previewImage1: "#",
+    previewImage2: "#",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260430-sakurazaka-channel-nakagawa-menggenggam-uang-5000-yen-dan-menantang-mesin-capit-ingin-memberikan-balasan-kepada-yamashita-sub-indo-abEqc",
+    rawMp4Url: "https://www.youtube.com/watch?v=plC6FR4aP_4&t=1s",
+    description:
+      "Segmen kali ini menampilkan Nakagawa Chihiro yang pergi ke sebuah pusat permainan di Yokohama untuk menantang berbagai mesin crane game. Membawa modal sebesar 5000 yen, Chihiro bertekad mendapatkan boneka sebagai hadiah balasan untuk Yamashita Shizuki, sekaligus mencari boneka lainnya untuk Takemoto-san. Dengan keahliannya yang sudah terasah sejak kecil, ia berhasil mendapatkan berbagai macam boneka, termasuk boneka berbentuk kuda, setelah melalui perjuangan dan sedikit bantuan dari manajer. Selain berburu boneka, ia juga mencoba keberuntungannya pada mesin crane game yang berisi hadiah makanan. Sisanya bisa ditonton sendiri.",
+  },
+  {
+    id: "ep-008-channel",
+    showId: "sakurazaka-channel",
+    showName: "Sakurazaka Channel",
+    showSlug: "sakurazaka-channel",
+    episodeTitle: "260422 {Sakurazaka Channel} Sub Indo",
+    episodeSubtitle:
+      "Meliput Konser Anniversary ke-5 Sakurazaka46 di Stadion Nasional untuk Pertama Kalinya!",
+    episodeNumber: "#",
+    releaseDate: "2026-04-22",
+    thumbnail: "/images/thumbnails/sakura-channel/260422/sakura-channel-1.jpg",
+    previewImage1: "#",
+    previewImage2: "#",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260422-sakurazaka-channel-meliput-konser-anniversary-ke-5-sakurazaka46-di-stadion-nasional-untuk-pertama-kalinya-sub-indo-gv9Bs",
+    rawMp4Url: "https://www.youtube.com/watch?v=KhcNpPgiVsw",
+    description:
+      "Segmen kali ini menyajikan liputan eksklusif di balik layar hari pertama konser Sakurazaka46 5th Anniversary Live yang megah di National Stadium. Member Sakurazaka46 berbagi antusiasme mereka terhadap panggung yang luar biasa luas dan cuaca yang cerah—kontras dengan hujan deras sehari sebelumnya—serta kesibukan mereka selama latihan dan masa istirahat, mulai dari keceriaan saat berinteraksi dengan sesama member hingga momen santai menikmati katering di area belakang panggung. Sisanya bisa ditonton sendiri.",
+  },
+  {
+    id: "ep-007-channel",
+    showId: "sakurazaka-channel",
+    showName: "Sakurazaka Channel",
+    showSlug: "sakurazaka-channel",
+    episodeTitle: "260408 {Sakurazaka Channel} Sub Indo",
+    episodeSubtitle:
+      "Yamakawa Ui Berkemah Solo untuk Pertama Kalinya! Kesulitan Besar Saat Memasang Tenda",
+    episodeNumber: "#",
+    releaseDate: "2026-04-08",
+    thumbnail: "/images/thumbnails/sakura-channel/260408/sakura-channel-1.jpg",
+    previewImage1: "#",
+    previewImage2: "#",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260408-sakurazaka-channel-yamakawa-ui-berkemah-solo-untuk-pertama-kalinya-kesulitan-besar-saat-memasang-tenda-sub-indo-evvdJ",
+    rawMp4Url: "https://www.youtube.com/watch?v=NWQwnkbX_vQ",
+    description:
+      "Segmen kali ini adalah segmen solo camp pertama dari member Sakurazaka46, Yamakawa Ui, yang akhirnya mewujudkan impiannya untuk berkemah sendirian di tengah alam terbuka. Tantangan utamanya adalah kemandirian, mulai dari mendirikan tenda sendiri, membelah kayu bakar untuk pertama kalinya, hingga memasak cheese fondue dan memanggang daging dengan api unggun yang ia nyalakan sendiri. Meski sempat menghadapi kendala kecil seperti daging yang hampir gosong, pengalaman ini memberikan ketenangan bagi Ui untuk merenung dan menikmati waktu luang yang jarang ia dapatkan sebagai orang yang biasanya lebih suka menghabiskan waktu di rumah. Sisanya bisa ditonton sendiri.",
+  },
+  {
+    id: "ep-006-channel",
+    showId: "sakurazaka-channel",
+    showName: "Sakurazaka Channel",
+    showSlug: "sakurazaka-channel",
+    episodeTitle: "260401 {Sakurazaka Channel} Sub Indo",
+    episodeSubtitle:
+      "Jalan Menuju Mengatasi Kelemahan Yamasaki Ten (20)! Hono dan Kuma Juga Muncul!",
+    episodeNumber: "#",
+    releaseDate: "2026-04-01",
+    thumbnail: "/images/thumbnails/sakura-channel/260401/sakura-channel-1.jpg",
+    previewImage1: "#",
+    previewImage2: "#",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260401-sakurazaka-channel-jalan-menuju-mengatasi-kelemahan-yamasaki-ten-20-hono-dan-kuma-juga-muncul-sub-indo-OKcU3",
+    rawMp4Url: "https://www.youtube.com/watch?v=wXN-lY3xBRE",
+    description:
+      "Eps minggu ini adalah segmen tantangan mental member Sakurazaka46, Yamazaki Ten, yang berusaha mengatasi berbagai ketakutannya yang sudah mulai mengganggu pekerjaan di usia 20 tahun. Tantangan ini mencakup beberapa tahap, mulai dari mencoba makanan yang mengandung wasabi dan karashi (mustard Jepang), hingga menghadapi hal yang paling ia takuti: kostum maskot dan hewan kecil. Dengan bantuan Hono, Ten mencoba menaklukkan rasa takutnya terhadap hewan seperti kelinci dan anak ayam, bahkan berhasil menyentuhnya secara langsung. Sisanya bisa ditonton sendiri.",
+  },
+  {
+    id: "ep-005-channel",
+    showId: "sakurazaka-channel",
+    showName: "Sakurazaka Channel",
+    showSlug: "sakurazaka-channel",
+    episodeTitle: "260324 {Sakurazaka Channel} Sub Indo",
+    episodeSubtitle:
+      "Bagian Kedua Perjalanan Sendirian Yuzu Naik Kereta Nishitetsu! Mencari Belut Yanagawa di Fukuoka!",
+    episodeNumber: "#",
+    releaseDate: "2026-03-24",
+    thumbnail: "/images/thumbnails/sakura-channel/260324/sakura-channel-1.jpg",
+    previewImage1: "#",
+    previewImage2: "#",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260324-sakurazaka-channel-bagian-kedua-perjalanan-sendirian-yuzu-naik-kereta-nishitetsu-mencari-belut-yanagawa-di-fukuoka-sub-indo-j6OfH",
+    rawMp4Url: "https://www.youtube.com/watch?v=FCMrKuziVjA",
+    description:
+      "Eps kali ini adalah segmen perjalanan solo Nakashima Yuzuki, yang kembali menjelajahi kenangan masa sekolahnya di Fukuoka dengan menaiki kereta Nishitetsu. Tantangan pribadinya adalah mengeksplorasi tempat-tempat baru seperti Yanagawa—termasuk menikmati unagi (belut) di Wakamatsuya dan menyusuri sungai menggunakan perahu—serta mengunjungi toko roti kukus favoritnya di Stasiun Daizenji. Perjalanan santai ini juga menjadi ajang nostalgia bagi Yuzu yang sempat bekerja paruh waktu di pusat perbelanjaan Shintencho sebelum akhirnya menutup petualangannya dengan rencana untuk mencoba kedai yatai di kesempatan mendatang. Sisanya bisa ditonton sendiri.",
+  },
+  {
+    id: "ep-004-channel",
+    showId: "sakurazaka-channel",
+    showName: "Sakurazaka Channel",
+    showSlug: "sakurazaka-channel",
+    episodeTitle: "260318 {Sakurazaka Channel} Sub Indo",
+    episodeSubtitle:
+      "Idol Akiho Onuma Membedah Ikan Kanburi (Yellowtail) Seberat 8kg! Bahkan Membawa Pisau Sendiri!",
+    episodeNumber: "#",
+    releaseDate: "2026-03-18",
+    thumbnail: "/images/thumbnails/sakura-channel/260318/sakura-channel-1.jpg",
+    previewImage1: "#",
+    previewImage2: "#",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/250318-sakurazaka-channel-idol-akiho-onuma-membedah-ikan-kanburi-yellowtail-seberat-8kg-bahkan-membawa-pisau-sendiri-sub-indo-ubWW0",
+    rawMp4Url:
+      "https://www.youtube.com/watch?v=zTTh3hxakpE&pp=0gcJCUELAYcqIYzv",
+    description:
+      "Eps kali ini adalah segmen tantangan memotong ikan raksasa yang dilakukan oleh Onuma Akiho, di Tsukiji Uogashi. Tantangan utamanya adalah memotong ikan kanburi seberat 8 kg—rekor ikan terbesar yang pernah ia potong seumur hidupnya—yang bahkan sempat membuatnya kewalahan karena ukuran dan ketebalan tulangnya. Setelah perjuangan selama 4 jam, ia berhasil mengolah hasil potongannya menjadi berbagai hidangan lezat seperti shabu-shabu, sashimi, goma buri, dan buri kama sebagai bentuk penghargaannya terhadap ikan tersebut. Sisanya bisa ditonton sendiri.",
+  },
+  {
+    id: "ep-003-channel",
+    showId: "sakurazaka-channel",
+    showName: "Sakurazaka Channel",
+    showSlug: "sakurazaka-channel",
+    episodeTitle: "260305 {Sakurazaka Channel} Sub Indo",
+    episodeSubtitle:
+      "Kojima Nagisa yang Khawatir dan Murai Yuu yang Ngebut Ikut Turun ke Lereng Ski!",
+    episodeNumber: "#",
+    releaseDate: "2026-03-05",
+    thumbnail: "/images/thumbnails/sakura-channel/260305/sakura-channel-1.jpg",
+    previewImage1: "#",
+    previewImage2: "#",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260305-sakurazaka-channel-kojima-nagisa-yang-khawatir-dan-murai-yuu-yang-ngebut-ikut-turun-ke-lereng-ski-sub-indo-OT7wF",
+    rawMp4Url: "https://www.youtube.com/watch?v=NK2vG5-7Vhw",
+    description:
+      'Eps kali ini adalah segmen liburan musim dingin Murai Yu dan Kojima Nagisa, yang mencoba kembali mengasah kemampuan ski mereka di lereng ski Karuizawa, Nagano. Tantangan utamanya adalah mengatasi rasa cemas karena sudah sekitar 10 tahun tidak bermain ski, sekaligus menghadapi medan lereng yang cukup curam. Meski awalnya sempat ragu dan kesulitan, mereka akhirnya berhasil menaklukkan puncak tertinggi dan menikmati pemandangan indah, bahkan sempat membuat janji untuk membentuk "klub ski" Sakurazaka46 di masa depan. Sisanya bisa ditonton sendiri.',
+  },
+  {
+    id: "ep-002-channel",
+    showId: "sakurazaka-channel",
+    showName: "Sakurazaka Channel",
+    showSlug: "sakurazaka-channel",
+    episodeTitle: "260226 {Sakurazaka Channel} Sub Indo",
+    episodeSubtitle:
+      "Moriya Rena x Memancing! Memancing Ikan Wakasagi di Atas Es di Danau Akagi Onuma!",
+    episodeNumber: "#",
+    releaseDate: "2026-02-26",
+    thumbnail: "/images/thumbnails/sakura-channel/260226/sakura-channel-1.jpg",
+    previewImage1: "#",
+    previewImage2: "#",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260226-sakurazaka-channel-moriya-rena-x-memancing-memancing-ikan-wakasagi-di-atas-es-di-danau-akagi-onuma-sub-indo-7CrWD",
+    rawMp4Url: "https://www.youtube.com/watch?v=-TAj2pFEnW8",
+    description:
+      "Eps kali ini adalah segmen tantangan dari Moriya Rena, yang mencoba mewujudkan impiannya memancing ikan wakasagi di Danau Akagi Onuma yang membeku. Tantangan utamanya kali ini adalah bertahan di tengah cuaca ekstrem dan medan es yang licin untuk mendapatkan minimal 10 ekor ikan sebagai target pribadinya. Meski sempat mengalami kesulitan teknis saat melubangi es dan ikan yang tak kunjung memakan umpan, kejutan manis menanti di akhir segmen.",
   },
 ];
 
