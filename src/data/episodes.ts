@@ -70,6 +70,29 @@ export const shows: Show[] = [
 
 export const episodes: Episode[] = [
   {
+    id: "ep-025-channel",
+    showId: "sakurazaka-channel",
+    showName: "Sakurazaka Channel",
+    showSlug: "sakurazaka-channel",
+    episodeTitle: "260922 {Sakurazaka Channel} Sub Indo",
+    episodeSubtitle:
+      "Pertunjukan Terakhir Tur Nasional! Mengikuti Secara Dekat Sakurazaka46 di Konser Kagawa! Di Balik Layar!",
+    episodeNumber: "#",
+    releaseDate: "2026-09-22",
+    thumbnail: "/images/thumbnails/sakura-channel/260922/sakura-channel-1.jpg",
+    previewImage1:
+      "/images/thumbnails/sakura-channel/260922/sakura-channel-2.png",
+    previewImage2:
+      "/images/thumbnails/sakura-channel/260922/sakura-channel-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260922-sakurazaka-channel-pertunjukan-terakhir-tur-nasional-mengikuti-secara-dekat-sakurazaka46-di-konser-kagawa-di-balik-layar-sub-indo-GJGbk",
+    rawMp4Url: "https://www.youtube.com/watch?v=brypAmxXNoI",
+    description:
+      'Konten Sakurazaka Channel kali ini mengajak Buddies menyusuri keseruan di balik panggung konser Arena Tour 2026 "What\'s lonesome?" Sakurazaka46 di Kagawa, dimulai dari Yamada Momomi, Asai Konomi, dan beberapa member lain yang berbagi momen jelang tampil — mulai dari sesi berdandan dan tata rambut, obrolan santai penuh tawa, sampai waktu istirahat menyantap kuliner khas daerah setempat. Ada juga selingan seru seperti bermain game bareng dan menggambar maskot tur di balon untuk dibagikan ke penonton konser. Menutup hari yang panjang, keseruan berlanjut usai konser dengan sesi perayaan kecil untuk Karin-chan yang berulang tahun. Sisanya bisa langsung kalian tonton sendiri ya!',
+  },
+  {
     id: "ep-303-choko",
     showId: "chokosaku",
     showName: "Chokosaku",
