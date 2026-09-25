@@ -70,6 +70,27 @@ export const shows: Show[] = [
 
 export const episodes: Episode[] = [
   {
+    id: "ep-169-meets",
+    showId: "sakura-meets",
+    showName: "Sakura Meets",
+    showSlug: "sakura-meets",
+    episodeTitle: "260924 {Sakura Meets} #169 Sub Indo",
+    episodeSubtitle:
+      "Kilas Balik dari Panggung Sakura Meets Fes Bagian Yoru Meets",
+    episodeNumber: "Episode 169",
+    releaseDate: "2026-09-24",
+    thumbnail: "/images/thumbnails/sakura-meets/169/sakura-meets-1.png",
+    previewImage1: "/images/thumbnails/sakura-meets/169/sakura-meets-2.png",
+    previewImage2: "/images/thumbnails/sakura-meets/169/sakura-meets-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260924-sakura-meets-169-sub-indo-HwQzo",
+    rawMp4Url: "https://www.akari46.com/search/label/Lemino",
+    description:
+      'Sakura Meets pekan ini merangkum momen-momen seru dari gelaran "Sakura Meets Fes", khususnya sesi malam "Yoru Meets", dipandu langsung oleh Kira-san bersama para member yang berbagi cerita di balik layar acaranya sebagai penampilan terakhirnya di Sakura Meets. Ada sorotan sketsa komedi bareng beberapa komedian tamu, hingga kuis unik yang dibuat dari momen keseharian Kira di hari liburnya. Episode ini juga mengikuti liputan khusus Yuzu yang tampil untuk pertama kalinya di acara Ametalk. Sisanya bisa langsung kalian tonton sendiri di rilisannya ya!',
+  },
+  {
     id: "ep-025-channel",
     showId: "sakurazaka-channel",
     showName: "Sakurazaka Channel",
