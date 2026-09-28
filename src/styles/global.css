@@ -141,6 +141,16 @@
   .dark .group:hover .title-tag-gold {
     color: #fde68a;
   }
+
+  .search-highlight {
+    background: transparent;
+    color: #e8638a;
+    font-weight: 600;
+  }
+
+  .dark .search-highlight {
+    color: #f472b6;
+  }
 }
 
 @layer utilities {
