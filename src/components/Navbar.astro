@@ -118,7 +118,7 @@ const serializedEpisodes = JSON.stringify(
   <!-- Expanding search bar (hidden by default, shown over nav when active) -->
   <div
     id="nav-search-bar"
-    class="hidden absolute inset-x-0 top-0 h-16 z-10 px-4 sm:px-6 lg:px-8 flex items-center gap-3 bg-ground/95 dark:bg-dark-ground/95 backdrop-blur-md"
+    class="hidden absolute inset-x-0 top-0 h-16 z-10 px-4 sm:px-6 lg:px-8 items-center gap-3 bg-ground/95 dark:bg-dark-ground/95 backdrop-blur-md"
   >
     <svg class="w-5 h-5 text-ink-muted dark:text-dark-muted flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
       <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
@@ -257,8 +257,7 @@ const serializedEpisodes = JSON.stringify(
     const emptyMsg = document.getElementById('nav-search-empty');
     const closeBtn = document.getElementById('nav-search-close');
 
-    const overlayEl = document.getElementById('nav-search-overlay');
-    const rawData = overlayEl?.dataset.episodes ?? '[]';
+    const rawData = searchOverlay?.dataset.episodes ?? '[]';
     let allEpisodes = [];
     try { allEpisodes = JSON.parse(rawData); } catch {}
 
