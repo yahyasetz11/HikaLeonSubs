@@ -70,6 +70,28 @@ export const shows: Show[] = [
 
 export const episodes: Episode[] = [
   {
+    id: "ep-304-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "260927 {Soko Magattara, Sakurazaka} #304 Sub Indo",
+    episodeSubtitle: "Taman Hiburan Masumoto Final!",
+    episodeNumber: "Episode 304",
+    releaseDate: "2026-09-28",
+    thumbnail: "/images/thumbnails/sokomagattara/304/sokomagattara-1.png",
+    previewImage1: "/images/thumbnails/sokomagattara/304/sokomagattara-2.png",
+    previewImage2: "/images/thumbnails/sokomagattara/304/sokomagattara-3.png",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/file/hovaem9dua0ym7b/260927_Soko_Magattara%252C_Sakurazaka_%2523304_Sub_Indo.ass/file",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260927-soko-magattara-sakurazaka-304-sub-indo-exyam",
+    rawMp4Url:
+      "https://www.akari46.com/2026/09/260920-soko-magattara-sakurazaka-304.html",
+    description:
+      'Sokosaku minggu ini menghadirkan segmen spesial "Taman Hiburan Masumoto Final!", perayaan menjelang kelulusan Masumoto Kira lewat deretan wahana yang ia rancang sendiri sebagai Kepala Taman. Para member dijajal berbagai tantangan, mulai dari kuis tebak lagu lewat tiupan terompet, adu kreativitas seputar makanan yang tidak disukai Masumoto, hingga aksi fisik demi melindungi sang Kepala Taman, sembari menanti apakah impian lamanya akan terwujud. Menutup keseruan episode, panggung beralih ke momen haru saat Masumoto berbagi kesan dan pesan terakhirnya. Sisanya bisa langsung kalian tonton sendiri!',
+  },
+  {
     id: "ep-169-meets",
     showId: "sakura-meets",
     showName: "Sakura Meets",
@@ -148,7 +170,7 @@ export const episodes: Episode[] = [
     previewImage2: "/images/thumbnails/sokomagattara/303/sokomagattara-3.png",
     downloadUrl: "#",
     mediafireUrl:
-      "https://www.akari46.com/2026/09/260920-soko-magattara-sakurazaka-303.html",
+      "https://www.mediafire.com/file/p6iw525vmrleinm/260920_Soko_Magattara%252C_Sakurazaka_%2523303_Sub_Indo.ass/filel",
     trakteerUrl:
       "https://trakteer.id/hikaleon/reward/260920-soko-magattara-sakurazaka-303-sub-indo-jTiOo",
     rawMp4Url:
