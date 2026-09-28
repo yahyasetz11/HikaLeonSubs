@@ -1,4 +1,20 @@
 ---
+import { episodes, shows } from '../data/episodes';
+import { stripTitleTags } from '../utils/title';
+
+const serializedEpisodes = JSON.stringify(
+  episodes.map((ep) => ({
+    id: ep.id,
+    showSlug: ep.showSlug,
+    showName: ep.showName,
+    episodeTitle: stripTitleTags(ep.episodeTitle),
+    episodeSubtitle: ep.episodeSubtitle ?? '',
+    episodeNumber: ep.episodeNumber,
+    releaseDate: ep.releaseDate,
+    thumbnail: ep.thumbnail,
+    description: ep.description ?? '',
+  }))
+);
 ---
 
 <header class="sticky top-0 z-50 bg-ground/90 dark:bg-dark-ground/90 backdrop-blur-md border-b border-ground-border dark:border-dark-border">
@@ -25,6 +41,18 @@
         Algoritma
       </a>
 
+      <!-- search button desktop -->
+      <button
+        id="nav-search-btn"
+        type="button"
+        aria-label="Cari episode"
+        class="w-9 h-9 flex items-center justify-center rounded-lg text-ink-muted dark:text-dark-muted hover:text-ink dark:hover:text-dark-ink hover:bg-ground-border dark:hover:bg-dark-border transition-all duration-150"
+      >
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+        </svg>
+      </button>
+
       <div class="w-px h-5 bg-ground-border dark:bg-dark-border mx-1" aria-hidden="true"></div>
 
       <button
@@ -43,6 +71,18 @@
     </div>
 
     <div class="flex md:hidden items-center gap-1.5">
+      <!-- search button mobile -->
+      <button
+        id="nav-search-btn-mobile"
+        type="button"
+        aria-label="Cari episode"
+        class="w-10 h-10 flex items-center justify-center rounded-lg text-ink-muted dark:text-dark-muted hover:text-ink dark:hover:text-dark-ink hover:bg-ground-border dark:hover:bg-dark-border transition-all duration-150"
+      >
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+        </svg>
+      </button>
+
       <button
         id="theme-toggle-mobile"
         type="button"
@@ -74,6 +114,55 @@
       </button>
     </div>
   </nav>
+
+  <!-- Expanding search bar (hidden by default, shown over nav when active) -->
+  <div
+    id="nav-search-bar"
+    class="hidden absolute inset-x-0 top-0 h-16 z-10 px-4 sm:px-6 lg:px-8 flex items-center gap-3 bg-ground/95 dark:bg-dark-ground/95 backdrop-blur-md"
+  >
+    <svg class="w-5 h-5 text-ink-muted dark:text-dark-muted flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+    </svg>
+    <input
+      id="nav-search-input"
+      type="text"
+      placeholder="Cari episode..."
+      autocomplete="off"
+      class="flex-1 bg-transparent font-sans text-sm text-ink dark:text-dark-ink placeholder-ink-muted dark:placeholder-dark-muted outline-none"
+    />
+    <button
+      id="nav-search-close"
+      type="button"
+      aria-label="Tutup pencarian"
+      class="w-8 h-8 flex items-center justify-center rounded-lg text-ink-muted dark:text-dark-muted hover:text-ink dark:hover:text-dark-ink hover:bg-ground-border dark:hover:bg-dark-border transition-all duration-150 flex-shrink-0"
+    >
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Live results overlay -->
+  <div
+    id="nav-search-overlay"
+    class="hidden absolute left-0 right-0 top-16 z-50 mx-4 sm:mx-6 lg:mx-8 rounded-xl border border-ground-border dark:border-dark-border bg-ground/98 dark:bg-dark-card/98 backdrop-blur-md shadow-xl overflow-hidden animate-fade-in"
+    data-episodes={serializedEpisodes}
+  >
+    <div id="nav-search-results" class="divide-y divide-ground-border dark:divide-dark-border"></div>
+    <div id="nav-search-see-all" class="hidden px-4 py-2.5 border-t border-ground-border dark:border-dark-border">
+      <a
+        id="nav-search-see-all-link"
+        href="/search"
+        class="flex items-center justify-between text-sm font-display font-semibold text-sakura-600 dark:text-sakura-400 hover:text-sakura-700 dark:hover:text-sakura-300 transition-colors"
+      >
+        <span id="nav-search-see-all-text">Lihat semua hasil</span>
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+        </svg>
+      </a>
+    </div>
+    <div id="nav-search-empty" class="hidden px-4 py-5 text-sm text-ink-muted dark:text-dark-muted font-sans"></div>
+  </div>
 
   <div
     id="mobile-menu"
@@ -155,4 +244,145 @@
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') toggleMenu(false);
   });
+
+  // ── Navbar Search ──────────────────────────────────────────────
+  (function () {
+    const searchBar = document.getElementById('nav-search-bar');
+    const searchInput = document.getElementById('nav-search-input');
+    const searchOverlay = document.getElementById('nav-search-overlay');
+    const resultsContainer = document.getElementById('nav-search-results');
+    const seeAllWrap = document.getElementById('nav-search-see-all');
+    const seeAllLink = document.getElementById('nav-search-see-all-link');
+    const seeAllText = document.getElementById('nav-search-see-all-text');
+    const emptyMsg = document.getElementById('nav-search-empty');
+    const closeBtn = document.getElementById('nav-search-close');
+
+    const overlayEl = document.getElementById('nav-search-overlay');
+    const rawData = overlayEl?.dataset.episodes ?? '[]';
+    let allEpisodes = [];
+    try { allEpisodes = JSON.parse(rawData); } catch {}
+
+    function highlightMatch(text, query) {
+      if (!query || !text) return text;
+      const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const regex = new RegExp(`(${escaped})`, 'gi');
+      return text.replace(regex, '<mark class="search-highlight">$1</mark>');
+    }
+
+    function scoreEpisodes(q) {
+      const lq = q.toLowerCase();
+      const scored = [];
+      for (const ep of allEpisodes) {
+        let score = 0;
+        if (ep.episodeTitle.toLowerCase().includes(lq)) score += 3;
+        if (ep.episodeSubtitle && ep.episodeSubtitle.toLowerCase().includes(lq)) score += 2;
+        if (ep.showName.toLowerCase().includes(lq)) score += 2;
+        if (ep.episodeNumber.toLowerCase().includes(lq)) score += 2;
+        if (ep.description && ep.description.toLowerCase().includes(lq)) score += 1;
+        if (score > 0) scored.push({ ep, score });
+      }
+      scored.sort((a, b) => b.score !== a.score ? b.score - a.score : b.ep.releaseDate.localeCompare(a.ep.releaseDate));
+      return scored;
+    }
+
+    function formatDate(d) {
+      try {
+        return new Date(d).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' });
+      } catch { return d; }
+    }
+
+    function renderResults(query) {
+      if (!resultsContainer || !searchOverlay) return;
+      const q = query.trim();
+      if (q.length < 3) {
+        searchOverlay.classList.add('hidden');
+        return;
+      }
+      const scored = scoreEpisodes(q);
+      const top5 = scored.slice(0, 5);
+
+      resultsContainer.innerHTML = '';
+      searchOverlay.classList.remove('hidden');
+
+      if (top5.length === 0) {
+        if (emptyMsg) {
+          emptyMsg.classList.remove('hidden');
+          emptyMsg.textContent = `Tidak ada hasil untuk '${q}'`;
+        }
+        if (seeAllWrap) seeAllWrap.classList.add('hidden');
+        return;
+      }
+
+      if (emptyMsg) emptyMsg.classList.add('hidden');
+
+      top5.forEach(({ ep }) => {
+        const card = document.createElement('a');
+        card.href = `/shows/${ep.showSlug}/${ep.id}`;
+        card.className = 'flex items-center gap-3 px-4 py-3 hover:bg-ground-border dark:hover:bg-dark-border transition-colors duration-100 group';
+        card.innerHTML = `
+          <img src="${ep.thumbnail}" alt="" class="w-12 h-9 object-cover rounded-md flex-shrink-0 bg-ground-border dark:bg-dark-border" loading="lazy" />
+          <div class="flex-1 min-w-0">
+            <p class="text-sm font-display font-semibold text-ink dark:text-dark-ink truncate leading-snug">${highlightMatch(ep.episodeTitle, q)}</p>
+            ${ep.episodeSubtitle ? `<p class="text-xs text-ink-muted dark:text-dark-muted truncate mt-0.5">${highlightMatch(ep.episodeSubtitle, q)}</p>` : ''}
+            <p class="text-xs text-ink-light dark:text-dark-muted mt-0.5">${formatDate(ep.releaseDate)}</p>
+          </div>
+        `;
+        resultsContainer.appendChild(card);
+      });
+
+      if (seeAllWrap && seeAllLink && seeAllText) {
+        seeAllWrap.classList.remove('hidden');
+        const url = `/search?q=${encodeURIComponent(q)}`;
+        seeAllLink.href = url;
+        seeAllText.textContent = `Lihat semua ${scored.length} hasil →`;
+      }
+    }
+
+    function openSearch() {
+      if (!searchBar) return;
+      searchBar.classList.remove('hidden');
+      searchBar.classList.add('flex');
+      searchInput?.focus();
+    }
+
+    function closeSearch() {
+      if (!searchBar) return;
+      searchBar.classList.add('hidden');
+      searchBar.classList.remove('flex');
+      if (searchInput) searchInput.value = '';
+      if (searchOverlay) searchOverlay.classList.add('hidden');
+    }
+
+    let debounceTimer;
+    searchInput?.addEventListener('input', () => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => renderResults(searchInput.value), 200);
+    });
+
+    searchInput?.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const q = searchInput.value.trim();
+        if (q.length >= 3) {
+          window.location.href = `/search?q=${encodeURIComponent(q)}`;
+          closeSearch();
+        }
+      }
+    });
+
+    closeBtn?.addEventListener('click', closeSearch);
+
+    document.getElementById('nav-search-btn')?.addEventListener('click', openSearch);
+    document.getElementById('nav-search-btn-mobile')?.addEventListener('click', openSearch);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeSearch();
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!searchBar || searchBar.classList.contains('hidden')) return;
+      if (!searchBar.contains(e.target) && !searchOverlay?.contains(e.target)) {
+        closeSearch();
+      }
+    });
+  })();
 </script>
