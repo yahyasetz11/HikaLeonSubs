@@ -19,7 +19,7 @@ const serializedEpisodes = JSON.stringify(
 
 <header class="sticky top-0 z-50 bg-ground/90 dark:bg-dark-ground/90 backdrop-blur-md border-b border-ground-border dark:border-dark-border">
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-    <a href="/" class="flex items-center gap-2.5 group" aria-label="HikaLeonSubs beranda">
+    <a href="/" class="flex items-center gap-2.5 group shrink-0" aria-label="HikaLeonSubs beranda">
       <img src="/logo-black.png" alt="HikaLeonSubs" class="h-8 w-auto dark:hidden" />
       <img src="/logo-white.png" alt="HikaLeonSubs" class="h-8 w-auto hidden dark:block" />
       <span class="font-display font-bold text-lg tracking-tight text-ink dark:text-dark-ink group-hover:text-sakura-600 dark:group-hover:text-sakura-400 transition-colors duration-150">
@@ -27,31 +27,69 @@ const serializedEpisodes = JSON.stringify(
       </span>
     </a>
 
+    <!-- Desktop right side -->
     <div class="hidden md:flex items-center gap-1">
-      <a href="/" class="font-display font-medium text-sm px-3 py-2 rounded-lg text-ink-muted dark:text-dark-muted hover:text-ink dark:hover:text-dark-ink hover:bg-ground-border dark:hover:bg-dark-border transition-all duration-150">
-        Beranda
-      </a>
-      <a href="/shows" class="font-display font-medium text-sm px-3 py-2 rounded-lg text-ink-muted dark:text-dark-muted hover:text-ink dark:hover:text-dark-ink hover:bg-ground-border dark:hover:bg-dark-border transition-all duration-150">
-        Semua Show
-      </a>
-      <a href="/about" class="font-display font-medium text-sm px-3 py-2 rounded-lg text-ink-muted dark:text-dark-muted hover:text-ink dark:hover:text-dark-ink hover:bg-ground-border dark:hover:bg-dark-border transition-all duration-150">
-        Tentang
-      </a>
-      <a href="/algorithm" class="font-display font-medium text-sm px-3 py-2 rounded-lg text-ink-muted dark:text-dark-muted hover:text-ink dark:hover:text-dark-ink hover:bg-ground-border dark:hover:bg-dark-border transition-all duration-150">
-        Algoritma
-      </a>
+      <!-- Nav links + inline search input (crossfade) -->
+      <div class="relative flex items-center">
+        <!-- Nav links layer -->
+        <div
+          id="nav-links"
+          class="flex items-center gap-1 transition-[opacity,transform] duration-220 ease-out"
+          style="transition-timing-function: cubic-bezier(0.16,1,0.3,1);"
+        >
+          <a href="/" class="font-display font-medium text-sm px-3 py-2 rounded-lg text-ink-muted dark:text-dark-muted hover:text-ink dark:hover:text-dark-ink hover:bg-ground-border dark:hover:bg-dark-border transition-all duration-150">
+            Beranda
+          </a>
+          <a href="/shows" class="font-display font-medium text-sm px-3 py-2 rounded-lg text-ink-muted dark:text-dark-muted hover:text-ink dark:hover:text-dark-ink hover:bg-ground-border dark:hover:bg-dark-border transition-all duration-150">
+            Semua Show
+          </a>
+          <a href="/about" class="font-display font-medium text-sm px-3 py-2 rounded-lg text-ink-muted dark:text-dark-muted hover:text-ink dark:hover:text-dark-ink hover:bg-ground-border dark:hover:bg-dark-border transition-all duration-150">
+            Tentang
+          </a>
+          <a href="/algorithm" class="font-display font-medium text-sm px-3 py-2 rounded-lg text-ink-muted dark:text-dark-muted hover:text-ink dark:hover:text-dark-ink hover:bg-ground-border dark:hover:bg-dark-border transition-all duration-150">
+            Algoritma
+          </a>
+          <button
+            id="nav-search-btn"
+            type="button"
+            aria-label="Cari episode"
+            class="w-9 h-9 flex items-center justify-center rounded-lg text-ink-muted dark:text-dark-muted hover:text-ink dark:hover:text-dark-ink hover:bg-ground-border dark:hover:bg-dark-border transition-all duration-150"
+          >
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+          </button>
+        </div>
 
-      <!-- search button desktop -->
-      <button
-        id="nav-search-btn"
-        type="button"
-        aria-label="Cari episode"
-        class="w-9 h-9 flex items-center justify-center rounded-lg text-ink-muted dark:text-dark-muted hover:text-ink dark:hover:text-dark-ink hover:bg-ground-border dark:hover:bg-dark-border transition-all duration-150"
-      >
-        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-        </svg>
-      </button>
+        <!-- Search input layer (fades in over nav links) -->
+        <div
+          id="nav-search-bar"
+          aria-hidden="true"
+          class="absolute inset-y-0 right-0 flex items-center gap-2 pointer-events-none opacity-0"
+          style="min-width: 320px; transition: opacity 0.22s cubic-bezier(0.16,1,0.3,1), transform 0.22s cubic-bezier(0.16,1,0.3,1); transform: translateX(6px);"
+        >
+          <svg class="w-4 h-4 text-ink-muted dark:text-dark-muted flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>
+          <input
+            id="nav-search-input"
+            type="text"
+            placeholder="Cari episode..."
+            autocomplete="off"
+            class="flex-1 bg-transparent font-sans text-sm text-ink dark:text-dark-ink placeholder-ink-muted dark:placeholder-dark-muted outline-none min-w-0"
+          />
+          <button
+            id="nav-search-close"
+            type="button"
+            aria-label="Tutup pencarian"
+            class="w-8 h-8 flex items-center justify-center rounded-lg text-ink-muted dark:text-dark-muted hover:text-ink dark:hover:text-dark-ink hover:bg-ground-border dark:hover:bg-dark-border transition-all duration-150 flex-shrink-0"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
 
       <div class="w-px h-5 bg-ground-border dark:bg-dark-border mx-1" aria-hidden="true"></div>
 
@@ -115,23 +153,25 @@ const serializedEpisodes = JSON.stringify(
     </div>
   </nav>
 
-  <!-- Expanding search bar (hidden by default, shown over nav when active) -->
+  <!-- Mobile search overlay (full-width, shown below nav row on mobile) -->
   <div
-    id="nav-search-bar"
-    class="hidden absolute inset-x-0 top-0 h-16 z-10 px-4 sm:px-6 lg:px-8 items-center gap-3 bg-ground/95 dark:bg-dark-ground/95 backdrop-blur-md"
+    id="nav-search-bar-mobile"
+    aria-hidden="true"
+    class="md:hidden absolute inset-x-0 top-0 h-16 flex items-center gap-3 px-4 pointer-events-none opacity-0"
+    style="transition: opacity 0.22s cubic-bezier(0.16,1,0.3,1), transform 0.22s cubic-bezier(0.16,1,0.3,1); transform: translateY(-4px); background: inherit;"
   >
     <svg class="w-5 h-5 text-ink-muted dark:text-dark-muted flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
       <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
     </svg>
     <input
-      id="nav-search-input"
+      id="nav-search-input-mobile"
       type="text"
       placeholder="Cari episode..."
       autocomplete="off"
       class="flex-1 bg-transparent font-sans text-sm text-ink dark:text-dark-ink placeholder-ink-muted dark:placeholder-dark-muted outline-none"
     />
     <button
-      id="nav-search-close"
+      id="nav-search-close-mobile"
       type="button"
       aria-label="Tutup pencarian"
       class="w-8 h-8 flex items-center justify-center rounded-lg text-ink-muted dark:text-dark-muted hover:text-ink dark:hover:text-dark-ink hover:bg-ground-border dark:hover:bg-dark-border transition-all duration-150 flex-shrink-0"
@@ -145,7 +185,7 @@ const serializedEpisodes = JSON.stringify(
   <!-- Live results overlay -->
   <div
     id="nav-search-overlay"
-    class="hidden absolute left-0 right-0 top-16 z-50 mx-4 sm:mx-6 lg:mx-8 rounded-xl border border-ground-border dark:border-dark-border bg-ground/98 dark:bg-dark-card/98 backdrop-blur-md shadow-xl overflow-hidden animate-fade-in"
+    class="hidden absolute left-0 right-0 top-16 z-50 mx-4 sm:mx-6 lg:mx-8 rounded-xl border border-ground-border dark:border-dark-border bg-ground-card dark:bg-dark-card shadow-xl overflow-hidden"
     data-episodes={serializedEpisodes}
   >
     <div id="nav-search-results" class="divide-y divide-ground-border dark:divide-dark-border"></div>
@@ -247,30 +287,44 @@ const serializedEpisodes = JSON.stringify(
 
   // ── Navbar Search ──────────────────────────────────────────────
   (function () {
-    const searchBar = document.getElementById('nav-search-bar');
-    const searchInput = document.getElementById('nav-search-input');
+    const isMobile = () => window.innerWidth < 768;
+
+    const navLinks = document.getElementById('nav-links');
+    const searchBarDesktop = document.getElementById('nav-search-bar');
+    const searchInputDesktop = document.getElementById('nav-search-input') as HTMLInputElement | null;
+    const closeBtnDesktop = document.getElementById('nav-search-close');
+
+    const searchBarMobile = document.getElementById('nav-search-bar-mobile');
+    const searchInputMobile = document.getElementById('nav-search-input-mobile') as HTMLInputElement | null;
+    const closeBtnMobile = document.getElementById('nav-search-close-mobile');
+
     const searchOverlay = document.getElementById('nav-search-overlay');
     const resultsContainer = document.getElementById('nav-search-results');
     const seeAllWrap = document.getElementById('nav-search-see-all');
     const seeAllLink = document.getElementById('nav-search-see-all-link');
     const seeAllText = document.getElementById('nav-search-see-all-text');
     const emptyMsg = document.getElementById('nav-search-empty');
-    const closeBtn = document.getElementById('nav-search-close');
 
     const rawData = searchOverlay?.dataset.episodes ?? '[]';
-    let allEpisodes = [];
+    let allEpisodes: any[] = [];
     try { allEpisodes = JSON.parse(rawData); } catch {}
 
-    function highlightMatch(text, query) {
+    let isOpen = false;
+
+    function getActiveInput(): HTMLInputElement | null {
+      return isMobile() ? searchInputMobile : searchInputDesktop;
+    }
+
+    function highlightMatch(text: string, query: string) {
       if (!query || !text) return text;
       const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       const regex = new RegExp(`(${escaped})`, 'gi');
       return text.replace(regex, '<mark class="search-highlight">$1</mark>');
     }
 
-    function scoreEpisodes(q) {
+    function scoreEpisodes(q: string) {
       const lq = q.toLowerCase();
-      const scored = [];
+      const scored: { ep: any; score: number }[] = [];
       for (const ep of allEpisodes) {
         let score = 0;
         if (ep.episodeTitle.toLowerCase().includes(lq)) score += 3;
@@ -284,13 +338,13 @@ const serializedEpisodes = JSON.stringify(
       return scored;
     }
 
-    function formatDate(d) {
+    function formatDate(d: string) {
       try {
         return new Date(d).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' });
       } catch { return d; }
     }
 
-    function renderResults(query) {
+    function renderResults(query: string) {
       if (!resultsContainer || !searchOverlay) return;
       const q = query.trim();
       if (q.length < 3) {
@@ -301,7 +355,20 @@ const serializedEpisodes = JSON.stringify(
       const top5 = scored.slice(0, 5);
 
       resultsContainer.innerHTML = '';
+
+      const wasHidden = searchOverlay.classList.contains('hidden');
       searchOverlay.classList.remove('hidden');
+      if (wasHidden) {
+        searchOverlay.style.opacity = '0';
+        searchOverlay.style.transform = 'translateY(-6px)';
+        searchOverlay.style.transition = 'opacity 0.2s cubic-bezier(0.16,1,0.3,1), transform 0.2s cubic-bezier(0.16,1,0.3,1)';
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            searchOverlay.style.opacity = '1';
+            searchOverlay.style.transform = 'translateY(0)';
+          });
+        });
+      }
 
       if (top5.length === 0) {
         if (emptyMsg) {
@@ -332,56 +399,124 @@ const serializedEpisodes = JSON.stringify(
       if (seeAllWrap && seeAllLink && seeAllText) {
         seeAllWrap.classList.remove('hidden');
         const url = `/search?q=${encodeURIComponent(q)}`;
-        seeAllLink.href = url;
+        seeAllLink.setAttribute('href', url);
         seeAllText.textContent = `Lihat semua ${scored.length} hasil →`;
       }
     }
 
+    function animateIn(el: HTMLElement) {
+      el.style.transition = 'opacity 0.22s cubic-bezier(0.16,1,0.3,1), transform 0.22s cubic-bezier(0.16,1,0.3,1)';
+      el.classList.remove('pointer-events-none');
+      el.setAttribute('aria-hidden', 'false');
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          el.style.opacity = '1';
+          el.style.transform = el === searchBarDesktop ? 'translateX(0)' : 'translateY(0)';
+        });
+      });
+    }
+
+    function animateOut(el: HTMLElement, resetTransform: string) {
+      el.style.transition = 'opacity 0.16s cubic-bezier(0.7,0,0.84,0), transform 0.16s cubic-bezier(0.7,0,0.84,0)';
+      el.style.opacity = '0';
+      el.style.transform = resetTransform;
+      el.classList.add('pointer-events-none');
+      el.setAttribute('aria-hidden', 'true');
+    }
+
+    let openTimer: ReturnType<typeof setTimeout>;
+    let closeTimer: ReturnType<typeof setTimeout>;
+
     function openSearch() {
-      if (!searchBar) return;
-      searchBar.classList.remove('hidden');
-      searchBar.classList.add('flex');
-      searchInput?.focus();
+      clearTimeout(closeTimer);
+      clearTimeout(openTimer);
+      isOpen = true;
+      if (isMobile()) {
+        if (searchBarMobile) animateIn(searchBarMobile);
+        setTimeout(() => getActiveInput()?.focus(), 50);
+      } else {
+        if (navLinks) {
+          navLinks.style.transition = 'opacity 0.14s cubic-bezier(0.7,0,0.84,0), transform 0.14s cubic-bezier(0.7,0,0.84,0)';
+          navLinks.style.opacity = '0';
+          navLinks.style.transform = 'translateX(-4px)';
+          navLinks.style.pointerEvents = 'none';
+        }
+        openTimer = setTimeout(() => {
+          if (!isOpen) return;
+          if (searchBarDesktop) animateIn(searchBarDesktop);
+          getActiveInput()?.focus();
+        }, 120);
+      }
     }
 
     function closeSearch() {
-      if (!searchBar) return;
-      searchBar.classList.add('hidden');
-      searchBar.classList.remove('flex');
-      if (searchInput) searchInput.value = '';
+      clearTimeout(openTimer);
+      clearTimeout(closeTimer);
+      isOpen = false;
+      if (searchBarMobile) {
+        animateOut(searchBarMobile, 'translateY(-4px)');
+        if (searchInputMobile) searchInputMobile.value = '';
+      }
+      if (searchBarDesktop) {
+        animateOut(searchBarDesktop, 'translateX(6px)');
+        if (searchInputDesktop) searchInputDesktop.value = '';
+        closeTimer = setTimeout(() => {
+          if (isOpen) return;
+          if (navLinks) {
+            navLinks.style.transition = 'opacity 0.2s cubic-bezier(0.16,1,0.3,1), transform 0.2s cubic-bezier(0.16,1,0.3,1)';
+            navLinks.style.opacity = '1';
+            navLinks.style.transform = 'translateX(0)';
+            navLinks.style.pointerEvents = '';
+          }
+        }, 100);
+      }
       if (searchOverlay) searchOverlay.classList.add('hidden');
     }
 
-    let debounceTimer;
-    searchInput?.addEventListener('input', () => {
+    let debounceTimer: ReturnType<typeof setTimeout>;
+    function onInput(input: HTMLInputElement) {
       clearTimeout(debounceTimer);
-      debounceTimer = setTimeout(() => renderResults(searchInput.value), 200);
-    });
+      debounceTimer = setTimeout(() => renderResults(input.value), 200);
+    }
 
-    searchInput?.addEventListener('keydown', (e) => {
+    function onKeydown(e: KeyboardEvent, input: HTMLInputElement) {
       if (e.key === 'Enter') {
-        const q = searchInput.value.trim();
+        const q = input.value.trim();
         if (q.length >= 3) {
           window.location.href = `/search?q=${encodeURIComponent(q)}`;
           closeSearch();
         }
       }
+    }
+
+    searchInputDesktop?.addEventListener('input', () => onInput(searchInputDesktop));
+    searchInputDesktop?.addEventListener('keydown', (e) => onKeydown(e, searchInputDesktop));
+    searchInputMobile?.addEventListener('input', () => onInput(searchInputMobile));
+    searchInputMobile?.addEventListener('keydown', (e) => onKeydown(e, searchInputMobile));
+
+    closeBtnDesktop?.addEventListener('click', closeSearch);
+    closeBtnMobile?.addEventListener('click', closeSearch);
+
+    document.getElementById('nav-search-btn')?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openSearch();
+    });
+    document.getElementById('nav-search-btn-mobile')?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openSearch();
     });
 
-    closeBtn?.addEventListener('click', closeSearch);
-
-    document.getElementById('nav-search-btn')?.addEventListener('click', openSearch);
-    document.getElementById('nav-search-btn-mobile')?.addEventListener('click', openSearch);
-
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeSearch();
+      if (e.key === 'Escape' && isOpen) closeSearch();
     });
 
     document.addEventListener('click', (e) => {
-      if (!searchBar || searchBar.classList.contains('hidden')) return;
-      if (!searchBar.contains(e.target) && !searchOverlay?.contains(e.target)) {
-        closeSearch();
-      }
+      if (!isOpen) return;
+      const target = e.target as Node;
+      const inDesktop = searchBarDesktop?.contains(target);
+      const inMobile = searchBarMobile?.contains(target);
+      const inOverlay = searchOverlay?.contains(target);
+      if (!inDesktop && !inMobile && !inOverlay) closeSearch();
     });
   })();
 </script>
