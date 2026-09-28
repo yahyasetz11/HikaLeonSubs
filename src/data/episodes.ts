@@ -70,6 +70,28 @@ export const shows: Show[] = [
 
 export const episodes: Episode[] = [
   {
+    id: "ep-304-choko",
+    showId: "chokosaku",
+    showName: "Chokosaku",
+    showSlug: "chokosaku",
+    episodeTitle: "260927 {Chokosaku} #304 Sub Indo",
+    episodeSubtitle:
+      "Terima Kasih Kirako Selama Ini! Pesta Kelulusan Masumoto Kira!",
+    episodeNumber: "Episode 304",
+    releaseDate: "2026-09-28",
+    thumbnail: "/images/thumbnails/chokosaku/304/chokosaku-1.png",
+    previewImage1: "/images/thumbnails/chokosaku/304/chokosaku-2.png",
+    previewImage2: "/images/thumbnails/chokosaku/304/chokosaku-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260927-chokosaku-304-sub-indo-TG4U7",
+    rawMp4Url:
+      "https://www.akari46.com/2026/09/260927-sakurazaka46chokosaku304.html",
+    description:
+      'Melanjutkan keseruan dari tayangan utama, Chokosaku pekan ini menghadirkan episode spesial "Kirako, Terima Kasih Buat Selama Ini! Episode Kelulusan Masumoto Kira" yang dipandu oleh Matsuda Rina. Berbeda dari proyek kelulusan biasanya, kali ini Masumoto Kira sendiri yang menyampaikan pesan langsung kepada para member lewat proyek "Dengan Ini Ditutup, Masumoto Taman Hiburan", wahana terakhir dari Taman Hiburan Masumoto yang jadi pusat keseruan di acara utama. Satu per satu member pun mendapat kesempatan menikmati waktu berdua bersama Masumoto, sebelum berlanjut ke penyerahan ijazah kelulusan penuh makna dari sang kapten. Sisanya bisa langsung kalian tonton sendiri ya!',
+  },
+  {
     id: "ep-304-soko",
     showId: "sokomagattara",
     showName: "Sokomagattara, Sakurazaka?",
