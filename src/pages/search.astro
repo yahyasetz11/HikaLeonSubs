@@ -66,7 +66,7 @@ const serializedShows = JSON.stringify(
     <!-- Pagination -->
     <nav
       id="search-pagination"
-      class="hidden mt-10 flex items-center justify-center gap-2"
+      class="hidden mt-10 items-center justify-center gap-2"
       aria-label="Pagination hasil pencarian"
     >
       <button id="sr-prev" type="button" class="pg-btn" aria-label="Halaman sebelumnya" disabled>
@@ -351,7 +351,7 @@ const serializedShows = JSON.stringify(
             </svg>
             <p class="font-display font-semibold text-base text-ink dark:text-dark-ink">Ketik minimal 3 karakter untuk mencari...</p>
           </div>`;
-        if (paginationNav) paginationNav.classList.add('hidden');
+        if (paginationNav) { paginationNav.classList.add('hidden'); paginationNav.classList.remove('flex'); }
         return;
       }
 
@@ -364,7 +364,7 @@ const serializedShows = JSON.stringify(
             <p class="font-display font-semibold text-base text-ink dark:text-dark-ink mb-1">Tidak ada hasil untuk '${q}'</p>
             <p class="text-sm text-ink-muted dark:text-dark-muted">Coba kata kunci lain atau pilih show yang berbeda.</p>
           </div>`;
-        if (paginationNav) paginationNav.classList.add('hidden');
+        if (paginationNav) { paginationNav.classList.add('hidden'); paginationNav.classList.remove('flex'); }
         return;
       }
 
@@ -398,13 +398,13 @@ const serializedShows = JSON.stringify(
 
       // Pagination controls
       if (totalPages > 1) {
-        if (paginationNav) paginationNav.classList.remove('hidden');
+        if (paginationNav) { paginationNav.classList.remove('hidden'); paginationNav.classList.add('flex'); }
         if (pgTotal) pgTotal.textContent = String(totalPages);
         if (pgInput) pgInput.value = String(safePage);
         if (prevBtn) prevBtn.disabled = safePage === 1;
         if (nextBtn) nextBtn.disabled = safePage === totalPages;
       } else {
-        if (paginationNav) paginationNav.classList.add('hidden');
+        if (paginationNav) { paginationNav.classList.add('hidden'); paginationNav.classList.remove('flex'); }
       }
     }
 
@@ -457,6 +457,7 @@ const serializedShows = JSON.stringify(
 
     pageInput?.addEventListener('keydown', (e) => {
       if (e.key === 'Enter') {
+        clearTimeout(debounce);
         currentQuery = pageInput.value;
         currentPage = 1;
         pushParams(currentQuery, currentShow, currentPage);
