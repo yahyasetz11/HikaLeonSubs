@@ -1,0 +1,485 @@
+---
+import Base from '../layouts/Base.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { episodes, shows } from '../data/episodes';
+import { stripTitleTags } from '../utils/title';
+
+const EPISODES_PER_PAGE = 10;
+
+const serializedEpisodes = JSON.stringify(
+  episodes.map((ep) => ({
+    id: ep.id,
+    showSlug: ep.showSlug,
+    showName: ep.showName,
+    episodeTitle: stripTitleTags(ep.episodeTitle),
+    episodeSubtitle: ep.episodeSubtitle ?? '',
+    episodeNumber: ep.episodeNumber,
+    releaseDate: ep.releaseDate,
+    thumbnail: ep.thumbnail,
+    description: ep.description ?? '',
+  }))
+);
+
+const serializedShows = JSON.stringify(
+  shows.map((s) => ({ slug: s.slug, name: s.name }))
+);
+---
+
+<Base title="Cari Episode — HikaLeonSubs" description="Cari episode subtitle Indonesia Sakurazaka46">
+  <Navbar />
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+
+    <!-- Page heading + search input -->
+    <div class="mb-6 sm:mb-8">
+      <h1 class="font-display font-bold text-2xl sm:text-3xl text-ink dark:text-dark-ink mb-4">Cari Episode</h1>
+      <div class="relative max-w-xl">
+        <svg class="absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5 text-ink-muted dark:text-dark-muted pointer-events-none" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+        </svg>
+        <input
+          id="search-page-input"
+          type="text"
+          placeholder="Ketik minimal 3 karakter untuk mencari..."
+          autocomplete="off"
+          class="w-full pl-11 pr-4 py-3 rounded-xl border border-ground-border dark:border-dark-border bg-ground-card dark:bg-dark-card text-ink dark:text-dark-ink placeholder-ink-muted dark:placeholder-dark-muted font-sans text-sm outline-none focus:border-sakura-500 focus:ring-2 focus:ring-sakura-500/20 transition-all duration-150"
+        />
+      </div>
+    </div>
+
+    <!-- Show filter pills -->
+    <div id="show-filter-pills" class="flex flex-wrap gap-2 mb-6">
+      <button
+        type="button"
+        data-slug=""
+        class="search-pill search-pill--active font-display font-semibold text-xs px-3.5 py-1.5 rounded-full transition-colors duration-150"
+      >
+        Semua
+      </button>
+    </div>
+
+    <!-- Results area -->
+    <div id="search-results-area">
+      <!-- Populated by JS -->
+    </div>
+
+    <!-- Pagination -->
+    <nav
+      id="search-pagination"
+      class="hidden mt-10 flex items-center justify-center gap-2"
+      aria-label="Pagination hasil pencarian"
+    >
+      <button id="sr-prev" type="button" class="pg-btn" aria-label="Halaman sebelumnya" disabled>
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"/>
+        </svg>
+      </button>
+      <div class="flex items-center gap-1.5 font-display text-sm text-ink-muted dark:text-dark-muted select-none">
+        <input
+          id="sr-pg-input"
+          type="text"
+          inputmode="numeric"
+          class="pg-input"
+          value="1"
+          aria-label="Halaman saat ini"
+        />
+        <span class="text-ink-light dark:text-dark-muted">/</span>
+        <span id="sr-pg-total" class="font-semibold text-ink dark:text-dark-ink">1</span>
+      </div>
+      <button id="sr-next" type="button" class="pg-btn" aria-label="Halaman berikutnya">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
+        </svg>
+      </button>
+    </nav>
+
+  </main>
+  <Footer />
+</Base>
+
+<style is:global>
+  .search-pill {
+    border: 1px solid #f3f4f6;
+    background: #ffffff;
+    color: #6b7280;
+    cursor: pointer;
+  }
+
+  .dark .search-pill {
+    border-color: #202020;
+    background: #161616;
+    color: #9ca3af;
+  }
+
+  .search-pill:hover:not(.search-pill--active) {
+    border-color: #fbcfe8;
+    background: #fdf2f8;
+    color: #db2777;
+  }
+
+  .dark .search-pill:hover:not(.search-pill--active) {
+    border-color: rgba(157, 23, 77, 0.5);
+    background: rgba(157, 23, 77, 0.08);
+    color: #f472b6;
+  }
+
+  .search-pill--active {
+    border-color: #e8638a;
+    background: #e8638a;
+    color: #ffffff;
+  }
+
+  .dark .search-pill--active {
+    border-color: #e8638a;
+    background: #e8638a;
+    color: #ffffff;
+  }
+
+  .sr-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 0.875rem;
+    border: 1px solid #f3f4f6;
+    background: #ffffff;
+    text-decoration: none;
+    transition: box-shadow 200ms ease-out, border-color 200ms ease-out, transform 200ms ease-out;
+  }
+
+  .dark .sr-card {
+    border-color: #202020;
+    background: #161616;
+  }
+
+  .sr-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(232, 99, 138, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-color: #fbcfe8;
+  }
+
+  .dark .sr-card:hover {
+    box-shadow: 0 8px 24px rgba(232, 99, 138, 0.2), 0 2px 8px rgba(0, 0, 0, 0.3);
+    border-color: rgba(157, 23, 77, 0.4);
+  }
+
+  .pg-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 0.625rem;
+    border: 1px solid #f3f4f6;
+    background: #ffffff;
+    color: #6b7280;
+    cursor: pointer;
+    transition: color 150ms ease-out, border-color 150ms ease-out, background 150ms ease-out, box-shadow 150ms ease-out;
+    flex-shrink: 0;
+  }
+
+  .dark .pg-btn {
+    background: #161616;
+    border-color: #202020;
+    color: #9ca3af;
+  }
+
+  .pg-btn:hover:not(:disabled) {
+    color: #db2777;
+    border-color: #fbcfe8;
+    background: #fdf2f8;
+    box-shadow: 0 2px 8px rgba(232, 99, 138, 0.14);
+  }
+
+  .dark .pg-btn:hover:not(:disabled) {
+    color: #f472b6;
+    border-color: rgba(157, 23, 77, 0.5);
+    background: rgba(157, 23, 77, 0.08);
+    box-shadow: 0 2px 8px rgba(232, 99, 138, 0.18);
+  }
+
+  .pg-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+  }
+
+  .pg-input {
+    width: 2.5rem;
+    height: 2.25rem;
+    text-align: center;
+    border-radius: 0.625rem;
+    border: 1px solid #f3f4f6;
+    background: #ffffff;
+    font-family: 'Urbanist', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #1a1a1a;
+    outline: none;
+    transition: border-color 150ms ease-out, box-shadow 150ms ease-out, background 150ms ease-out, color 150ms ease-out;
+    -moz-appearance: textfield;
+  }
+
+  .dark .pg-input {
+    background: #161616;
+    border-color: #202020;
+    color: #ededed;
+  }
+
+  .pg-input:focus {
+    border-color: #e8638a;
+    box-shadow: 0 0 0 2px rgba(232, 99, 138, 0.18);
+  }
+
+  .dark .pg-input:focus {
+    border-color: #e8638a;
+    box-shadow: 0 0 0 2px rgba(232, 99, 138, 0.22);
+  }
+
+  .pg-input::-webkit-outer-spin-button,
+  .pg-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+</style>
+
+<script define:vars={{ serializedEpisodes, serializedShows, EPISODES_PER_PAGE }}>
+  (function () {
+    const allEpisodes = JSON.parse(serializedEpisodes);
+    const allShows = JSON.parse(serializedShows);
+    const PER_PAGE = EPISODES_PER_PAGE;
+
+    // ── State ──────────────────────────────────────────────
+    let currentQuery = '';
+    let currentShow = '';
+    let currentPage = 1;
+    let currentResults = [];
+
+    // ── DOM refs ───────────────────────────────────────────
+    const pageInput = document.getElementById('search-page-input');
+    const resultsArea = document.getElementById('search-results-area');
+    const pillsContainer = document.getElementById('show-filter-pills');
+    const paginationNav = document.getElementById('search-pagination');
+    const prevBtn = document.getElementById('sr-prev');
+    const nextBtn = document.getElementById('sr-next');
+    const pgInput = document.getElementById('sr-pg-input');
+    const pgTotal = document.getElementById('sr-pg-total');
+
+    // ── URL helpers ────────────────────────────────────────
+    function getParams() {
+      const p = new URLSearchParams(window.location.search);
+      return { q: p.get('q') ?? '', show: p.get('show') ?? '' };
+    }
+
+    function pushParams(q, show, page) {
+      const p = new URLSearchParams();
+      if (q) p.set('q', q);
+      if (show) p.set('show', show);
+      if (page > 1) p.set('page', String(page));
+      const newUrl = `${window.location.pathname}${p.toString() ? '?' + p.toString() : ''}`;
+      history.pushState({}, '', newUrl);
+    }
+
+    // ── Scoring ────────────────────────────────────────────
+    function scoreEpisodes(q, showSlug) {
+      const lq = q.toLowerCase();
+      const pool = showSlug ? allEpisodes.filter((ep) => ep.showSlug === showSlug) : allEpisodes;
+      const scored = [];
+      for (const ep of pool) {
+        let score = 0;
+        if (ep.episodeTitle.toLowerCase().includes(lq)) score += 3;
+        if (ep.episodeSubtitle && ep.episodeSubtitle.toLowerCase().includes(lq)) score += 2;
+        if (ep.showName.toLowerCase().includes(lq)) score += 2;
+        if (ep.episodeNumber.toLowerCase().includes(lq)) score += 2;
+        if (ep.description && ep.description.toLowerCase().includes(lq)) score += 1;
+        if (score > 0) scored.push({ ep, score });
+      }
+      scored.sort((a, b) => b.score !== a.score ? b.score - a.score : b.ep.releaseDate.localeCompare(a.ep.releaseDate));
+      return scored.map((s) => s.ep);
+    }
+
+    // ── Highlight ──────────────────────────────────────────
+    function highlightMatch(text, q) {
+      if (!q || !text || q.length < 3) return text;
+      const escaped = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const regex = new RegExp(`(${escaped})`, 'gi');
+      return text.replace(regex, '<mark class="search-highlight">$1</mark>');
+    }
+
+    // ── Format date ────────────────────────────────────────
+    function formatDate(d) {
+      try {
+        return new Date(d).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' });
+      } catch { return d; }
+    }
+
+    // ── Render pills ───────────────────────────────────────
+    function renderPills() {
+      if (!pillsContainer) return;
+      pillsContainer.innerHTML = '';
+
+      const allBtn = document.createElement('button');
+      allBtn.type = 'button';
+      allBtn.dataset.slug = '';
+      allBtn.className = `search-pill ${currentShow === '' ? 'search-pill--active' : ''} font-display font-semibold text-xs px-3.5 py-1.5 rounded-full transition-colors duration-150`;
+      allBtn.textContent = 'Semua';
+      allBtn.addEventListener('click', () => { currentShow = ''; currentPage = 1; pushParams(currentQuery, currentShow, currentPage); render(); });
+      pillsContainer.appendChild(allBtn);
+
+      allShows.forEach((show) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.dataset.slug = show.slug;
+        btn.className = `search-pill ${currentShow === show.slug ? 'search-pill--active' : ''} font-display font-semibold text-xs px-3.5 py-1.5 rounded-full transition-colors duration-150`;
+        btn.textContent = show.name;
+        btn.addEventListener('click', () => { currentShow = show.slug; currentPage = 1; pushParams(currentQuery, currentShow, currentPage); render(); });
+        pillsContainer.appendChild(btn);
+      });
+    }
+
+    // ── Render results ─────────────────────────────────────
+    function renderResultsArea() {
+      if (!resultsArea) return;
+      resultsArea.innerHTML = '';
+
+      const q = currentQuery.trim();
+
+      if (q.length < 3) {
+        resultsArea.innerHTML = `
+          <div class="flex flex-col items-center justify-center py-20 text-center">
+            <svg class="w-12 h-12 text-ink-light dark:text-dark-muted mb-4" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+            <p class="font-display font-semibold text-base text-ink dark:text-dark-ink">Ketik minimal 3 karakter untuk mencari...</p>
+          </div>`;
+        if (paginationNav) paginationNav.classList.add('hidden');
+        return;
+      }
+
+      if (currentResults.length === 0) {
+        resultsArea.innerHTML = `
+          <div class="flex flex-col items-center justify-center py-20 text-center">
+            <svg class="w-12 h-12 text-ink-light dark:text-dark-muted mb-4" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+            <p class="font-display font-semibold text-base text-ink dark:text-dark-ink mb-1">Tidak ada hasil untuk '${q}'</p>
+            <p class="text-sm text-ink-muted dark:text-dark-muted">Coba kata kunci lain atau pilih show yang berbeda.</p>
+          </div>`;
+        if (paginationNav) paginationNav.classList.add('hidden');
+        return;
+      }
+
+      const totalPages = Math.max(1, Math.ceil(currentResults.length / PER_PAGE));
+      const safePage = Math.max(1, Math.min(currentPage, totalPages));
+      const start = (safePage - 1) * PER_PAGE;
+      const pageEps = currentResults.slice(start, start + PER_PAGE);
+
+      const grid = document.createElement('div');
+      grid.className = 'grid grid-cols-1 gap-3';
+
+      pageEps.forEach((ep) => {
+        const card = document.createElement('a');
+        card.href = `/shows/${ep.showSlug}/${ep.id}`;
+        card.className = 'sr-card';
+        card.innerHTML = `
+          <img src="${ep.thumbnail}" alt="" class="w-24 h-16 sm:w-28 sm:h-20 object-cover rounded-lg flex-shrink-0 bg-ground-border dark:bg-dark-border" loading="lazy" />
+          <div class="flex-1 min-w-0 py-0.5">
+            <p class="font-display font-bold text-sm sm:text-base text-ink dark:text-dark-ink leading-snug mb-0.5">${highlightMatch(ep.episodeTitle, q)}</p>
+            ${ep.episodeSubtitle ? `<p class="text-xs sm:text-sm text-ink-muted dark:text-dark-muted leading-snug mb-1">${highlightMatch(ep.episodeSubtitle, q)}</p>` : ''}
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="text-xs font-display font-semibold text-sakura-600 dark:text-sakura-400">${ep.showName}</span>
+              <span class="text-xs text-ink-light dark:text-dark-muted">${formatDate(ep.releaseDate)}</span>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+
+      resultsArea.appendChild(grid);
+
+      // Pagination controls
+      if (totalPages > 1) {
+        if (paginationNav) paginationNav.classList.remove('hidden');
+        if (pgTotal) pgTotal.textContent = String(totalPages);
+        if (pgInput) pgInput.value = String(safePage);
+        if (prevBtn) prevBtn.disabled = safePage === 1;
+        if (nextBtn) nextBtn.disabled = safePage === totalPages;
+      } else {
+        if (paginationNav) paginationNav.classList.add('hidden');
+      }
+    }
+
+    // ── Master render ──────────────────────────────────────
+    function render() {
+      const q = currentQuery.trim();
+      currentResults = q.length >= 3 ? scoreEpisodes(q, currentShow) : [];
+      renderPills();
+      renderResultsArea();
+    }
+
+    // ── Pagination handlers ────────────────────────────────
+    function goToPage(page) {
+      const totalPages = Math.max(1, Math.ceil(currentResults.length / PER_PAGE));
+      currentPage = Math.max(1, Math.min(totalPages, page));
+      pushParams(currentQuery, currentShow, currentPage);
+      renderResultsArea();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    prevBtn?.addEventListener('click', () => goToPage(currentPage - 1));
+    nextBtn?.addEventListener('click', () => goToPage(currentPage + 1));
+
+    pgInput?.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const val = parseInt(pgInput.value, 10);
+        if (!isNaN(val)) goToPage(val);
+        pgInput.blur();
+      }
+    });
+
+    pgInput?.addEventListener('blur', () => {
+      const val = parseInt(pgInput.value, 10);
+      if (!isNaN(val)) { goToPage(val); } else { pgInput.value = String(currentPage); }
+    });
+
+    pgInput?.addEventListener('focus', () => pgInput.select());
+
+    // ── Search input handler ───────────────────────────────
+    let debounce;
+    pageInput?.addEventListener('input', () => {
+      clearTimeout(debounce);
+      debounce = setTimeout(() => {
+        currentQuery = pageInput.value;
+        currentPage = 1;
+        pushParams(currentQuery, currentShow, currentPage);
+        render();
+      }, 200);
+    });
+
+    pageInput?.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        currentQuery = pageInput.value;
+        currentPage = 1;
+        pushParams(currentQuery, currentShow, currentPage);
+        render();
+      }
+    });
+
+    // ── Browser back/forward ───────────────────────────────
+    window.addEventListener('popstate', () => {
+      const { q, show } = getParams();
+      currentQuery = q;
+      currentShow = show;
+      currentPage = parseInt(new URLSearchParams(window.location.search).get('page') ?? '1', 10) || 1;
+      if (pageInput) pageInput.value = currentQuery;
+      render();
+    });
+
+    // ── Initial load ───────────────────────────────────────
+    const { q: initQ, show: initShow } = getParams();
+    currentQuery = initQ;
+    currentShow = initShow;
+    currentPage = parseInt(new URLSearchParams(window.location.search).get('page') ?? '1', 10) || 1;
+    if (pageInput) pageInput.value = currentQuery;
+    render();
+  })();
+</script>
