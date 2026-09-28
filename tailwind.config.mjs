@@ -53,11 +53,26 @@ export default {
         'carousel-enter': 'carouselEnter 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
         'carousel-exit': 'carouselExit 0.4s cubic-bezier(0.7, 0, 0.84, 0)',
         shimmer: 'shimmer 1.5s infinite',
+        'search-in': 'searchIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+        'search-out': 'searchOut 0.18s cubic-bezier(0.7, 0, 0.84, 0) forwards',
+        'results-in': 'resultsIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards',
       },
       keyframes: {
         fadeIn: {
           from: { opacity: '0' },
           to: { opacity: '1' },
+        },
+        searchIn: {
+          from: { opacity: '0', transform: 'scaleX(0.96) translateY(-4px)' },
+          to: { opacity: '1', transform: 'scaleX(1) translateY(0)' },
+        },
+        searchOut: {
+          from: { opacity: '1', transform: 'scaleX(1) translateY(0)' },
+          to: { opacity: '0', transform: 'scaleX(0.96) translateY(-4px)' },
+        },
+        resultsIn: {
+          from: { opacity: '0', transform: 'translateY(-6px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
         },
         slideUp: {
           from: { opacity: '0', transform: 'translateY(16px)' },

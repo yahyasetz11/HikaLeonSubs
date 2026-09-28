@@ -14,6 +14,8 @@ export function getStaticPaths() {
 
 const { show } = Astro.props;
 const showEpisodes = episodes.filter((ep) => ep.showSlug === show.slug);
+const EPISODES_PER_PAGE = 10;
+const totalPages = Math.max(1, Math.ceil(showEpisodes.length / EPISODES_PER_PAGE));
 ---
 
 <Base title={`${show.name} — HikaLeonSubs`} description={show.description} image={show.thumbnail}>
@@ -39,12 +41,208 @@ const showEpisodes = episodes.filter((ep) => ep.showSlug === show.slug);
         <p class="text-xs sm:text-sm text-ink-muted dark:text-dark-muted">Episode untuk show ini akan segera hadir.</p>
       </div>
     ) : (
-      <div class="grid grid-cols-1 gap-4">
-        {showEpisodes.map((ep) => (
-          <EpisodeCard episode={ep} />
-        ))}
-      </div>
+      <>
+        <div id="episode-list" class="grid grid-cols-1 gap-4">
+          {showEpisodes.map((ep, i) => (
+            <div class="episode-page-item" data-index={i}>
+              <EpisodeCard episode={ep} />
+            </div>
+          ))}
+        </div>
+
+        {totalPages > 1 && (
+          <nav
+            class="mt-10 flex items-center justify-center gap-2"
+            aria-label="Pagination"
+            id="pagination-nav"
+            data-total={totalPages}
+            data-per-page={EPISODES_PER_PAGE}
+          >
+            <button
+              id="pg-prev"
+              type="button"
+              class="pg-btn"
+              aria-label="Halaman sebelumnya"
+              disabled
+            >
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"/>
+              </svg>
+            </button>
+
+            <div class="flex items-center gap-1.5 font-display text-sm text-ink-muted dark:text-dark-muted select-none">
+              <input
+                id="pg-input"
+                type="text"
+                inputmode="numeric"
+                class="pg-input"
+                value="1"
+                aria-label="Halaman saat ini"
+              />
+              <span class="text-ink-light dark:text-dark-muted">/</span>
+              <span id="pg-total" class="font-semibold text-ink dark:text-dark-ink">{totalPages}</span>
+            </div>
+
+            <button
+              id="pg-next"
+              type="button"
+              class="pg-btn"
+              aria-label="Halaman berikutnya"
+            >
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
+              </svg>
+            </button>
+          </nav>
+        )}
+      </>
     )}
   </main>
   <Footer />
 </Base>
+
+<style is:global>
+  .pg-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 0.625rem;
+    border: 1px solid #f3f4f6;
+    background: #ffffff;
+    color: #6b7280;
+    cursor: pointer;
+    transition: color 150ms ease-out, border-color 150ms ease-out, background 150ms ease-out, box-shadow 150ms ease-out;
+    flex-shrink: 0;
+  }
+
+  .dark .pg-btn {
+    background: #161616;
+    border-color: #202020;
+    color: #9ca3af;
+  }
+
+  .pg-btn:hover:not(:disabled) {
+    color: #db2777;
+    border-color: #fbcfe8;
+    background: #fdf2f8;
+    box-shadow: 0 2px 8px rgba(232, 99, 138, 0.14);
+  }
+
+  .dark .pg-btn:hover:not(:disabled) {
+    color: #f472b6;
+    border-color: rgba(157, 23, 77, 0.5);
+    background: rgba(157, 23, 77, 0.08);
+    box-shadow: 0 2px 8px rgba(232, 99, 138, 0.18);
+  }
+
+  .pg-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+  }
+
+  .pg-input {
+    width: 2.5rem;
+    height: 2.25rem;
+    text-align: center;
+    border-radius: 0.625rem;
+    border: 1px solid #f3f4f6;
+    background: #ffffff;
+    font-family: 'Urbanist', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #1a1a1a;
+    outline: none;
+    transition: border-color 150ms ease-out, box-shadow 150ms ease-out, background 150ms ease-out, color 150ms ease-out;
+    -moz-appearance: textfield;
+  }
+
+  .dark .pg-input {
+    background: #161616;
+    border-color: #202020;
+    color: #ededed;
+  }
+
+  .pg-input:focus {
+    border-color: #e8638a;
+    box-shadow: 0 0 0 2px rgba(232, 99, 138, 0.18);
+  }
+
+  .dark .pg-input:focus {
+    border-color: #e8638a;
+    box-shadow: 0 0 0 2px rgba(232, 99, 138, 0.22);
+  }
+
+  .pg-input::-webkit-outer-spin-button,
+  .pg-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .episode-page-item[data-hidden="true"] {
+    display: none;
+  }
+</style>
+
+<script>
+  const nav = document.getElementById('pagination-nav');
+  if (nav) {
+    const totalPages = parseInt(nav.dataset.total ?? '1', 10);
+    const perPage = parseInt(nav.dataset.perPage ?? '10', 10);
+    const items = Array.from(document.querySelectorAll<HTMLElement>('.episode-page-item'));
+    const prevBtn = document.getElementById('pg-prev') as HTMLButtonElement | null;
+    const nextBtn = document.getElementById('pg-next') as HTMLButtonElement | null;
+    const input = document.getElementById('pg-input') as HTMLInputElement | null;
+
+    let current = 1;
+
+    function goTo(page: number) {
+      page = Math.max(1, Math.min(totalPages, page));
+      current = page;
+
+      const start = (page - 1) * perPage;
+      const end = start + perPage;
+
+      items.forEach((item, i) => {
+        if (i >= start && i < end) {
+          item.removeAttribute('data-hidden');
+        } else {
+          item.setAttribute('data-hidden', 'true');
+        }
+      });
+
+      if (input) input.value = String(page);
+      if (prevBtn) prevBtn.disabled = page === 1;
+      if (nextBtn) nextBtn.disabled = page === totalPages;
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    goTo(1);
+
+    prevBtn?.addEventListener('click', () => goTo(current - 1));
+    nextBtn?.addEventListener('click', () => goTo(current + 1));
+
+    input?.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const val = parseInt(input.value, 10);
+        if (!isNaN(val)) goTo(val);
+        input.blur();
+      }
+    });
+
+    input?.addEventListener('blur', () => {
+      const val = parseInt(input.value, 10);
+      if (!isNaN(val)) {
+        goTo(val);
+      } else {
+        input.value = String(current);
+      }
+    });
+
+    input?.addEventListener('focus', () => {
+      input.select();
+    });
+  }
+</script>
