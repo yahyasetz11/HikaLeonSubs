@@ -70,6 +70,29 @@ export const shows: Show[] = [
 
 export const episodes: Episode[] = [
   {
+    id: "ep-026-channel",
+    showId: "sakurazaka-channel",
+    showName: "Sakurazaka Channel",
+    showSlug: "sakurazaka-channel",
+    episodeTitle: "260928 {Sakurazaka Channel} Sub Indo",
+    episodeSubtitle:
+      "Proyek Kelulusan Masumoto! Perjalanan Terakhir KiraMari! Menikmati Kobe Sepuasnya! ",
+    episodeNumber: "#",
+    releaseDate: "2026-10-02",
+    thumbnail: "/images/thumbnails/sakura-channel/260928/sakura-channel-1.jpg",
+    previewImage1:
+      "/images/thumbnails/sakura-channel/260922/sakura-channel-2.png",
+    previewImage2:
+      "/images/thumbnails/sakura-channel/260922/sakura-channel-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/260928-sakurazaka-channel-proyek-kelulusan-masumoto-perjalanan-terakhir-kiramari-menikmati-kobe-sepuasnya-sub-indo-HKNYD",
+    rawMp4Url: "https://www.youtube.com/watch?v=gb6uPi7ePg8",
+    description:
+      "Konten Sakurazaka Channel kali ini merekam YouTube terakhir Masumoto Kira sebelum lulus, sehari setelah konser tur di Kobe selesai. Bersama Kosaka Marino, sesama member asal Prefektur Hyogo, mereka menjadikannya perjalanan terakhir yang penuh kenang-kenangan. Keduanya menyusuri Nankinmachi, pecinan Kobe, sambil berburu jajanan khas, mulai dari camilan lucu berbentuk panda, minuman unik, es serut, sampai xiaolongbao yang sudah mereka incar. Setelah kenyang, mereka bergeser ke Kobe Super Stadium untuk menjajal berbagai wahana dan permainan seru, lalu menutup hari dengan camilan Dippin' Dots. Sisanya bisa langsung kalian tonton sendiri!",
+  },
+  {
     id: "ep-304-choko",
     showId: "chokosaku",
     showName: "Chokosaku",
