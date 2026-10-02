@@ -70,6 +70,26 @@ export const shows: Show[] = [
 
 export const episodes: Episode[] = [
   {
+    id: "ep-170-meets",
+    showId: "sakura-meets",
+    showName: "Sakura Meets",
+    showSlug: "sakura-meets",
+    episodeTitle: "261001 {Sakura Meets} #170 Sub Indo",
+    episodeSubtitle: "Kuis! Ini Isi Kepala Siapa~?",
+    episodeNumber: "Episode 170",
+    releaseDate: "2026-10-02",
+    thumbnail: "/images/thumbnails/sakura-meets/170/sakura-meets-1.png",
+    previewImage1: "/images/thumbnails/sakura-meets/170/sakura-meets-2.png",
+    previewImage2: "/images/thumbnails/sakura-meets/170/sakura-meets-3.png",
+    downloadUrl: "#",
+    mediafireUrl: "#",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/261001-sakura-meets-170-sub-indo-tmUKJ",
+    rawMp4Url: "https://www.akari46.com/search/label/Lemino",
+    description:
+      'Sakura Meets minggu ini menghadirkan segmen "Kuis! Ini Isi Kepala Siapa~?", kuis tebak-tebakan berbasis angket tentang hal-hal yang sedang dipikirkan para member Sakurazaka46 saat ini. Isi kepala ditampilkan satu per satu, dan siapa pun yang merasa tahu pemiliknya harus cepat menekan tombol, tapi tiap orang hanya punya satu kesempatan menjawab. Para member beradu insting dan kejelian mengamati teman-temannya, sementara tebakan tak terduga dan pengakuan di luar dugaan bermunculan. Di balik permainan itu, terungkap juga sisi-sisi para member yang jarang terlihat, mulai dari kebiasaan sehari-hari sampai hal-hal yang diam-diam mereka pikirkan. Siapa yang paling jeli membaca isi kepala teman-temannya? Selengkapnya bisa kalian saksikan sendiri, karena persaingannya masih berlanjut di episode berikutnya!',
+  },
+  {
     id: "ep-026-channel",
     showId: "sakurazaka-channel",
     showName: "Sakurazaka Channel",
