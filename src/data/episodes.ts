@@ -81,9 +81,9 @@ export const episodes: Episode[] = [
     releaseDate: "2026-10-02",
     thumbnail: "/images/thumbnails/sakura-channel/260928/sakura-channel-1.jpg",
     previewImage1:
-      "/images/thumbnails/sakura-channel/260922/sakura-channel-2.png",
+      "/images/thumbnails/sakura-channel/260928/sakura-channel-2.png",
     previewImage2:
-      "/images/thumbnails/sakura-channel/260922/sakura-channel-3.png",
+      "/images/thumbnails/sakura-channel/260928/sakura-channel-3.png",
     downloadUrl: "#",
     mediafireUrl: "#",
     trakteerUrl:
