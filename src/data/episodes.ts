@@ -2517,6 +2517,250 @@ export const episodes: Episode[] = [
       "Eps minggu ini adalah segmen reaction check dari Generasi ke-4. Pada part ini mereka akan dibawa ke FujiQ Highland untuk dilihat reaksi mereka terhadap wahana Roller Coaster. Sisanya bisa ditonton sendiri.",
   },
   {
+    id: "ep-250-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "250831 {Soko Magattara, Sakurazaka} #250 Sub Indo",
+    episodeSubtitle: "Segmen Ulang Tahun Tsuchida-san",
+    episodeNumber: "Episode 250",
+    releaseDate: "2025-08-31",
+    thumbnail: "/images/thumbnails/sokomagattara/250/sokomagattara-1.jpg",
+    previewImage1: "/images/thumbnails/sokomagattara/250/sokomagattara-2.png",
+    previewImage2: "/images/thumbnails/sokomagattara/250/sokomagattara-3.png",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/folder/2n1pwqoidoun4/250831_Soko_Magattara%2C_Sakurazaka_%23250_Sub_Indo",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/250831-soko-magattara-sakurazaka-250-sub-indo-UVA7E",
+    rawMp4Url:
+      "https://www.akari46.com/2025/08/250831-soko-magattara-sakurazaka-250.html",
+    description:
+      "Eps minggu ini adalah segmen ulang tahun Tsuchida-san. Member akan memberikan hadiah dan merayakan pesta ulang tahun bersama Tsuchida-san.",
+  },
+  {
+    id: "ep-249-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "250824 {Soko Magattara, Sakurazaka} #249 Sub Indo",
+    episodeSubtitle: "Part 2 Segmen Presentasi Member",
+    episodeNumber: "Episode 249",
+    releaseDate: "2025-08-24",
+    thumbnail: "/images/thumbnails/sokomagattara/249/sokomagattara-1.png",
+    previewImage1: "/images/thumbnails/sokomagattara/249/sokomagattara-2.png",
+    previewImage2: "/images/thumbnails/sokomagattara/249/sokomagattara-3.jpg",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/folder/4r39imqhohwgz/250824_Soko_Magattara%2C_Sakurazaka_%23249_Sub_Indo",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/reupload-250824-soko-magattara-sakurazaka-249-sub-indo-k49e0",
+    rawMp4Url:
+      "https://www.akari46.com/2025/08/250824-soko-magattara-sakurazaka-249.html",
+    description:
+      "Eps minggu ini adalah part kedua dari segmen presentasi dari member untuk segmen seperti apa yang cocok untuk dibawakan oleh mereka.",
+  },
+  {
+    id: "ep-248-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "250817 {Soko Magattara, Sakurazaka} #248 Sub Indo",
+    episodeSubtitle: "Part 1 Segmen Presentasi Member",
+    episodeNumber: "Episode 248",
+    releaseDate: "2025-08-17",
+    thumbnail: "/images/thumbnails/sokomagattara/248/sokomagattara-1.png",
+    previewImage1: "/images/thumbnails/sokomagattara/248/sokomagattara-2.png",
+    previewImage2: "#",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/folder/n31sye8vsan3a/250817_Soko_Magattara%2C_Sakurazaka_%23248_Sub_Indo",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/250824-soko-magattara-sakurazaka-248-sub-indo-V7pPV",
+    rawMp4Url:
+      "https://www.akari46.com/2025/08/250817-soko-magattara-sakurazaka-248.html",
+    description:
+      "Eps minggu ini adalah part pertama dari segmen presentasi dari member untuk segmen seperti apa yang cocok untuk dibawakan oleh mereka.",
+  },
+  {
+    id: "ep-246-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "250803 {Soko Magattara, Sakurazaka} #246 Sub Indo",
+    episodeSubtitle: "Part 1 Segmen Pertandingan Tim Jerapah dan Tim Gajah",
+    episodeNumber: "Episode 246",
+    releaseDate: "2025-08-03",
+    thumbnail: "/images/thumbnails/sokomagattara/246/sokomagattara-1.jpg",
+    previewImage1: "/images/thumbnails/sokomagattara/246/sokomagattara-2.png",
+    previewImage2: "/images/thumbnails/sokomagattara/246/sokomagattara-3.png",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/folder/0e1dr8uy05c55/250803_Soko_Magattara%2C_Sakurazaka_%23246_Sub_Indo",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/reupload-250803-soko-magattara-sakurazaka-246-sub-indo-3vJTv",
+    rawMp4Url:
+      "https://www.akari46.com/2025/08/250803-soko-magattara-sakurazaka-246.html",
+    description:
+      "Eps minggu ini adalah part pertama dari segmen pertandingan tim Jerapah dan tim Gajah. Di part 1 ini ada pertandingan balapan & petak umpet. Ada my seng shijuk main di eps ini. sisanya mending ditonton sendiri aja.",
+  },
+  {
+    id: "ep-245-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "250727 {Soko Magattara, Sakurazaka} #245 Sub Indo",
+    episodeSubtitle: "Segmen Pemberian Saran dari Para Senior",
+    episodeNumber: "Episode 245",
+    releaseDate: "2025-07-27",
+    thumbnail: "/images/thumbnails/sokomagattara/245/sokomagattara-1.jpg",
+    previewImage1: "/images/thumbnails/sokomagattara/245/sokomagattara-2.png",
+    previewImage2: "/images/thumbnails/sokomagattara/245/sokomagattara-3.png",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/folder/8t0i3t172ay5y/250727_Soko_Magattara%2C_Sakurazaka_%23245_Sub_Indo",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/reupload-250727-soko-magattara-sakurazaka-245-sub-indo-CRs4W",
+    rawMp4Url:
+      "https://www.akari46.com/2025/07/250727-soko-magattara-sakurazaka-245.html",
+    description:
+      "Eps minggu ini adalah segmen pemberian saran dari para senior ke 4ki bagaimana yang harus dilakukan di sokosaku tahun pertama mereka. sisanya mending ditonton sendiri aja ",
+  },
+  {
+    id: "ep-243-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "250713 {Soko Magattara, Sakurazaka} #243 Sub Indo",
+    episodeSubtitle: "Segmen Kompetisi Ekspresi Para Member",
+    episodeNumber: "Episode 243",
+    releaseDate: "2025-07-13",
+    thumbnail: "/images/thumbnails/sokomagattara/243/sokomagattara-1.jpg",
+    previewImage1: "/images/thumbnails/sokomagattara/243/sokomagattara-2.png",
+    previewImage2: "/images/thumbnails/sokomagattara/243/sokomagattara-3.png",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/folder/7oteicoqei3sw/250713_Soko_Magattara%2C_Sakurazaka_%23243_Sub_Indo",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/reupload-250713-soko-magattara-sakurazaka-243-sub-indo-Q2HtK",
+    rawMp4Url:
+      "https://www.akari46.com/2025/07/250713-soko-magattara-sakurazaka-243.html",
+    description:
+      "Eps minggu ini adalah segmen kompetisi ekspresi para member. Dimana ekspresi my shijuk lucu bgt disini",
+  },
+  {
+    id: "ep-242-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "250706 {Soko Magattara, Sakurazaka} #242 Sub Indo",
+    episodeSubtitle: "Part 2 Segmen Perkenalan 4ki",
+    episodeNumber: "Episode 242",
+    releaseDate: "2025-07-06",
+    thumbnail: "/images/thumbnails/sokomagattara/242/sokomagattara-1.jpg",
+    previewImage1: "/images/thumbnails/sokomagattara/242/sokomagattara-2.png",
+    previewImage2: "/images/thumbnails/sokomagattara/242/sokomagattara-3.png",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/folder/gtekicj4ebpq9/250706_Soko_Magattara%2C_Sakurazaka_%23242_Sub_Indo",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/reupload-250706-soko-magattara-sakurazaka-242-sub-indo-Zq6If",
+    rawMp4Url:
+      "https://www.akari46.com/2025/07/250706-soko-magattara-sakurazaka-242.html",
+    description:
+      "Eps minggu ini adalah part 2 dari segmen perkenalan 4ki. Untuk minggu ini yang dikenalkan adalah Nakagawa Chihiro, Matsumoto Wako, Meguro Hiiro, Yamakawa Ui, dan Yamada Momomi. Akhirnya bisa lihat my Chiitan debut di sokosaku. Sisanya mending ditonton sendiri aja",
+  },
+  {
+    id: "ep-241-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "250629 {Soko Magattara, Sakurazaka} #241 Sub Indo",
+    episodeSubtitle: "Part 1 Segmen Perkenalan 4ki",
+    episodeNumber: "Episode 241",
+    releaseDate: "2025-06-29",
+    thumbnail: "/images/thumbnails/sokomagattara/241/sokomagattara-1.png",
+    previewImage1: "/images/thumbnails/sokomagattara/241/sokomagattara-2.png",
+    previewImage2: "/images/thumbnails/sokomagattara/241/sokomagattara-3.png",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/folder/bdgpgl8pv25xl/250629_Soko_Magattara%2C_Sakurazaka_%23241_Sub_Indo",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/reupload-250629-soko-magattara-sakurazaka-241-sub-indo-9KM7c",
+    rawMp4Url:
+      "https://www.akari46.com/2025/06/250629-soko-magattara-sakurazaka-241.html",
+    description:
+      "Eps minggu ini adalah segmen perkenalan 4ki. Untuk minggu ini yang dikenalkan adalah Asai Konomi, Inaguma Hina, Katsumata Haru, dan Sato Neo. Konomi lucu juga pas di sokosaku ini. sisanya mending ditonton sendiri aja",
+  },
+  {
+    id: "ep-240-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "250622 {Soko Magattara, Sakurazaka} #240 Sub Indo",
+    episodeSubtitle: "Segmen Hit Campaign untuk Single \'Make or Break\'",
+    episodeNumber: "Episode 240",
+    releaseDate: "2025-06-22",
+    thumbnail: "/images/thumbnails/sokomagattara/240/sokomagattara-1.jpg",
+    previewImage1: "/images/thumbnails/sokomagattara/240/sokomagattara-2.png",
+    previewImage2: "/images/thumbnails/sokomagattara/240/sokomagattara-3.png",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/folder/abbtya77b8e02/250622_Soko_Magattara%2C_Sakurazaka_%23240_Sub_Indo",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/reupload-250622-soko-magattara-sakurazaka-240-sub-indo-7IxWV",
+    rawMp4Url:
+      "https://www.akari46.com/2025/06/250622-soko-magattara-sakurazaka-240.html",
+    description:
+      "Eps minggu ini adalah segmen Hit Campaign untuk single \'Make or Break\'. Dimana Mio harus melukis di kanvas yang sangat besar dalam waktu 13 jam. Sisanya bisa ditonton sendiri",
+  },
+  {
+    id: "ep-239-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "250615 {Soko Magattara, Sakurazaka} #239 Sub Indo",
+    episodeSubtitle:
+      "Segmen Gen 3 Request Terakhir ke Gen 2 Sebagai Adik Bungsu",
+    episodeNumber: "Episode 239",
+    releaseDate: "2025-06-15",
+    thumbnail: "/images/thumbnails/sokomagattara/239/sokomagattara-1.jpg",
+    previewImage1: "/images/thumbnails/sokomagattara/239/sokomagattara-2.png",
+    previewImage2: "/images/thumbnails/sokomagattara/239/sokomagattara-3.png",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/folder/b66ebridw28wq/250615_Soko_Magattara%2C_Sakurazaka_%23239_Sub_Indo",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/reupload-250615-soko-magattara-sakurazaka-239-sub-indo-g0Rgm",
+    rawMp4Url:
+      "https://www.akari46.com/2025/06/250615-soko-magattara-sakurazaka-239.html",
+    description:
+      "Eps minggu ini adalah segmen Gen 3 akan request terakhir kalinya ke Gen 2 sebagai adik bungsu, karena mulai minggu depan ada dedek baru Gen 4 masuk. Banyak fanservice di segmen ini, ga bisa berhenti senyum” sendiri",
+  },
+  {
+    id: "ep-238-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "250608 {Soko Magattara, Sakurazaka} #238 Sub Indo",
+    episodeSubtitle:
+      "Marino-sama Akan Mentraktir Member yang Merasa Membutuhkan",
+    episodeNumber: "Episode 238",
+    releaseDate: "2025-06-08",
+    thumbnail: "/images/thumbnails/sokomagattara/238/sokomagattara-1.jpg",
+    previewImage1: "/images/thumbnails/sokomagattara/238/sokomagattara-2.png",
+    previewImage2: "/images/thumbnails/sokomagattara/238/sokomagattara-3.png",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/folder/a78elgwvp50zu/250608_Soko_Magattara%2C_Sakurazaka_%23238_Sub_Indo",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/reupload-250608-soko-magattara-sakurazaka-238-sub-indo-OXuyo",
+    rawMp4Url:
+      "https://www.akari46.com/2025/06/250608-soko-magattara-sakurazaka-238.html",
+    description:
+      "Eps minggu ini adalah segmen Marino-sama akan mentraktir member yang merasa membutuhkan. Jadi beberapa member akan mempresentasikan barang yang diinginkan, dan Marino-sama akan membelikannya apabila ia ingin.",
+  },
+  {
     id: "ep-237-soko",
     showId: "sokomagattara",
     showName: "Sokomagattara, Sakurazaka?",
@@ -2526,8 +2770,8 @@ export const episodes: Episode[] = [
     episodeNumber: "Episode 237",
     releaseDate: "2025-06-01",
     thumbnail: "/images/thumbnails/sokomagattara/237/sokomagattara-1.png",
-    previewImage1: "/images/thumbnails/sokomagattara/237/sokomagattara-2.png",
-    previewImage2: "/images/thumbnails/sokomagattara/237/sokomagattara-3.png",
+    previewImage1: "#",
+    previewImage2: "#",
     downloadUrl: "#",
     mediafireUrl:
       "https://www.mediafire.com/folder/m71pgi3uhtcm6/250601_Soko_Magattara%2C_Sakurazaka_%23237_Sub_Indo",
@@ -2537,6 +2781,138 @@ export const episodes: Episode[] = [
       "https://www.akari46.com/2025/06/250601-soko-magattara-sakurazaka-237.html",
     description:
       "Eps minggu ini adalah segmen kegiatan member gen 3 di ruang ganti. Kamera tersembunyi akan dipasang untuk melihat kegiatan seperti apa yang dilakukan oleh member generasi ke-3.",
+  },
+  {
+    id: "ep-236-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "250525 {Soko Magattara, Sakurazaka} #236 Sub Indo",
+    episodeSubtitle: "Segmen Pengungkapan Rahasia Para Member",
+    episodeNumber: "Episode 236",
+    releaseDate: "2025-05-25",
+    thumbnail: "/images/thumbnails/sokomagattara/236/sokomagattara-1.jpg",
+    previewImage1: "/images/thumbnails/sokomagattara/236/sokomagattara-2.png",
+    previewImage2: "/images/thumbnails/sokomagattara/236/sokomagattara-3.png",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/file/qqkggn1msvx1ldn/250525_Soko_Magattara%252C_Sakurazaka_%2523236_Sub_Indo.ass/file",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/reupload-250525-soko-magattara-sakurazaka-236-sub-indo-fdae4",
+    rawMp4Url:
+      "https://www.akari46.com/2025/05/250525-soko-magattara-sakurazaka-236.html",
+    description:
+      "Eps kali ini adalah segmen pengungkapan rahasia para member. Banyak plot twist di eps kali ini. Eps ini juga kocak parah, kalian wajib nonton ",
+  },
+  {
+    id: "ep-235-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "250518 {Soko Magattara, Sakurazaka} #235 Sub Indo",
+    episodeSubtitle: "Part 2 Segmen Ranking Para Senior 2ki oleh 3ki",
+    episodeNumber: "Episode 235",
+    releaseDate: "2025-05-18",
+    thumbnail: "/images/thumbnails/sokomagattara/235/sokomagattara-1.png",
+    previewImage1: "/images/thumbnails/sokomagattara/235/sokomagattara-2.jpg",
+    previewImage2: "#",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/file/w7gbj9sbd4pyxmj/250518_Soko_Magattara%252C_Sakurazaka_%2523235_Sub_Indo.ass/file",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/reupload-250518-soko-magattara-sakurazaka-235-sub-indo-cNpJx",
+    rawMp4Url:
+      "https://www.akari46.com/2025/05/250518-soko-magattara-sakurazaka-235.html",
+    description:
+      "Eps kali ini adalah part kedua dari segmen ranking para senior 2ki oleh 3ki. Jadi 3ki akan buat ranking senior termodis, terramah, tercantik, dll dan senior akan menebak siapa top 3 dari masing-masing kategori. Segmen ini asik bgt sih, kalian harus nonton wkwk",
+  },
+  {
+    id: "ep-234-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "250511 {Soko Magattara, Sakurazaka} #234 Sub Indo",
+    episodeSubtitle: "Part 1 Segmen Ranking Para Senior 2ki oleh 3ki",
+    episodeNumber: "Episode 234",
+    releaseDate: "2025-05-11",
+    thumbnail: "/images/thumbnails/sokomagattara/234/sokomagattara-1.png",
+    previewImage1: "/images/thumbnails/sokomagattara/234/sokomagattara-2.png",
+    previewImage2: "#",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/file/oryhulnon9pnye1/250511_Soko_Magattara%252C_Sakurazaka_%2523234_Sub_Indo.ass/file",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/reupload-250511-soko-magattara-sakurazaka-234-W7DD1",
+    rawMp4Url:
+      "https://www.akari46.com/2025/05/250511-soko-magattara-sakurazaka-234.html",
+    description:
+      "Eps kali ini adalah part pertama dari segmen ranking para senior 2ki oleh 3ki. Jadi 3ki akan buat ranking senior termodis, terramah, tercantik, dll dan senior akan menebak siapa top 3 dari masing-masing kategori. Segmen ini asik bgt sih, kalian harus nonton wkwk",
+  },
+  {
+    id: "ep-233-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "250504 {Soko Magattara, Sakurazaka} #233 Sub Indo",
+    episodeSubtitle: "Kompetisi Memasak Lauk yang Cocok Dimakan dengan Nasi",
+    episodeNumber: "Episode 233",
+    releaseDate: "2025-05-04",
+    thumbnail: "/images/thumbnails/sokomagattara/233/sokomagattara-1.jpg",
+    previewImage1: "/images/thumbnails/sokomagattara/233/sokomagattara-2.png",
+    previewImage2: "#",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/file/uj1slr58ns3lul0/250504_Soko_Magattara%252C_Sakurazaka_%2523233_Sub_Indo.ass/file",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/reupload-250504-soko-magattara-sakurazaka-233-sub-indo-cBUBY",
+    rawMp4Url:
+      "https://www.akari46.com/2025/05/250504-soko-magattara-sakurazaka-233.html",
+    description:
+      "Eps kali ini adalah segmen kompetisi memasak lauk yang paling cocok dimakan dengan nasi. Ada Ishimori, Airi, Renaa, Akiho, ama Tenchan yang akan memasak lauk andalan mereka.",
+  },
+  {
+    id: "ep-232-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "250427 {Soko Magattara, Sakurazaka} #232 Sub Indo",
+    episodeSubtitle: "Part 2 - Sharing Konser",
+    episodeNumber: "Episode 232",
+    releaseDate: "2025-04-27",
+    thumbnail: "/images/thumbnails/sokomagattara/232/sokomagattara-1.png",
+    previewImage1: "/images/thumbnails/sokomagattara/232/sokomagattara-2.png",
+    previewImage2: "#",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/file/wvhmtndxdct0hun/250427_Soko_Magattara%252C_Sakurazaka_%2523232_Sub_Indo.ass/file",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/reupload-250427-soko-magattara-sakurazaka-232-sub-indo-zedgD",
+    rawMp4Url:
+      "https://www.akari46.com/2025/04/250427-soko-magattara-sakurazaka-232.html",
+    description:
+      "Eps kali ini adalah part 2 dari sesi sharing dari member mengenai konser-konser mereka sebelumnya, seperti scene” keren, kocak, best moment, dll. ",
+  },
+  {
+    id: "ep-231-soko",
+    showId: "sokomagattara",
+    showName: "Sokomagattara, Sakurazaka?",
+    showSlug: "sokomagattara",
+    episodeTitle: "250420 {Soko Magattara, Sakurazaka} #231 Sub Indo",
+    episodeSubtitle: "Part 1 - Sharing Konser",
+    episodeNumber: "Episode 231",
+    releaseDate: "2025-04-20",
+    thumbnail: "/images/thumbnails/sokomagattara/231/sokomagattara-1.jpg",
+    previewImage1: "#",
+    previewImage2: "#",
+    downloadUrl: "#",
+    mediafireUrl:
+      "https://www.mediafire.com/file/z67y06vg4rkc1ts/250420_Soko_Magattara%252C_Sakurazaka_%2523231_Sub_Indo.ass/file",
+    trakteerUrl:
+      "https://trakteer.id/hikaleon/reward/250420-soko-magattara-sakurazaka-231-sub-indo-I5JKt",
+    rawMp4Url:
+      "https://www.akari46.com/2025/04/250420-soko-magattara-sakurazaka-231.html",
+    description:
+      "Eps kali ini adalah sesi sharing dari member mengenai konser-konser mereka sebelumnya, seperti scene” keren, kocak, best moment, dll. ",
   },
 ];
 
